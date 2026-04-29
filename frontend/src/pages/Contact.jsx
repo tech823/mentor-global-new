@@ -120,7 +120,7 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-8 p-8 md:p-10">
               <ScrollReveal>
-                <form onSubmit={handleSubmit} data-testid="contact-form" className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate data-testid="contact-form" className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Full Name *</label>

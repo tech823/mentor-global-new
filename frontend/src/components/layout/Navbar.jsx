@@ -22,6 +22,11 @@ export default function Navbar() {
     setDropdownOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
     setDropdownOpen(true);
