@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import Solutions from "@/pages/Solutions";
 import SolutionDetail from "@/pages/SolutionDetail";
+import HealthcareInfrastructure from "@/pages/solutions/HealthcareInfrastructure";
 import Dexa from "@/pages/Dexa";
 import Subsidiaries from "@/pages/Subsidiaries";
 import About from "@/pages/About";
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solutions" element={<Solutions />} />
+          <Route path="/solutions/healthcare-infrastructure" element={<HealthcareInfrastructure />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
           <Route path="/dexa" element={<Dexa />} />
           <Route path="/subsidiaries" element={<Subsidiaries />} />
