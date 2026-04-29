@@ -11,6 +11,7 @@ import SolutionDetail from "@/pages/SolutionDetail";
 import HealthcareInfrastructure from "@/pages/solutions/HealthcareInfrastructure";
 import InsuranceInfrastructure from "@/pages/solutions/InsuranceInfrastructure";
 import FintechInfrastructure from "@/pages/solutions/FintechInfrastructure";
+import AIInfrastructure from "@/pages/solutions/AIInfrastructure";
 import Dexa from "@/pages/Dexa";
 import Subsidiaries from "@/pages/Subsidiaries";
 import About from "@/pages/About";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/solutions/healthcare-infrastructure" element={<HealthcareInfrastructure />} />
           <Route path="/solutions/insurance-infrastructure" element={<InsuranceInfrastructure />} />
           <Route path="/solutions/fintech-infrastructure" element={<FintechInfrastructure />} />
+          <Route path="/solutions/ai-infrastructure" element={<AIInfrastructure />} />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
           <Route path="/dexa" element={<Dexa />} />
           <Route path="/subsidiaries" element={<Subsidiaries />} />
