@@ -1,34 +1,130 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Mentor Global - Global Styles */
+
+/* Remove old CRA styles */
+.App {
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Eyebrow labels */
+.eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #0048FF;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Grid line pattern for cards */
+.grid-lines {
+  border: 1px solid rgba(17, 17, 31, 0.1);
 }
 
-.App-link {
-    color: #61dafb;
+.grid-lines-dark {
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Blue glow for AI/DEXA sections */
+.blue-glow {
+  background: radial-gradient(circle at center, rgba(0, 72, 255, 0.12), transparent 60%);
+}
+
+.blue-glow-subtle {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 72, 255, 0.08), transparent 50%);
+}
+
+/* Navigation dropdown animation */
+.nav-dropdown {
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Section transitions */
+.section-dark {
+  background-color: #11111F;
+  color: #FFFFFF;
+}
+
+.section-light {
+  background-color: #FFFFFF;
+  color: #11111F;
+}
+
+/* Thin grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.grid-bg-light {
+  background-image:
+    linear-gradient(rgba(17, 17, 31, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 31, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Counter number styling */
+.counter-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Form focus states */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #0048FF !important;
+  box-shadow: 0 0 0 1px #0048FF;
+}
+
+/* Mobile menu */
+.mobile-menu-overlay {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Premium hover effects on cards */
+.card-hover {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  background-color: rgba(0, 72, 255, 0.03);
+  border-color: rgba(0, 72, 255, 0.2);
+}
+
+.card-hover-dark {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover-dark:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 72, 255, 0.3);
+}
+
+/* Smooth page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Image lazy loading placeholder */
+.img-placeholder {
+  background: linear-gradient(110deg, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: -200%;
+  }
 }
