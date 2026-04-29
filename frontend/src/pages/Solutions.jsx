@@ -15,19 +15,33 @@ export default function Solutions() {
   return (
     <main data-testid="solutions-page">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28 grid-bg-light">
+      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">Solutions</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
-              Infrastructure for Healthcare, Insurance, Fintech, AI, and Operating Systems
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="mt-8 text-lg text-[#666666] max-w-3xl leading-relaxed">
-              Mentor Global helps organizations launch, automate, finance, insure, and operate digital ecosystems through modular, API first, multi tenant, white labelled infrastructure.
-            </p>
-          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <ScrollReveal>
+                <p className="eyebrow mb-4">Solutions</p>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05]">
+                  Infrastructure for Healthcare, Insurance, Fintech, AI, and Operating Systems
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.15}>
+                <p className="mt-8 text-lg text-[#666666] max-w-xl leading-relaxed">
+                  Mentor Global helps organizations launch, automate, finance, insure, and operate digital ecosystems through modular, API first, multi tenant, white labelled infrastructure.
+                </p>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal delay={0.2} direction="left">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1649682892309-e10e0b7cd40b?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700"
+                  alt="Digital infrastructure"
+                  className="w-full h-auto object-cover aspect-[4/3]"
+                  loading="lazy"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

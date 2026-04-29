@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <main data-testid="contact-page">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-20 grid-bg-light">
+      <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Contact</p>

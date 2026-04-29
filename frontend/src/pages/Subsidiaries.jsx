@@ -14,25 +14,40 @@ export default function Subsidiaries() {
   return (
     <main data-testid="subsidiaries-page">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28 grid-bg-light">
+      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <ScrollReveal>
-            <p className="eyebrow mb-4">Global Portfolio</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
-              A Global Portfolio of Health Fintech Infrastructure Companies
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="mt-8 text-lg text-[#666666] max-w-3xl leading-relaxed">
-              Mentor Global is a structured group of companies designed to build, deploy, and scale infrastructure across regulated markets.
-            </p>
-          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <ScrollReveal>
+                <p className="eyebrow mb-4">Global Portfolio</p>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05]">
+                  A Global Portfolio of Health Fintech Infrastructure Companies
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.15}>
+                <p className="mt-8 text-lg text-[#666666] max-w-xl leading-relaxed">
+                  Mentor Global is a structured group of companies designed to build, deploy, and scale infrastructure across regulated markets.
+                </p>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal delay={0.2} direction="left">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1733195296321-b99d129b09cd?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700"
+                  alt="Global presence"
+                  className="w-full h-auto object-cover aspect-[4/3]"
+                  loading="lazy"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* Structure */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.03] blur-[120px]" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-white/10">
             <ScrollReveal>
               <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-white/10 h-full">
@@ -67,7 +82,7 @@ export default function Subsidiaries() {
         <section
           key={sub.country}
           data-testid={`subsidiary-${sub.country.toLowerCase().replace(/\s+/g, "-")}`}
-          className={`${idx % 2 === 0 ? "bg-white" : "bg-[#11111F] grid-bg"} py-24 md:py-32`}
+          className={`${idx % 2 === 0 ? "bg-white" : "bg-[#11111F]"} py-24 md:py-32`}
         >
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
@@ -108,7 +123,7 @@ export default function Subsidiaries() {
       ))}
 
       {/* Global Technology Clients */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg relative overflow-hidden">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 blue-glow-subtle" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
           <ScrollReveal>

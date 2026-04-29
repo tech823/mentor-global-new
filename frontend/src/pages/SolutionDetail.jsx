@@ -3,6 +3,14 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
 import { solutionPillars } from "../data/content";
 
+const solutionImages = {
+  "healthcare-infrastructure": "https://images.unsplash.com/photo-1666886573301-b5d526cfd518?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700",
+  "insurance-infrastructure": "https://images.unsplash.com/photo-1765046255462-198d49d07dd1?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700",
+  "fintech-infrastructure": "https://images.unsplash.com/photo-1675390479077-8faec43d1055?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700",
+  "ai-infrastructure": "https://images.unsplash.com/photo-1653549893012-b8b4fbe97630?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700",
+  "company-operating-infrastructure": "https://images.unsplash.com/photo-1598270174567-c38899618e28?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700"
+};
+
 export default function SolutionDetail() {
   const { slug } = useParams();
   const solution = solutionPillars.find((s) => s.slug === slug);
@@ -14,7 +22,7 @@ export default function SolutionDetail() {
   return (
     <main data-testid={`solution-${slug}-page`}>
       {/* Hero */}
-      <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-24 grid-bg-light">
+      <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <Link
@@ -24,16 +32,32 @@ export default function SolutionDetail() {
             >
               <ArrowLeft className="w-4 h-4" /> All Solutions
             </Link>
-            <p className="eyebrow mb-4">{solution.title}</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
-              {solution.heroHeadline}
-            </h1>
           </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="mt-8 text-lg text-[#666666] max-w-3xl leading-relaxed">
-              {solution.heroSubtext}
-            </p>
-          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <ScrollReveal>
+                <p className="eyebrow mb-4">{solution.title}</p>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05]">
+                  {solution.heroHeadline}
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.15}>
+                <p className="mt-8 text-lg text-[#666666] max-w-xl leading-relaxed">
+                  {solution.heroSubtext}
+                </p>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal delay={0.2} direction="left">
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={solutionImages[slug] || solutionImages["healthcare-infrastructure"]}
+                  alt={solution.title}
+                  className="w-full h-auto object-cover aspect-[4/3]"
+                  loading="lazy"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -54,8 +78,9 @@ export default function SolutionDetail() {
       </section>
 
       {/* Modules */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.03] blur-[120px]" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Modules</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mb-16">
@@ -103,7 +128,7 @@ export default function SolutionDetail() {
 
       {/* Service Center (only for insurance) */}
       {solution.serviceCenter && (
-        <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
+        <section className="bg-[#11111F] py-24 md:py-32">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Digital Service Center</p>
@@ -184,7 +209,7 @@ export default function SolutionDetail() {
 
       {/* Agent Pods (only for AI infrastructure) */}
       {solution.agentPods && (
-        <section className="bg-[#11111F] py-24 md:py-32 grid-bg relative overflow-hidden">
+        <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 blue-glow" />
           <div className="relative max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
@@ -237,7 +262,7 @@ export default function SolutionDetail() {
       )}
 
       {/* DEXA Role */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg relative overflow-hidden">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 blue-glow-subtle" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
@@ -268,14 +293,21 @@ export default function SolutionDetail() {
               What the Infrastructure Looks Like
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-[#11111F]/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solution.visuals.map((visual, i) => (
               <ScrollReveal key={visual} delay={i * 0.05}>
-                <div className="bg-white p-8 h-full">
-                  <div className="w-full h-32 bg-[#11111F]/[0.03] border border-[#11111F]/10 flex items-center justify-center mb-4">
-                    <div className="w-12 h-1 bg-[#0048FF]/20" />
+                <div className="group border border-[#11111F]/10 overflow-hidden card-hover">
+                  <div className="relative w-full h-40 bg-gradient-to-br from-[#11111F]/[0.04] via-[#0048FF]/[0.03] to-[#11111F]/[0.02] flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-10 h-10 border border-[#0048FF]/20 flex items-center justify-center">
+                        <div className="w-3 h-3 bg-[#0048FF]/30 group-hover:bg-[#0048FF] transition-colors" />
+                      </div>
+                      <div className="w-16 h-[2px] bg-[#0048FF]/10" />
+                    </div>
                   </div>
-                  <p className="text-sm font-medium text-[#11111F]">{visual}</p>
+                  <div className="p-5">
+                    <p className="text-sm font-medium text-[#11111F]">{visual}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}

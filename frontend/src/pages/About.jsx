@@ -7,11 +7,11 @@ export default function About() {
   return (
     <main data-testid="about-page">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28 grid-bg-light">
+      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">About</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-4xl">
               Built for the Global Shift Toward Health Fintech Infrastructure
             </h1>
           </ScrollReveal>
@@ -49,7 +49,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
+      <section className="bg-[#11111F] py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Values</p>
@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       {/* Built by Operators */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
+      <section className="bg-[#11111F] py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Our Team</p>
@@ -131,7 +131,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
+      <section className="bg-[#11111F] py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mx-auto">

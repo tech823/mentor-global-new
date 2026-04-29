@@ -52,7 +52,7 @@ export default function Team() {
   return (
     <main data-testid="team-page">
       {/* Hero */}
-      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28 grid-bg-light">
+      <section className="bg-white pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Leadership</p>
@@ -82,7 +82,7 @@ export default function Team() {
       </section>
 
       {/* Closing */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
+      <section className="bg-[#11111F] py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <div className="max-w-3xl">

@@ -49,24 +49,39 @@ export default function Dexa() {
           <img
             src="https://images.unsplash.com/photo-1680992046626-418f7e910589?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920"
             alt=""
-            className="w-full h-full object-cover opacity-[0.15]"
+            className="w-full h-full object-cover opacity-[0.1]"
             loading="lazy"
           />
         </div>
-        <div className="absolute inset-0 grid-bg" />
         <div className="absolute inset-0 blue-glow" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.04] blur-[120px]" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-          <ScrollReveal>
-            <p className="eyebrow mb-6">Intelligence Engine</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white tracking-tighter leading-[1.05] max-w-5xl">
-              DEXA, The Intelligence Processing Engine Behind Mentor Global
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="mt-8 text-lg md:text-xl text-[#8A8A93] max-w-3xl leading-relaxed">
-              DEXA powers intelligent operations across healthcare, insurance, fintech, HealthRails, Mentor OS, and white labelled client platforms.
-            </p>
-          </ScrollReveal>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <ScrollReveal>
+                <p className="eyebrow mb-6">Intelligence Engine</p>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-white tracking-tighter leading-[1.05]">
+                  DEXA, The Intelligence Processing Engine Behind Mentor Global
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.15}>
+                <p className="mt-8 text-lg md:text-xl text-[#8A8A93] max-w-xl leading-relaxed">
+                  DEXA powers intelligent operations across healthcare, insurance, fintech, HealthRails, Mentor OS, and white labelled client platforms.
+                </p>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal delay={0.25} direction="left">
+              <div className="relative overflow-hidden rounded-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1653549893012-b8b4fbe97630?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700"
+                  alt="AI intelligence processing"
+                  className="w-full h-auto object-cover aspect-[4/3] opacity-80"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#11111F]/50 via-transparent to-transparent" />
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -99,7 +114,7 @@ export default function Dexa() {
       </section>
 
       {/* DEXA Across Domains */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg relative overflow-hidden">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 blue-glow-subtle" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
@@ -157,8 +172,9 @@ export default function Dexa() {
       </section>
 
       {/* Governance */}
-      <section className="bg-[#11111F] py-24 md:py-32 grid-bg">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.03] blur-[120px]" />
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Governance</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">

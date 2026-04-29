@@ -57,19 +57,13 @@
   color: #11111F;
 }
 
-/* Thin grid background */
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
+/* Subtle depth backgrounds (replacing grid) */
+.depth-dark {
+  background: linear-gradient(180deg, #11111F 0%, #0a0a15 50%, #11111F 100%);
 }
 
-.grid-bg-light {
-  background-image:
-    linear-gradient(rgba(17, 17, 31, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 17, 31, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+.depth-light {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFE 50%, #FFFFFF 100%);
 }
 
 /* Counter number styling */

@@ -15,75 +15,82 @@ const pillarIcons = {
 function Hero() {
   return (
     <section data-testid="home-hero" className="relative min-h-screen flex items-center bg-[#11111F] overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1709809994088-a1f134fe3da9?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920"
-          alt=""
-          className="w-full h-full object-cover opacity-[0.12]"
-          loading="lazy"
-        />
-      </div>
-      {/* Grid background */}
-      <div className="absolute inset-0 grid-bg" />
-      {/* Blue glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0048FF]/[0.06] blur-[120px]" />
+      {/* Subtle ambient glow */}
+      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-[#0048FF]/[0.05] blur-[150px]" />
+      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-[#0048FF]/[0.03] blur-[120px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24 md:pt-40 md:pb-32">
-        <ScrollReveal>
-          <p className="eyebrow mb-6">Global Health Fintech Infrastructure</p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white tracking-tighter leading-[1.05] max-w-5xl">
-            The Infrastructure Behind the Future of Health Fintech
-          </h1>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <p className="mt-8 text-lg md:text-xl text-[#8A8A93] max-w-2xl leading-relaxed">
-            Mentor Global builds the systems that power healthcare, insurance, fintech, AI, and company operating infrastructure across markets.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.3}>
-          <p className="mt-4 text-sm text-[#8A8A93]/70 max-w-2xl">
-            We do not build isolated products. We build the infrastructure that lets ecosystems launch, operate, automate, insure, finance, and scale.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.4}>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/solutions"
-              data-testid="hero-explore-solutions"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors"
-            >
-              Explore Solutions <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/contact"
-              data-testid="hero-partner-cta"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
-            >
-              Partner With Mentor Global <ArrowUpRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </ScrollReveal>
-
-        {/* Infrastructure rails visual */}
-        <ScrollReveal delay={0.5}>
-          <div className="mt-20 grid grid-cols-5 border border-white/10">
-            {["Healthcare", "Insurance", "Fintech", "AI", "Mentor OS"].map((label, i) => (
-              <div key={label} className={`p-4 md:p-6 text-center ${i < 4 ? "border-r border-white/10" : ""}`}>
-                <div className="w-2 h-2 bg-[#0048FF] mx-auto mb-3" />
-                <p className="text-xs md:text-sm font-medium text-white/60">{label}</p>
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24 md:pt-40 md:pb-32 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left - Text */}
+          <div>
+            <ScrollReveal>
+              <p className="eyebrow mb-6">Global Health Fintech Infrastructure</p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-white tracking-tighter leading-[1.05]">
+                The Infrastructure Behind the Future of Health Fintech
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="mt-8 text-lg md:text-xl text-[#8A8A93] max-w-xl leading-relaxed">
+                Mentor Global builds the systems that power healthcare, insurance, fintech, AI, and company operating infrastructure across markets.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <p className="mt-4 text-sm text-[#8A8A93]/70 max-w-xl">
+                We do not build isolated products. We build the infrastructure that lets ecosystems launch, operate, automate, insure, finance, and scale.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.4}>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/solutions"
+                  data-testid="hero-explore-solutions"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors"
+                >
+                  Explore Solutions <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/contact"
+                  data-testid="hero-partner-cta"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
+                >
+                  Partner With Mentor Global <ArrowUpRight className="w-5 h-5" />
+                </Link>
               </div>
-            ))}
+            </ScrollReveal>
           </div>
-          <div className="flex items-center justify-center gap-6 mt-4">
-            <span className="text-xs text-[#8A8A93]">Powered by</span>
-            <span className="text-xs font-semibold text-[#0048FF]">Mentor Innovation</span>
-            <span className="text-xs text-[#8A8A93]">&</span>
-            <span className="text-xs font-semibold text-[#0048FF]">DEXA</span>
-          </div>
-        </ScrollReveal>
+
+          {/* Right - Visual */}
+          <ScrollReveal delay={0.3} direction="left">
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1709809994088-a1f134fe3da9?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800"
+                  alt="Digital infrastructure network"
+                  className="w-full h-auto object-cover aspect-[4/3]"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#11111F]/60 via-transparent to-transparent" />
+              </div>
+              {/* Infrastructure rails overlay */}
+              <div className="mt-6 grid grid-cols-5 border border-white/10">
+                {["Healthcare", "Insurance", "Fintech", "AI", "Mentor OS"].map((label, i) => (
+                  <div key={label} className={`p-3 md:p-4 text-center ${i < 4 ? "border-r border-white/10" : ""}`}>
+                    <div className="w-1.5 h-1.5 bg-[#0048FF] mx-auto mb-2" />
+                    <p className="text-[10px] md:text-xs font-medium text-white/60">{label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-center gap-4 mt-3">
+                <span className="text-[10px] text-[#8A8A93]">Powered by</span>
+                <span className="text-[10px] font-semibold text-[#0048FF]">Mentor Innovation</span>
+                <span className="text-[10px] text-[#8A8A93]">&</span>
+                <span className="text-[10px] font-semibold text-[#0048FF]">DEXA</span>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   );
@@ -98,14 +105,28 @@ function Positioning() {
   ];
 
   return (
-    <section data-testid="home-positioning" className="bg-white py-24 md:py-32 grid-bg-light">
+    <section data-testid="home-positioning" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <ScrollReveal>
-          <p className="eyebrow mb-4">Structure</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-3xl">
-            A Global Holding Company for Health Fintech Infrastructure
-          </h2>
-        </ScrollReveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <ScrollReveal>
+              <p className="eyebrow mb-4">Structure</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+                A Global Holding Company for Health Fintech Infrastructure
+              </h2>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal delay={0.15}>
+            <div className="overflow-hidden rounded-sm">
+              <img
+                src="https://images.unsplash.com/photo-1598270174567-c38899618e28?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=700"
+                alt="Enterprise infrastructure"
+                className="w-full h-auto object-cover aspect-[16/10]"
+                loading="lazy"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-[#11111F]/10">
           {layers.map((layer, i) => (
             <ScrollReveal key={layer.label} delay={i * 0.1}>
@@ -132,8 +153,9 @@ function Problem() {
   ];
 
   return (
-    <section data-testid="home-problem" className="bg-[#11111F] py-24 md:py-32 grid-bg">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section data-testid="home-problem" className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#0048FF]/[0.03] blur-[120px]" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl">
@@ -197,7 +219,7 @@ function DexaSection() {
   return (
     <section data-testid="home-dexa" className="relative bg-[#11111F] py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0 blue-glow" />
-      <div className="absolute inset-0 grid-bg" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#0048FF]/[0.04] blur-[140px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Intelligence Engine</p>
@@ -256,7 +278,7 @@ function InnovationSection() {
   ];
 
   return (
-    <section data-testid="home-innovation" className="bg-white py-24 md:py-32 grid-bg-light">
+    <section data-testid="home-innovation" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -270,6 +292,16 @@ function InnovationSection() {
               <p className="mt-6 text-base text-[#666666] leading-relaxed">
                 Mentor Innovation is the technology engine behind Mentor Global, building every platform, product, and system that powers the group and its white-labelled deployments.
               </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div className="mt-8 overflow-hidden rounded-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1566735069541-33b700a9eba3?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=600"
+                  alt="Technology infrastructure"
+                  className="w-full h-auto object-cover aspect-[16/9]"
+                  loading="lazy"
+                />
+              </div>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={0.2}>
@@ -296,8 +328,8 @@ function InnovationSection() {
 function ScaleSection() {
   return (
     <section data-testid="home-scale" className="relative bg-[#11111F] py-24 md:py-36 overflow-hidden">
-      <div className="absolute inset-0 grid-bg" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0048FF]/[0.04] blur-[150px] rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0048FF]/[0.03] blur-[120px] rounded-full" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Scale</p>
@@ -393,8 +425,9 @@ function GlobalPresenceSection() {
 
 function FinalCTA() {
   return (
-    <section data-testid="home-final-cta" className="bg-[#11111F] py-24 md:py-32 grid-bg">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
+    <section data-testid="home-final-cta" className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mx-auto">
             Build on infrastructure designed for global health fintech systems.
