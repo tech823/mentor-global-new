@@ -57,7 +57,7 @@ export default function About() {
               What Drives Us
             </h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10">
             {aboutContent.values.map((v, i) => (
               <ScrollReveal key={v.title} delay={i * 0.08}>
                 <div className="bg-[#11111F] p-8 md:p-10 card-hover-dark h-full">

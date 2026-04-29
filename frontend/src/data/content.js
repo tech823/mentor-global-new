@@ -5,7 +5,7 @@ export const solutionPillars = [
     shortDesc: "Infrastructure for access, claims, benefits, and care delivery across corporate health, insurance, and provider ecosystems.",
     heroHeadline: "Healthcare Infrastructure for Access, Claims, Benefits, and Care Delivery",
     heroSubtext: "Build and scale digital healthcare ecosystems with modular infrastructure for TPA operations, claims management, provider networks, corporate health portals, employee apps, wallet-based health pools, and wellness programs.",
-    whoServes: ["TPAs", "Insurers", "Corporates", "Healthcare Groups", "Government Programs", "Brokers"],
+    whoServes: ["Employers", "TPAs", "Healthcare providers", "Insurers", "Governments", "Health platforms", "Corporate benefit managers"],
     modules: [
       "TPA infrastructure",
       "Claims management",
@@ -20,7 +20,7 @@ export const solutionPillars = [
       "API integrations",
       "Compliance controls"
     ],
-    dexaRole: "DEXA powers intelligent claims routing, provider recommendations, benefit optimization, and real-time health pool analytics across healthcare platforms.",
+    dexaRole: "DEXA helps users understand benefits, route claims, navigate providers, check wallet usage, identify missing documents, and support internal teams.",
     visuals: ["Corporate portal dashboard", "Employee app", "Claim status card", "Provider finder map", "Benefits usage dashboard", "Healthcare wallet card", "Claims workflow diagram"]
   },
   {
@@ -29,7 +29,7 @@ export const solutionPillars = [
     shortDesc: "Infrastructure for carriers, brokers, MGAs, TPAs, and embedded insurance partners across all insurance lines.",
     heroHeadline: "Insurance Infrastructure for Carriers, Brokers, MGAs, TPAs, and Embedded Partners",
     heroSubtext: "Launch digital insurance products, broker platforms, customer service centers, underwriting workflows, claims systems, and embedded insurance rails across health, travel, life, general, business, and specialty insurance.",
-    whoServes: ["Insurance Carriers", "Brokers", "MGAs", "TPAs", "Embedded Partners", "Reinsurers"],
+    whoServes: ["Insurance Carriers", "Insurance Brokers", "MGAs", "TPAs", "Agents", "Bancassurance Partners", "Embedded Insurance Platforms", "Digital Marketplaces", "Corporate Distributors", "White Labelled Insurance Businesses"],
     insuranceLines: ["Health", "Travel", "Life", "General", "Business", "Personal accident", "Property", "Motor", "Cyber", "Specialty", "Takaful", "Conventional insurance"],
     modules: [
       "Product configuration",
@@ -71,7 +71,7 @@ export const solutionPillars = [
       "Document validation",
       "Coverage gap analysis"
     ],
-    dexaRole: "DEXA enables intelligent quote intake, broker guidance, underwriting summaries, claims routing, renewal prompts, and coverage gap analysis across insurance operations.",
+    dexaRole: "DEXA powers insurance infrastructure by assisting product setup, quote intake, broker workflows, underwriting summaries, claims support, policy servicing, renewal prompts, document checks, and customer guidance.",
     visuals: ["Insurance quote builder", "Broker dashboard", "Service center cards", "Claims workflow", "Policy lifecycle timeline", "Carrier comparison interface", "DEXA insurance advisor panel", "Embedded insurance API diagram"]
   },
   {
@@ -80,7 +80,7 @@ export const solutionPillars = [
     shortDesc: "Infrastructure for wallets, payments, credit, settlement, and embedded finance across health and enterprise ecosystems.",
     heroHeadline: "Fintech Infrastructure for Wallets, Payments, Credit, Settlement, and Embedded Finance",
     heroSubtext: "Build and scale financial infrastructure with digital wallets, payment rails, ledger engines, settlement systems, health credit workflows, and embedded finance APIs.",
-    whoServes: ["Fintechs", "Healthcare Platforms", "Insurance Companies", "Corporates", "Banks", "Lending Institutions"],
+    whoServes: ["Fintech companies", "Banks", "NBFCs", "EMI partners", "Employers", "Healthcare providers", "Insurance platforms", "Embedded finance partners"],
     modules: [
       "Digital wallet",
       "Payment rails",
@@ -98,7 +98,7 @@ export const solutionPillars = [
       "Financial reporting",
       "Exposure controls"
     ],
-    dexaRole: "DEXA powers intelligent transaction monitoring, credit scoring, settlement optimization, and financial risk analysis across fintech platforms.",
+    dexaRole: "DEXA supports wallet eligibility, payment issues, credit workflows, financial exceptions, reconciliation summaries, settlement alerts, and operational support.",
     visuals: ["Wallet app screen", "Transaction dashboard", "Ledger interface", "Settlement timeline", "Reconciliation exceptions", "Credit eligibility workflow", "Provider receivable dashboard", "API rail diagram"]
   },
   {
@@ -168,7 +168,7 @@ export const solutionPillars = [
       headline: "Turn Personal Ambition Into Measurable Growth",
       flow: ["Goal", "Financial output required", "Margin target", "Sales target", "Daily activity plan", "AI coaching", "Reward"]
     },
-    dexaRole: "DEXA powers intelligent task prioritization, work intelligence analytics, AI-driven coaching, and leadership insights across Mentor OS.",
+    dexaRole: "DEXA powers the leadership window, employee guidance, productivity insights, work intelligence, goal breakdown, training support, and operational alerts.",
     visuals: ["Company command center dashboard", "CRM pipeline", "PRM provider onboarding board", "Task management view", "Team app mockup", "Work intelligence productivity screen", "Growth OS goal dashboard", "Finance ERP dashboard", "CEO leadership AI window"]
   }
 ];
@@ -279,14 +279,16 @@ export const globalFootprint = "Technology clients across Asia, Middle East, Afr
 
 export const aboutContent = {
   whoWeAre: "Mentor Global is a health fintech infrastructure holding company building the systems that power healthcare, insurance, fintech, AI, and company operating infrastructure. We do not build isolated products. We build the infrastructure that lets ecosystems launch, operate, automate, insure, finance, and scale.",
-  vision: "To build the global infrastructure layer that connects healthcare, insurance, fintech, AI, and company operating systems into one intelligent, interoperable ecosystem.",
-  mission: "To improve people's lives by transforming healthcare experience through scalable, intelligent, and modular infrastructure that empowers organizations to launch, automate, and grow.",
+  vision: "To build the global infrastructure layer that powers how healthcare, insurance, fintech, and operating systems work across markets.",
+  mission: "Improve people's lives by transforming healthcare and financial access through connected infrastructure.",
   values: [
-    { title: "Infrastructure First", desc: "We build systems, not features. Every solution is designed to scale across markets and verticals." },
-    { title: "Intelligence Driven", desc: "DEXA powers every platform with intelligence that understands, reasons, and acts." },
-    { title: "Global by Design", desc: "Every system is built for multi-market, multi-tenant, and multi-language deployment." },
-    { title: "Operator Mindset", desc: "Built by operators who understand the complexity of healthcare, insurance, and finance." },
-    { title: "Simplify Everything", desc: "Complexity is the enemy. We simplify systems so organizations can focus on what matters." }
+    { title: "Innovation", desc: "We push boundaries in healthcare, insurance, fintech, AI, and operating systems to build infrastructure that transforms industries." },
+    { title: "Scale", desc: "Every system is designed for multi-market, multi-tenant, and global deployment from day one." },
+    { title: "Integrity", desc: "We build with transparency, governance, and trust across every platform and partnership." },
+    { title: "Efficiency", desc: "We simplify complex systems so organizations can focus on what matters most." },
+    { title: "Empowerment", desc: "We give organizations the infrastructure to launch, operate, and grow on their own terms." },
+    { title: "Execution", desc: "Built by operators who understand the complexity of healthcare, insurance, and finance." },
+    { title: "Intelligence", desc: "DEXA powers every platform with intelligence that understands, reasons, and acts." }
   ],
   beliefs: [
     "Healthcare is essential.",

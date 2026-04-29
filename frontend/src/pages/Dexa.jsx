@@ -3,11 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
 
 const dexaDomains = [
-  { name: "Healthcare Infrastructure", items: ["Claims routing and triage", "Provider matching and recommendations", "Benefit optimization", "Health pool analytics"] },
-  { name: "Insurance Infrastructure", items: ["Quote intake and processing", "Broker guidance", "Underwriting summary", "Claims guidance", "Renewal prompts", "Coverage gap analysis"] },
-  { name: "Fintech Infrastructure", items: ["Transaction monitoring", "Credit scoring", "Settlement optimization", "Financial risk analysis"] },
-  { name: "HealthRails", items: ["Platform intelligence for white-labelled deployments", "Cross-tenant analytics", "Performance monitoring"] },
-  { name: "Mentor OS", items: ["Task prioritization", "Work intelligence", "AI coaching", "Leadership insights", "Growth recommendations"] }
+  { name: "Healthcare Infrastructure", items: ["Claims routing and triage", "Provider matching and recommendations", "Benefit optimization", "Health pool analytics", "Missing document identification", "Internal team support"] },
+  { name: "Insurance Infrastructure", items: ["Quote intake and processing", "Broker guidance", "Underwriting summary", "Claims guidance", "Renewal prompts", "Coverage gap analysis", "Document validation", "Service center automation"] },
+  { name: "Fintech Infrastructure", items: ["Wallet guidance", "Payment support", "Credit eligibility", "Settlement status", "Reconciliation exceptions", "Finance insights"] },
+  { name: "HealthRails", items: ["Studio workflow control", "Compose orchestration", "Runtime supervision", "AI agent assignment", "Testing and deployment", "KYC and design operations"] },
+  { name: "Mentor OS", items: ["Work Intelligence", "Daily employee guidance", "Leadership AI Window", "Productivity insights", "Task validation", "Project breakdown", "Training recommendations", "Growth OS coaching", "Finance summaries", "Operational exceptions"] }
 ];
 
 const whatDexaIsNot = [
@@ -149,6 +149,35 @@ export default function Dexa() {
       {/* Agent Pods */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
+          {/* HealthRails Section */}
+          <ScrollReveal>
+            <p className="eyebrow mb-4">DEXA Across HealthRails</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#11111F] tracking-tight mb-4">
+              DEXA Powers HealthRails Intelligence
+            </h2>
+            <p className="text-base text-[#666666] leading-relaxed max-w-3xl mb-12">
+              HealthRails provides the platform architecture. DEXA provides the intelligence that operates it. DEXA controls Studio, Compose, and Runtime workflows, assigns work to specialized AI agents, and supervises testing, deployment, KYC, design, and marketing operations.
+            </p>
+          </ScrollReveal>
+
+          {/* Mentor OS Section */}
+          <ScrollReveal delay={0.1}>
+            <p className="eyebrow mb-4">DEXA Across Mentor OS</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#11111F] tracking-tight mb-8">
+              DEXA Powers Mentor OS Intelligence
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[1px] bg-[#11111F]/10 mb-20">
+            {["Work Intelligence", "Daily employee guidance", "Leadership AI Window", "Productivity insights", "Task validation", "Project breakdown", "Training recommendations", "Growth OS coaching", "Finance summaries", "Operational exceptions"].map((item, i) => (
+              <ScrollReveal key={item} delay={i * 0.03}>
+                <div className="bg-white p-4 md:p-5 card-hover h-full">
+                  <p className="text-sm text-[#11111F] font-medium">{item}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Agent Pods */}
           <ScrollReveal>
             <p className="eyebrow mb-4">Agentic AI</p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">
@@ -199,7 +228,7 @@ export default function Dexa() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-3xl mx-auto">
-              Build Intelligent Platforms With DEXA
+              Partner With DEXA Infrastructure
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>

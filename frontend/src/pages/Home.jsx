@@ -98,10 +98,9 @@ function Hero() {
 
 function Positioning() {
   const layers = [
-    { label: "Holding Layer", desc: "Mentor Global provides strategy, capital, governance, and global coordination.", color: "text-white" },
-    { label: "Technology Layer", desc: "Mentor Innovation builds customized software, API-first platforms, multi-tenant SaaS, and white-labelled solutions.", color: "text-[#0048FF]" },
-    { label: "Intelligence Layer", desc: "DEXA powers intelligent operations across every platform with reasoning, coordination, and action.", color: "text-[#0048FF]" },
-    { label: "Subsidiaries", desc: "Execute in markets across Singapore, Pakistan, UAE, and the United States.", color: "text-white" }
+    { label: "Holding Layer", desc: "Defines strategy, expansion, partnerships, and capital allocation." },
+    { label: "Technology Layer", desc: "Mentor Innovation builds the shared technology backbone." },
+    { label: "Intelligence Layer", desc: "DEXA powers intelligent workflows, orchestration, monitoring, and decision support." }
   ];
 
   return (
@@ -115,6 +114,11 @@ function Positioning() {
                 A Global Holding Company for Health Fintech Infrastructure
               </h2>
             </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <p className="mt-6 text-base text-[#666666] leading-relaxed">
+                Mentor Global is a structured group of companies designed to build, deploy, and scale infrastructure across regulated markets.
+              </p>
+            </ScrollReveal>
           </div>
           <ScrollReveal delay={0.15}>
             <div className="overflow-hidden rounded-sm">
@@ -127,10 +131,10 @@ function Positioning() {
             </div>
           </ScrollReveal>
         </div>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-[#11111F]/10">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 border border-[#11111F]/10">
           {layers.map((layer, i) => (
             <ScrollReveal key={layer.label} delay={i * 0.1}>
-              <div className={`p-8 md:p-10 ${i < 3 ? "border-b md:border-b-0 md:border-r border-[#11111F]/10" : ""} card-hover h-full`}>
+              <div className={`p-8 md:p-10 ${i < 2 ? "border-b md:border-b-0 md:border-r border-[#11111F]/10" : ""} card-hover h-full`}>
                 <p className="text-xs uppercase tracking-[0.2em] font-bold text-[#0048FF] mb-4">0{i + 1}</p>
                 <h3 className="text-xl font-bold text-[#11111F] mb-3">{layer.label}</h3>
                 <p className="text-sm text-[#666666] leading-relaxed">{layer.desc}</p>
@@ -138,6 +142,11 @@ function Positioning() {
             </ScrollReveal>
           ))}
         </div>
+        <ScrollReveal delay={0.4}>
+          <p className="mt-10 text-lg md:text-xl font-bold text-[#11111F] tracking-tight text-center">
+            Multiple markets. Multiple companies. <span className="text-[#0048FF]">One infrastructure vision.</span>
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -145,11 +154,14 @@ function Positioning() {
 
 function Problem() {
   const problems = [
-    { area: "Healthcare", issue: "Fragmented provider networks, manual claims, disconnected patient records, and siloed benefit systems." },
-    { area: "Insurance", issue: "Legacy policy admin, manual underwriting, disconnected brokers, and slow claims processing." },
-    { area: "Fintech", issue: "Fragmented payments, manual reconciliation, disconnected ledgers, and limited credit access." },
-    { area: "Company Operations", issue: "Disconnected CRMs, spreadsheet-based tracking, manual HR, and siloed financial reporting." },
-    { area: "AI", issue: "Chatbot-only solutions, no real intelligence processing, no governance, and no system-wide reasoning." }
+    { area: "Healthcare", issue: "Healthcare access is fragmented" },
+    { area: "Insurance", issue: "Insurance workflows are slow and paper heavy" },
+    { area: "Fintech", issue: "Financial rails are disconnected from service delivery" },
+    { area: "Operations", issue: "Companies still run on spreadsheets and manual trackers" },
+    { area: "AI", issue: "AI is often isolated from real operations" },
+    { area: "Data", issue: "Data does not flow across systems" },
+    { area: "Payments", issue: "Claims and payments remain delayed" },
+    { area: "Leadership", issue: "Leadership visibility is weak" }
   ];
 
   return (
@@ -162,16 +174,27 @@ function Problem() {
             Large industries are still running on broken systems
           </h2>
         </ScrollReveal>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 border border-white/10">
+        <ScrollReveal delay={0.1}>
+          <p className="mt-6 text-lg text-[#8A8A93] max-w-2xl">
+            Healthcare, insurance, fintech, and business operations remain fragmented, manual, slow, and disconnected.
+          </p>
+        </ScrollReveal>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10">
           {problems.map((p, i) => (
-            <ScrollReveal key={p.area} delay={i * 0.08}>
-              <div className={`p-6 md:p-8 ${i < 4 ? "border-b lg:border-b-0 lg:border-r border-white/10" : ""} card-hover-dark h-full`}>
+            <ScrollReveal key={p.area} delay={i * 0.06}>
+              <div className="bg-[#11111F] p-6 md:p-8 card-hover-dark h-full">
                 <p className="text-[#0048FF] text-sm font-bold mb-3">{p.area}</p>
                 <p className="text-sm text-[#8A8A93] leading-relaxed">{p.issue}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
+        <ScrollReveal delay={0.5}>
+          <div className="mt-12 text-center">
+            <p className="text-base text-white/60">This is not a surface problem.</p>
+            <p className="text-lg font-bold text-white mt-1">It is an <span className="text-[#0048FF]">infrastructure</span> problem.</p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -229,17 +252,17 @@ function DexaSection() {
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <p className="mt-6 text-lg text-[#8A8A93] max-w-2xl leading-relaxed">
-            DEXA is the intelligence processing engine across healthcare, insurance, fintech, HealthRails, Mentor OS, and white labelled platforms.
+            DEXA is the intelligence processing engine across Mentor Global. It understands context, reasons across systems, coordinates workflows, monitors execution, and powers intelligent operations across healthcare, insurance, fintech, HealthRails, Mentor OS, and white labelled client platforms.
           </p>
         </ScrollReveal>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-white/10">
           {[
-            { label: "Healthcare", desc: "Claims routing, provider matching, benefit optimization" },
-            { label: "Insurance", desc: "Quote intake, underwriting guidance, renewal prompts" },
-            { label: "Fintech", desc: "Transaction monitoring, credit scoring, settlement optimization" },
-            { label: "Mentor OS", desc: "Task prioritization, work intelligence, AI coaching" },
-            { label: "HealthRails", desc: "Platform intelligence for white-labelled deployments" },
-            { label: "Governance", desc: "Human approval gates, audit trails, confidence scoring" }
+            { label: "Context", desc: "Understands user and system context" },
+            { label: "Routing", desc: "Routes workflows to the right process" },
+            { label: "Coordination", desc: "Coordinates specialized AI pods" },
+            { label: "Operations", desc: "Supports claims, policy, wallet, and operating workflows" },
+            { label: "Monitoring", desc: "Monitors execution and detects gaps" },
+            { label: "Governance", desc: "Escalates when human approval is required and creates audit ready intelligence" }
           ].map((item, i) => (
             <ScrollReveal key={item.label} delay={i * 0.08}>
               <div className="bg-[#11111F] p-8 card-hover-dark h-full">
@@ -290,10 +313,20 @@ function InnovationSection() {
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <p className="mt-6 text-base text-[#666666] leading-relaxed">
-                Mentor Innovation is the technology engine behind Mentor Global, building every platform, product, and system that powers the group and its white-labelled deployments.
+                Mentor Innovation designs and builds the apps, portals, APIs, dashboards, workflow engines, payment systems, insurance stacks, AI systems, and operating platforms behind Mentor Global.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
+              <div className="mt-8 border-l-2 border-[#0048FF] pl-6">
+                <p className="text-sm text-[#11111F] font-medium leading-relaxed">
+                  Build on Mentor infrastructure.<br />
+                  Launch as your own brand.<br />
+                  Operate with your own workflows.<br />
+                  Scale with our technology backbone.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.25}>
               <div className="mt-8 overflow-hidden rounded-sm">
                 <img
                   src="https://images.unsplash.com/photo-1566735069541-33b700a9eba3?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=600"
@@ -337,6 +370,11 @@ function ScaleSection() {
             Operating Infrastructure at Global Scale
           </h2>
         </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <p className="mt-6 text-base text-[#8A8A93] max-w-2xl">
+            These numbers represent platforms, partners, and client ecosystems running on or connected through Mentor infrastructure, including direct and indirect reach.
+          </p>
+        </ScrollReveal>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/10">
           {scaleMetrics.map((metric, i) => (
@@ -364,6 +402,12 @@ function ScaleSection() {
             {scaleDisclaimer}
           </p>
         </ScrollReveal>
+        <ScrollReveal delay={0.6}>
+          <div className="mt-12 text-center">
+            <p className="text-base text-white/60">This is not theoretical infrastructure.</p>
+            <p className="text-lg font-bold text-white mt-1">This is infrastructure running across ecosystems.</p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -375,8 +419,8 @@ function GlobalPresenceSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Global Presence</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
-            A Global Footprint
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+            Built in Singapore. Validated in Pakistan. Expanding Through UAE and the US. Serving Global Technology Clients.
           </h2>
         </ScrollReveal>
 
