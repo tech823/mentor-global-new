@@ -41,6 +41,17 @@ Build a premium, enterprise-grade, fully responsive website for Mentor Global - 
 - [x] Background imagery (Unsplash) in hero/DEXA/global sections
 - [x] Mobile responsive with hamburger menu
 
+## Visual Update (Jan 29, 2026 - Iteration 2)
+- [x] Split hero layouts (text left, visual right) on Home, Solutions, SolutionDetail, DEXA, Subsidiaries
+- [x] Removed all background grid lines from all pages
+- [x] Added subtle ambient blue glow to dark sections for depth
+- [x] Added relevant stock images to sections (healthcare, insurance, fintech, AI, infrastructure)
+- [x] Upgraded platform visuals section with interactive card design
+- [x] Solution-specific images for each solution detail page
+- [x] Updated page title and meta description for branding
+- [x] Added preconnect for image CDN (Unsplash) for performance
+- [x] Mobile responsive: heroes stack text first, image second
+
 ## Testing Results
 - 100% frontend success rate (37/40 assertions passed, 3 were network timeout flakes)
 - All 12 routes verified at desktop (1920x1080) and mobile (390x844)
