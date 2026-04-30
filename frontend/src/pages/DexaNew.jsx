@@ -13,7 +13,7 @@ function Hero() {
             <ScrollReveal><p className="eyebrow mb-6">Intelligence Processing Engine</p><h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tighter leading-[1.05]">DEXA, The Intelligence Processing Engine Behind Mentor Global</h1></ScrollReveal>
             <ScrollReveal delay={0.15}><p className="mt-8 text-lg text-[#8A8A93] max-w-xl leading-relaxed">DEXA understands context, retrieves approved knowledge, applies rules, coordinates agents, triggers workflows, requests human approval, monitors execution, and turns healthcare, insurance, fintech, AI, and company operating infrastructure into intelligent systems.</p></ScrollReveal>
             <ScrollReveal delay={0.2}><p className="mt-4 text-sm text-white/50 max-w-xl italic">DEXA is not the chat window. DEXA is the intelligence layer behind the action.</p></ScrollReveal>
-            <ScrollReveal delay={0.25}><p className="mt-3 text-sm text-[#8A8A93]/70 max-w-xl">Mentor Global builds infrastructure. Mentor Innovation builds the technology. DEXA makes the infrastructure intelligent.</p></ScrollReveal>
+            <ScrollReveal delay={0.25}><p className="mt-3 text-sm text-[#8A8A93] max-w-xl">Mentor Global builds infrastructure. Mentor Innovation builds the technology. DEXA makes the infrastructure intelligent.</p></ScrollReveal>
             <ScrollReveal delay={0.35}><div className="mt-10 flex flex-col sm:flex-row gap-4"><Link to="/contact" data-testid="dexa-hero-cta" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors">Explore DEXA <ArrowRight className="w-5 h-5" /></Link><a href="#dexa-video" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">Watch DEXA in Action</a></div></ScrollReveal>
           </div>
           <ScrollReveal delay={0.2} direction="left">
@@ -256,7 +256,7 @@ function OutcomesSection() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#11111F]/10">
           {dexaOutcomes.map((o, i) => (<ScrollReveal key={o} delay={i * 0.02}><div className="bg-white p-5 card-hover h-full"><div className="w-5 h-5 border border-[#0048FF]/30 flex items-center justify-center mb-2"><div className="w-1.5 h-1.5 bg-[#0048FF]" /></div><p className="text-sm text-[#11111F] font-medium">{o}</p></div></ScrollReveal>))}
         </div>
-        <ScrollReveal delay={0.3}><p className="mt-8 text-xs text-[#666666]/60 max-w-3xl">Designed to improve guidance, support faster workflow routing, reduce repetitive coordination, strengthen governance, and support human controlled automation. These do not represent unsupported claims.</p></ScrollReveal>
+        <ScrollReveal delay={0.3}><p className="mt-8 text-xs text-[#666666] max-w-3xl">Designed to improve guidance, support faster workflow routing, reduce repetitive coordination, strengthen governance, and support human controlled automation. These do not represent unsupported claims.</p></ScrollReveal>
       </div>
     </section>
   );
