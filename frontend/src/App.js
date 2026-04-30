@@ -13,7 +13,7 @@ import InsuranceInfrastructure from "@/pages/solutions/InsuranceInfrastructure";
 import FintechInfrastructure from "@/pages/solutions/FintechInfrastructure";
 import AIInfrastructure from "@/pages/solutions/AIInfrastructure";
 import CompanyOperatingInfrastructure from "@/pages/solutions/CompanyOperatingInfrastructure";
-import Dexa from "@/pages/Dexa";
+import Dexa from "@/pages/DexaNew";
 import Subsidiaries from "@/pages/Subsidiaries";
 import About from "@/pages/About";
 import Team from "@/pages/Team";
