@@ -14,7 +14,7 @@ import FintechInfrastructure from "@/pages/solutions/FintechInfrastructure";
 import AIInfrastructure from "@/pages/solutions/AIInfrastructure";
 import CompanyOperatingInfrastructure from "@/pages/solutions/CompanyOperatingInfrastructure";
 import Dexa from "@/pages/DexaNew";
-import Subsidiaries from "@/pages/Subsidiaries";
+import Subsidiaries from "@/pages/SubsidiariesNew";
 import About from "@/pages/About";
 import Team from "@/pages/Team";
 import Contact from "@/pages/Contact";
