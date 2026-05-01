@@ -32,7 +32,15 @@ Build a premium, enterprise-grade, fully responsive website for Mentor Global - 
 - [x] DEXA page with what-is/is-not, domains, agent pods, governance
 - [x] Subsidiaries page with 4 country sections
 - [x] About page with values, beliefs
-- [x] Team page with 6 leadership cards (expandable)
+- [x] Team page v1: 6 leadership cards (expandable) — SUPERSEDED Feb 2026
+- [x] **Leadership Architects page v2 (Feb 2026)** — 15 sections, full BRD compliance:
+      Hero with architecture composition visual, Founder quote, 3 Philosophy cards,
+      Architecture Map (8 architects around Mentor Global hub), Founder Feature (Dr. Ali),
+      Board Leadership (3), Executive Leadership (5 incl. DEXA), DEXA Virtual Intelligence
+      Officer section with abstract core visual + governance, 6 expandable leader profile
+      cards (Navroz, Rafique, Jawwad, Khubaib, Sarmad, Ovais), Operating Model (9 stages),
+      8×8 Infrastructure Ownership Matrix, 8 Builder Credibility cards, DEXA Governance
+      Note disclaimer, 8 Future Advisor placeholders, Final CTA. Tested 100% (iteration_11).
 - [x] Contact form with validation and success message
 - [x] Fixed navbar with Solutions dropdown
 - [x] Global footer with navigation, solutions, presence
