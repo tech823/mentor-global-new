@@ -31,7 +31,17 @@ Build a premium, enterprise-grade, fully responsive website for Mentor Global - 
 - [x] 5 solution detail pages with dynamic content (modules, insurance lines, service center, AI layers, agent pods, Growth OS)
 - [x] DEXA page with what-is/is-not, domains, agent pods, governance
 - [x] Subsidiaries page with 4 country sections
-- [x] About page with values, beliefs
+- [x] About page v1 — SUPERSEDED Feb 2026
+- [x] **About page v2 (Feb 2026)** — 16 sections, full BRD compliance:
+      Hero with infrastructure composition visual, Founder Thesis (founder quote 1),
+      Who We Are (3-layer model), What We Build (5 pillar cards), Why Infrastructure
+      Matters (product-vs-infrastructure comparison), Operating Model (4 layers),
+      Global Presence (5 regions), UAE & US Chapters (expansion timeline), Mentor
+      Innovation + DEXA Backbone diagram, Dual Philosophy (Value for Clients / Growth
+      for Employees), Belief Manifesto, 7 Values cards, Built by Operators section,
+      6 Differentiators, Future We Are Building (founder quote 2), Final CTA.
+      Tested 100% (iteration_12) — founder-quote uniqueness and anti-"planned"
+      language rules verified.
 - [x] Team page v1: 6 leadership cards (expandable) — SUPERSEDED Feb 2026
 - [x] **Leadership Architects page v2 (Feb 2026)** — 15 sections, full BRD compliance:
       Hero with architecture composition visual, Founder quote, 3 Philosophy cards,
