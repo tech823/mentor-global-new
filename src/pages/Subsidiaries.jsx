@@ -54,7 +54,7 @@ export default function Subsidiaries() {
                 <p className="eyebrow mb-6">Mentor Global Provides</p>
                 <div className="space-y-3">
                   {["Strategy and capital allocation", "Global governance and compliance", "Technology architecture via Mentor Innovation", "Intelligence via DEXA", "Market entry and partnership coordination"].map((item) => (
-                    <p key={item} className="text-sm text-[#8A8A93] flex items-start gap-3">
+                    <p key={item} className="text-base text-[#8A8A93] flex items-start gap-3">
                       <span className="text-[#0048FF] mt-0.5">&#8212;</span> {item}
                     </p>
                   ))}
@@ -66,7 +66,7 @@ export default function Subsidiaries() {
                 <p className="eyebrow mb-6">Subsidiaries Provide</p>
                 <div className="space-y-3">
                   {["Local market execution", "Regulatory compliance", "Customer relationships", "Operational delivery", "Market-specific adaptation"].map((item) => (
-                    <p key={item} className="text-sm text-[#8A8A93] flex items-start gap-3">
+                    <p key={item} className="text-base text-[#8A8A93] flex items-start gap-3">
                       <span className="text-[#0048FF] mt-0.5">&#8212;</span> {item}
                     </p>
                   ))}
@@ -111,7 +111,7 @@ export default function Subsidiaries() {
                     <h3 className={`text-xl font-bold mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}>
                       {company.name}
                     </h3>
-                    <p className={`text-sm leading-relaxed ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}>
+                    <p className={`text-base leading-relaxed ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}>
                       {company.desc}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export default function Subsidiaries() {
               {["Asia", "Middle East", "Africa", "United States"].map((region) => (
                 <div key={region} className="bg-[#11111F] p-6 md:p-8">
                   <div className="w-3 h-3 bg-[#0048FF] mx-auto mb-3" />
-                  <p className="text-sm font-medium text-white">{region}</p>
+                  <p className="text-base font-medium text-white">{region}</p>
                 </div>
               ))}
             </div>

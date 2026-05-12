@@ -51,8 +51,8 @@ const InfrastructureStack = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0048FF]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <div className="relative flex justify-between items-start">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
-                  Layer 01
+                <p className="text-base uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
+                  Layer {String(1).padStart(2, "0")}
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight">
                   Mentor Global
@@ -61,7 +61,7 @@ const InfrastructureStack = () => {
               <ShieldCheck className="w-8 h-8 text-[#0048FF]" />
             </div>
             <div className="relative">
-              <p className="text-[10px] text-white/50 uppercase tracking-[0.2em] font-bold mb-1">
+              <p className="text-sm text-white/50 uppercase tracking-[0.2em] font-bold mb-1">
                 Portfolio Strategy
               </p>
               <div className="w-12 h-1 bg-[#0048FF]/50" />
@@ -90,8 +90,8 @@ const InfrastructureStack = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0048FF]/30 to-transparent opacity-40" />
             <div className="relative flex justify-between items-start">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
-                  Layer 02
+                <p className="text-base uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
+                  Layer {String(2).padStart(2, "0")}
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight">
                   Innovation + DEXA
@@ -100,10 +100,10 @@ const InfrastructureStack = () => {
               <Cpu className="w-8 h-8 text-[#0048FF] animate-pulse" />
             </div>
             <div className="relative flex flex-col sm:flex-row gap-2 sm:gap-4">
-              <span className="text-[10px] px-3 py-1.5 bg-white/10 border border-white/10 text-white font-bold uppercase tracking-wider">
+              <span className="text-base px-3 py-1.5 bg-white/10 border border-white/10 text-white font-bold uppercase tracking-wider">
                 Infrastructure Engine
               </span>
-              <span className="text-[10px] px-3 py-1.5 bg-[#0048FF] text-white font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(0,72,255,0.5)]">
+              <span className="text-base px-3 py-1.5 bg-[#0048FF] text-white font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(0,72,255,0.5)]">
                 AI Intelligence
               </span>
             </div>
@@ -138,8 +138,8 @@ const InfrastructureStack = () => {
             />
             <div className="relative flex justify-between items-start">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
-                  Layer 03
+                <p className="text-base uppercase tracking-[0.4em] font-bold text-[#0048FF] mb-2">
+                  Layer {String(3).padStart(2, "0")}
                 </p>
                 <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white tracking-tight">
                   Market Execution
@@ -150,7 +150,7 @@ const InfrastructureStack = () => {
             <div className="relative grid grid-cols-2 gap-3 sm:flex sm:gap-6 opacity-80">
               {["SINGAPORE", "PAKISTAN", "UAE", "USA"].map((code) => (
                 <div key={code} className="flex flex-col gap-1">
-                  <span className="text-[10px] font-bold text-white/80 tracking-[0.2em]">
+                  <span className="text-sm font-bold text-white/80 tracking-[0.2em]">
                     {code}
                   </span>
                   <div className="h-0.5 w-full bg-white/10 overflow-hidden">
@@ -202,11 +202,11 @@ function Hero() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0048FF]/10 border border-[#0048FF]/20 mb-8">
                 <Layers className="w-3.5 h-3.5 text-[#0048FF]" />
-                <span className="text-[11px] uppercase tracking-[0.25em] font-bold text-[#0048FF]">
+                <span className="text-sm uppercase tracking-[0.25em] font-bold text-[#0048FF]">
                   Portfolio Architecture
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold text-white tracking-tighter leading-[0.95] mb-8">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[0.95] mb-8">
                 A Global Portfolio of Health Fintech Infrastructure
               </h1>
             </ScrollReveal>
@@ -219,12 +219,12 @@ function Hero() {
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div className="space-y-4 max-w-xl mb-12">
-                <p className="text-sm text-[#8A8A93] leading-relaxed">
+                <p className="text-base text-[#8A8A93] leading-relaxed">
                   <span className="text-[#0048FF] font-bold mr-2">//</span>
                   Mentor Global is the holding layer. Subsidiaries execute
                   across regions and verticals.
                 </p>
-                <p className="text-sm text-[#8A8A93] leading-relaxed">
+                <p className="text-base text-[#8A8A93] leading-relaxed">
                   <span className="text-[#0048FF] font-bold mr-2">//</span>
                   Mentor Innovation builds the technology. DEXA powers
                   intelligence across every layer.
@@ -264,7 +264,7 @@ function GroupArchitecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Group Architecture</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             One Group. Multiple Engines of Execution.
           </h2>
         </ScrollReveal>
@@ -278,7 +278,7 @@ function GroupArchitecture() {
               <div className="border border-[#11111F]/10 p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                   <div className="md:w-48 shrink-0">
-                    <span className="text-[#0048FF] text-xs font-bold">
+                    <span className="text-[#0048FF] text-base font-bold">
                       0{idx + 1}
                     </span>
                     <h3 className="text-lg font-bold text-[#11111F] mt-1">
@@ -289,7 +289,7 @@ function GroupArchitecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-xs text-[#666666] px-3 py-1.5 border border-[#11111F]/10"
+                        className="text-base text-[#666666] px-3 py-1.5 border border-[#11111F]/10"
                       >
                         {item}
                       </span>
@@ -388,7 +388,7 @@ function RegionSection({ eyebrow, headline, body, companies }) {
           {headline}
         </h3>
         {body && (
-          <p className="text-sm text-[#666666] max-w-2xl mb-8">{body}</p>
+          <p className="text-base text-[#666666] max-w-2xl mb-8">{body}</p>
         )}
       </ScrollReveal>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
@@ -398,20 +398,20 @@ function RegionSection({ eyebrow, headline, body, companies }) {
               <h4 className="text-lg font-bold text-[#11111F] mb-1">
                 {company.companyName}
               </h4>
-              <p className="text-xs text-[#0048FF] font-bold mb-3">
+              <p className="text-base text-[#0048FF] font-bold mb-3">
                 {company.role}
               </p>
               <div className="mb-4 flex-1">
-                <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
+                <p className="text-base uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
                   What it does
                 </p>
                 <div className="space-y-1">
                   {company.capabilities.map((c) => (
                     <p
                       key={c}
-                      className="text-[11px] text-[#666666] flex items-start gap-2"
+                      className="text-base text-[#666666] flex items-start gap-2"
                     >
-                      <span className="text-[#0048FF] mt-0.5 text-[8px]">
+                      <span className="text-[#0048FF] mt-0.5 text-xs">
                         &#9632;
                       </span>
                       {c}
@@ -420,14 +420,14 @@ function RegionSection({ eyebrow, headline, body, companies }) {
                 </div>
               </div>
               <div className="mb-4">
-                <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
+                <p className="text-base uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
                   Infrastructure
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {company.infrastructure.map((inf) => (
                     <span
                       key={inf}
-                      className="text-[9px] px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
+                      className="text-base px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
                     >
                       {inf}
                     </span>
@@ -435,12 +435,12 @@ function RegionSection({ eyebrow, headline, body, companies }) {
                 </div>
               </div>
               <div className="mb-4">
-                <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
+                <p className="text-base uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
                   Serves
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {company.serves.map((s) => (
-                    <span key={s} className="text-[9px] text-[#666666]">
+                    <span key={s} className="text-base text-[#666666]">
                       {s}
                       {company.serves.indexOf(s) < company.serves.length - 1
                         ? ","
@@ -450,14 +450,14 @@ function RegionSection({ eyebrow, headline, body, companies }) {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-[#11111F]/10">
-                <span className="text-[10px] px-3 py-1.5 border border-[#11111F]/15 text-[#11111F]/60 cursor-default">
+                <span className="text-base px-3 py-1.5 border border-[#11111F]/15 text-[#11111F]/60 cursor-default">
                   {company.websiteStatus === "coming_soon"
                     ? "Website Coming Soon"
                     : "Visit Website"}
                 </span>
                 <Link
                   to="/contact"
-                  className="text-[10px] px-3 py-1.5 bg-[#0048FF] text-white font-medium"
+                  className="text-base px-3 py-1.5 bg-[#0048FF] text-white font-medium"
                 >
                   Request Introduction
                 </Link>
@@ -519,7 +519,7 @@ function GlobalClients() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Client Ecosystem</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Global Technology Client Ecosystem
           </h2>
           <p className="mt-4 text-base text-[#8A8A93] max-w-2xl">
@@ -527,7 +527,7 @@ function GlobalClients() {
             power clients across Asia, the Middle East, Africa, and the United
             States.
           </p>
-          <p className="mt-3 text-xs text-[#8A8A93]/60">
+          <p className="mt-3 text-base text-[#8A8A93]/60">
             Global technology clients are not subsidiaries. They are clients,
             partners, and deployment markets served through Mentor Innovation,
             DEXA, white labelled platforms, APIs, and custom infrastructure
@@ -542,7 +542,7 @@ function GlobalClients() {
                 <h3 className="text-base font-bold text-white mb-3">
                   {r.region}
                 </h3>
-                <div className="space-y-2 text-[11px] text-[#8A8A93]">
+                <div className="space-y-2 text-base text-[#8A8A93]">
                   <p>
                     <span className="text-[#0048FF] font-bold">Clients:</span>{" "}
                     {r.clients}
@@ -560,7 +560,7 @@ function GlobalClients() {
                 </div>
                 <Link
                   to="/contact"
-                  className="mt-4 inline-block text-[10px] px-3 py-1.5 bg-[#0048FF]/10 border border-[#0048FF]/30 text-[#0048FF] font-medium"
+                  className="mt-4 inline-block text-base px-3 py-1.5 bg-[#0048FF]/10 border border-[#0048FF]/30 text-[#0048FF] font-medium"
                 >
                   Request Introduction
                 </Link>
@@ -579,7 +579,7 @@ function SharedBackbone() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Shared Infrastructure</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             Different companies. One infrastructure backbone.
           </h2>
         </ScrollReveal>
@@ -587,7 +587,7 @@ function SharedBackbone() {
           {sharedBackboneComponents.map((c, i) => (
             <ScrollReveal key={c} delay={i * 0.02}>
               <div className="bg-white p-4 card-hover h-full">
-                <p className="text-[11px] text-[#11111F] font-medium">{c}</p>
+                <p className="text-base text-[#11111F] font-medium">{c}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -596,24 +596,24 @@ function SharedBackbone() {
           <div className="mt-12 border border-[#11111F]/10 p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="p-4 bg-[#11111F] text-white">
-                <p className="text-xs font-bold">Mentor Global</p>
-                <p className="text-[10px] text-[#8A8A93] mt-1">
+                <p className="text-base font-bold">Mentor Global</p>
+                <p className="text-base text-[#8A8A93] mt-1">
                   Strategy + Governance
                 </p>
               </div>
               <div className="p-4 bg-[#0048FF]/10 border border-[#0048FF]/20">
-                <p className="text-xs font-bold text-[#0048FF]">
+                <p className="text-base font-bold text-[#0048FF]">
                   Mentor Innovation + DEXA
                 </p>
-                <p className="text-[10px] text-[#666666] mt-1">
+                <p className="text-base text-[#666666] mt-1">
                   Technology + Intelligence
                 </p>
               </div>
               <div className="p-4 bg-[#11111F]/[0.03] border border-[#11111F]/10">
-                <p className="text-xs font-bold text-[#11111F]">
+                <p className="text-base font-bold text-[#11111F]">
                   Subsidiaries + Clients
                 </p>
-                <p className="text-[10px] text-[#666666] mt-1">
+                <p className="text-base text-[#666666] mt-1">
                   Market Execution
                 </p>
               </div>
@@ -631,7 +631,7 @@ function HowPortfolioScales() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Scaling Model</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Local execution. Global consistency.
           </h2>
         </ScrollReveal>
@@ -639,7 +639,7 @@ function HowPortfolioScales() {
           <div className="mt-12 flex flex-wrap items-center gap-1.5">
             {scalingFlow.map((step, i) => (
               <span key={step} className="flex items-center gap-1.5">
-                <span className="text-[10px] px-3 py-2 bg-white/5 border border-white/10 text-white font-medium">
+                <span className="text-sm px-3 py-2 bg-white/5 border border-white/10 text-white font-medium">
                   {step}
                 </span>
                 {i < scalingFlow.length - 1 && (
@@ -660,7 +660,7 @@ function Partnerships() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Partnership Pathways</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             Partner with the right company inside the Mentor Global ecosystem
           </h2>
         </ScrollReveal>
@@ -668,10 +668,10 @@ function Partnerships() {
           {partnerPathways.map((p, i) => (
             <ScrollReveal key={p.type} delay={i * 0.04}>
               <div className="bg-white p-5 md:p-6 card-hover h-full">
-                <p className="text-sm font-bold text-[#0048FF] mb-2">
+                <p className="text-base font-bold text-[#0048FF] mb-2">
                   {p.type}
                 </p>
-                <p className="text-xs text-[#666666]">{p.connect}</p>
+                <p className="text-base text-[#666666]">{p.connect}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -690,10 +690,10 @@ function GovernanceSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Governance</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built for regulated markets and responsible scale
           </h2>
-          <p className="mt-4 text-sm text-[#8A8A93] max-w-2xl">
+          <p className="mt-4 text-base text-[#8A8A93] max-w-2xl">
             Each subsidiary operates in its local market while following group
             level governance, brand architecture, technology standards, data
             controls, and compliance expectations.
@@ -703,13 +703,13 @@ function GovernanceSection() {
           {governanceComponents.map((g, i) => (
             <ScrollReveal key={g} delay={i * 0.02}>
               <div className="bg-[#11111F] p-4 card-hover-dark">
-                <p className="text-[11px] text-white/80 font-medium">{g}</p>
+                <p className="text-base text-white/80 font-medium">{g}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
         <ScrollReveal delay={0.2}>
-          <p className="mt-8 text-xs text-[#8A8A93]/50 max-w-2xl">
+          <p className="mt-8 text-base text-[#8A8A93]/50 max-w-2xl">
             Designed for regulated market deployment. Built with local
             regulatory adaptation. Governed through group level oversight.
             Configurable for market specific requirements.
@@ -725,7 +725,7 @@ function FinalCTA() {
     <section data-testid="sub-final-cta" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
             Build with the Mentor Global ecosystem
           </h2>
         </ScrollReveal>

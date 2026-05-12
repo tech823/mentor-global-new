@@ -56,7 +56,7 @@ export default function Contact() {
   };
 
   const inputClass = (field) =>
-    `w-full px-4 py-3 bg-transparent border text-[#11111F] text-sm placeholder:text-[#11111F]/30 focus:border-[#0048FF] transition-colors ${
+    `w-full px-4 py-3 bg-transparent border text-[#11111F] text-base placeholder:text-[#11111F]/30 focus:border-[#0048FF] transition-colors ${
       errors[field] ? "border-red-500" : "border-[#11111F]/15"
     }`;
 
@@ -89,7 +89,7 @@ export default function Contact() {
         <div className="max-w-[1720px] mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Contact</p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
+            <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">
               Connect With the Infrastructure Layer of Health Fintech
             </h1>
           </ScrollReveal>
@@ -103,13 +103,13 @@ export default function Contact() {
             {/* Partner categories */}
             <div className="lg:col-span-4 p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-[#11111F]/10">
               <ScrollReveal>
-                <p className="text-xs uppercase tracking-[0.2em] font-bold text-[#11111F]/40 mb-6">
+                <p className="text-base uppercase tracking-[0.2em] font-bold text-[#11111F]/40 mb-6">
                   Partner Categories
                 </p>
                 <div className="space-y-3">
                   {partnerTypes.map((type) => (
-                    <p key={type} className="text-sm text-[#666666] flex items-start gap-3">
-                      <span className="text-[#0048FF] mt-0.5 text-xs">&#9632;</span>
+                    <p key={type} className="text-lg text-[#666666] flex items-start gap-3">
+                      <span className="text-[#0048FF] mt-0.5 text-sm">&#9632;</span>
                       {type}
                     </p>
                   ))}
@@ -123,7 +123,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} noValidate data-testid="contact-form" className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Full Name *</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Full Name *</label>
                       <input
                         type="text"
                         name="fullName"
@@ -136,7 +136,7 @@ export default function Contact() {
                       {errors.fullName && <p className="text-xs text-red-500 mt-1">{errors.fullName}</p>}
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Organization *</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Organization *</label>
                       <input
                         type="text"
                         name="organization"
@@ -152,7 +152,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Email *</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Email *</label>
                       <input
                         type="email"
                         name="email"
@@ -165,7 +165,7 @@ export default function Contact() {
                       {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Phone</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Phone</label>
                       <input
                         type="tel"
                         name="phone"
@@ -180,7 +180,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Country</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Country</label>
                       <input
                         type="text"
                         name="country"
@@ -192,7 +192,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Partner Type *</label>
+                      <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Partner Type *</label>
                       <select
                         name="partnerType"
                         value={form.partnerType}
@@ -210,7 +210,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Solution Interest</label>
+                    <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Solution Interest</label>
                     <select
                       name="solutionInterest"
                       value={form.solutionInterest}
@@ -226,7 +226,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Message</label>
+                    <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-2">Message</label>
                     <textarea
                       name="message"
                       value={form.message}
@@ -239,7 +239,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#11111F]/60 uppercase tracking-wider mb-3">Preferred Contact Method</label>
+                    <label className="block text-base font-bold text-[#11111F]/60 uppercase tracking-wider mb-3">Preferred Contact Method</label>
                     <div className="flex flex-wrap gap-4 sm:gap-6">
                       {["email", "phone", "either"].map((method) => (
                         <label key={method} className="flex items-center gap-2 cursor-pointer">
@@ -252,7 +252,7 @@ export default function Contact() {
                             className="accent-[#0048FF]"
                             data-testid={`contact-preferred-${method}`}
                           />
-                          <span className="text-sm text-[#666666] capitalize">{method}</span>
+                          <span className="text-base text-[#666666] capitalize">{method}</span>
                         </label>
                       ))}
                     </div>
@@ -261,7 +261,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     data-testid="contact-submit-button"
-                    className="w-full md:w-auto px-10 py-4 bg-[#0048FF] text-white font-semibold text-sm hover:bg-[#0030CC] transition-colors"
+                    className="w-full md:w-auto px-10 py-4 bg-[#0048FF] text-white font-semibold text-base hover:bg-[#0030CC] transition-colors"
                   >
                     Submit Inquiry
                   </button>

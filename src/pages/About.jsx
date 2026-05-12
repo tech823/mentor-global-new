@@ -59,11 +59,11 @@ function Hero() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0048FF]/10 border border-[#0048FF]/20 mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-[#0048FF]">
+                <span className="text-sm sm:text-base font-bold tracking-widest uppercase text-[#0048FF]">
                   {aboutHero.eyebrow}
                 </span>
               </div>
-              <h1 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 {aboutHero.headline}
               </h1>
             </ScrollReveal>
@@ -73,7 +73,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.18}>
-              <p className="mt-4 text-sm text-white/50 max-w-2xl leading-relaxed">
+              <p className="mt-4 text-base text-white/50 max-w-2xl leading-relaxed">
                 {aboutHero.supporting}
               </p>
             </ScrollReveal>
@@ -107,12 +107,12 @@ function Hero() {
                   <div className="flex items-center justify-between mb-6 pb-3 border-b border-white/5">
                     <div className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse shadow-[0_0_8px_#0048FF]" />
-                      <span className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-extrabold text-[#0048FF]">
+                      <span className="text-sm md:text-base uppercase tracking-[0.3em] font-extrabold text-[#0048FF]">
                         Infrastructure OS v4.0
                       </span>
                     </div>
-                    <span className="text-[8px] text-[#0048FF] font-black tracking-widest uppercase px-1.5 py-0.5 rounded-sm bg-[#0048FF]/10 border border-[#0048FF]/20">
-                      Active
+                    <span className="text-sm text-[#0048FF] font-black tracking-widest uppercase px-1.5 py-0.5 rounded-sm bg-[#0048FF]/10 border border-[#0048FF]/20">
+                      Layer 00
                     </span>
                   </div>
 
@@ -123,8 +123,8 @@ function Hero() {
                     className="relative border border-[#0048FF]/30 bg-[#0048FF]/5 p-5 mb-4 text-center group overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0048FF]/5 to-transparent opacity-50" />
-                    <p className="relative text-[8px] uppercase tracking-[0.4em] text-[#0048FF]/60 font-black mb-1.5">
-                      Global Holding Structure
+                    <p className="relative text-xs uppercase tracking-[0.4em] text-[#0048FF]/60 font-black mb-1.5">
+                      Infrastructure OS
                     </p>
                     <p className="relative text-xl md:text-2xl text-white font-extrabold tracking-tight">
                       Mentor Global
@@ -142,7 +142,7 @@ function Hero() {
                         transition={{ delay: 0.1 + i * 0.04 }}
                         className="border border-white/10 bg-white/[0.02] p-2.5 text-center transition-all hover:border-[#0048FF]/40 hover:bg-[#0048FF]/5"
                       >
-                        <p className="text-[8px] md:text-[9px] text-white/70 font-bold leading-tight uppercase tracking-tighter">
+                        <p className="text-sm md:text-base text-white/70 font-bold leading-tight uppercase tracking-tighter">
                           {p.replace(" Infrastructure", "")}
                         </p>
                       </motion.div>
@@ -154,14 +154,14 @@ function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="relative text-center text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-[#0048FF] font-black border border-[#0048FF]/15 bg-[#0048FF]/[0.05] py-2.5 mb-6"
+                    className="relative text-center text-sm md:text-base uppercase tracking-[0.25em] text-[#0048FF] font-black border border-[#0048FF]/15 bg-[#0048FF]/[0.05] py-2.5 mb-6"
                   >
                     Powered by Mentor Innovation & DEXA
                   </motion.div>
 
                   {/* Global Markers - Dense Grid to fit all 5 */}
                   <div className="flex-1 min-h-0">
-                    <p className="text-[9px] uppercase tracking-[0.2em] text-white/20 mb-4 font-black flex items-center gap-2">
+                    <p className="text-sm uppercase tracking-[0.2em] text-white/20 mb-4 font-black flex items-center gap-2">
                       <span className="w-6 h-[1px] bg-white/10" />
                       Operational Hubs
                       <span className="flex-1 h-[1px] bg-white/10" />
@@ -179,10 +179,10 @@ function Hero() {
                             <MapPin className="w-3 h-3 text-[#0048FF]" />
                           </div>
                           <div className="flex flex-col min-w-0">
-                            <span className="text-[10px] text-white font-extrabold tracking-tight truncate">
+                            <span className="text-sm text-white font-extrabold tracking-tight truncate">
                               {g.location}
                             </span>
-                            <span className="text-[7px] text-white/30 font-bold uppercase tracking-widest truncate leading-none mt-1">
+                            <span className="text-sm text-white/30 font-bold uppercase tracking-widest truncate leading-none mt-1">
                               {g.role}
                             </span>
                           </div>
@@ -229,7 +229,7 @@ function FounderThesis() {
           <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
             A Vision for the Infrastructure Age{" "}
           </p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight mb-16">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-16">
             The Founder's Declaration
           </h2>
         </ScrollReveal>
@@ -313,7 +313,7 @@ function WhoWeAre() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-sm sm:text-base text-[#666666] leading-relaxed">
+              <p className="text-base sm:text-lg text-[#666666] leading-relaxed">
                 Mentor Global operates through a holding company model, with
                 Singapore as the strategic structure, Pakistan as a core
                 operating and validation market, and operational chapters in the
@@ -343,15 +343,15 @@ function WhoWeAre() {
                   </span>
                 </div>
                 <div className="col-span-10 md:col-span-4 p-5 md:p-7 border-r border-[#11111F]/10">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-1">
-                    {l.label}
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-1">
+                    0{i + 1}
                   </p>
                   <p className="text-base md:text-lg font-bold text-[#11111F] leading-snug">
                     {l.org}
                   </p>
                 </div>
                 <div className="col-span-12 md:col-span-7 p-5 md:p-7 border-t md:border-t-0 border-[#11111F]/10">
-                  <p className="text-sm md:text-base text-[#666666] leading-relaxed">
+                  <p className="text-base md:text-lg text-[#666666] leading-relaxed">
                     {l.desc}
                   </p>
                 </div>
@@ -375,7 +375,7 @@ function WhatWeBuild() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">What We Build</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Five infrastructure layers. One connected global architecture.
           </h2>
         </ScrollReveal>
@@ -389,7 +389,7 @@ function WhatWeBuild() {
                 }`}
               >
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[#0048FF] text-xs font-bold font-mono">
+                  <span className="text-[#0048FF] text-sm font-bold font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <Layers className="w-4 h-4 text-[#0048FF]/40" />
@@ -397,7 +397,7 @@ function WhatWeBuild() {
                 <h3 className="text-xl font-bold text-[#11111F] mb-4 leading-snug">
                   {c.title}
                 </h3>
-                <p className="text-sm text-[#666666] leading-relaxed">
+                <p className="text-base text-[#666666] leading-relaxed">
                   {c.copy}
                 </p>
               </div>
@@ -422,7 +422,7 @@ function WhyInfrastructure() {
           <p className="eyebrow text-[#0048FF] mb-4">
             Why Infrastructure Matters
           </p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Products solve moments. Infrastructure changes systems.
           </h2>
           <div className="mt-8 max-w-3xl space-y-4">
@@ -452,7 +452,7 @@ function WhyInfrastructure() {
                 <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                   <X className="w-4 h-4 text-white/40" />
                 </div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-white/40 font-bold">
+                <p className="text-sm uppercase tracking-[0.25em] text-white/40 font-bold">
                   Product Thinking
                 </p>
               </div>
@@ -460,7 +460,7 @@ function WhyInfrastructure() {
                 {productVsInfra.product.map((p) => (
                   <li
                     key={p}
-                    className="flex gap-3 text-sm md:text-base text-white/60 leading-relaxed"
+                    className="flex gap-3 text-base md:text-lg text-white/60 leading-relaxed"
                   >
                     <span className="text-white/30 flex-shrink-0">—</span>
                     <span>{p}</span>
@@ -475,7 +475,7 @@ function WhyInfrastructure() {
                 <div className="w-8 h-8 rounded-full bg-[#0048FF]/20 border border-[#0048FF]/40 flex items-center justify-center">
                   <Check className="w-4 h-4 text-[#0048FF]" />
                 </div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold">
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0048FF] font-bold">
                   Infrastructure Thinking
                 </p>
               </div>
@@ -483,7 +483,7 @@ function WhyInfrastructure() {
                 {productVsInfra.infrastructure.map((p) => (
                   <li
                     key={p}
-                    className="flex gap-3 text-sm md:text-base text-white leading-relaxed font-semibold"
+                    className="flex gap-3 text-base md:text-lg text-white leading-relaxed font-semibold"
                   >
                     <span className="text-[#0048FF] flex-shrink-0">▸</span>
                     <span>{p}</span>
@@ -509,7 +509,7 @@ function OperatingModel() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Our Operating Model</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             How Mentor Global Operates
           </h2>
           <p className="mt-6 section-desc max-w-3xl">
@@ -537,7 +537,7 @@ function OperatingModel() {
                         : "bg-[#0048FF] text-white md:order-2"
                     } p-8 flex flex-col justify-center`}
                   >
-                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2 opacity-70">
+                    <p className="text-sm uppercase tracking-[0.2em] font-bold mb-2 opacity-70">
                       Layer {String(i + 1).padStart(2, "0")}
                     </p>
                     <p className="text-xl md:text-2xl font-bold leading-tight">
@@ -549,7 +549,7 @@ function OperatingModel() {
                       i % 2 === 0 ? "" : "md:order-1"
                     }`}
                   >
-                    <p className="text-sm md:text-base text-[#666666] leading-relaxed">
+                    <p className="text-base md:text-lg text-[#666666] leading-relaxed">
                       {l.desc}
                     </p>
                   </div>
@@ -575,7 +575,7 @@ function GlobalPresence() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">Global Presence</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Global Presence With Operational Chapters
           </h2>
           <p className="mt-6 section-desc-dark max-w-3xl">
@@ -592,17 +592,17 @@ function GlobalPresence() {
               <div className="bg-[#11111F] p-6 h-full hover:bg-white/[0.02] transition-colors">
                 <div className="flex items-center justify-between mb-5">
                   <MapPin className="w-4 h-4 text-[#0048FF]" />
-                  <span className="text-[9px] font-mono text-white/40">
+                  <span className="text-sm font-mono text-white/40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="text-base md:text-lg font-bold text-white mb-2 leading-tight">
                   {r.name}
                 </h3>
-                <p className="text-[10px] uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-4">
+                <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-4">
                   {r.role}
                 </p>
-                <p className="text-xs text-white/60 leading-relaxed">
+                <p className="text-base text-white/60 leading-relaxed">
                   {r.desc}
                 </p>
               </div>
@@ -622,7 +622,7 @@ function ChaptersOperational() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Operational Chapters</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             UAE and US Chapters Are Operational
           </h2>
           <div className="mt-8 max-w-4xl space-y-4">
@@ -651,7 +651,7 @@ function ChaptersOperational() {
         {/* Expansion timeline */}
         <ScrollReveal delay={0.15}>
           <div className="mt-20">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-8">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-8">
               Expansion Timeline
             </p>
             <div className="relative">
@@ -665,7 +665,7 @@ function ChaptersOperational() {
                       className="relative flex flex-col items-center"
                     >
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm relative z-10 ${
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base relative z-10 ${
                           i === expansionTimeline.length - 1
                             ? "bg-[#0048FF] shadow-[0_0_30px_#0048FF]"
                             : "bg-[#11111F]"
@@ -677,7 +677,7 @@ function ChaptersOperational() {
                         {s.step}
                       </p>
                       <span
-                        className={`mt-2 text-[9px] uppercase tracking-[0.15em] font-bold ${
+                        className={`mt-2 text-xs uppercase tracking-[0.15em] font-bold ${
                           i < 4 ? "text-[#0048FF]" : "text-[#666666]"
                         }`}
                       >
@@ -695,7 +695,7 @@ function ChaptersOperational() {
                     className="flex items-center gap-4 border border-[#11111F]/10 p-4"
                   >
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 ${
+                      className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base flex-shrink-0 ${
                         i === expansionTimeline.length - 1
                           ? "bg-[#0048FF]"
                           : "bg-[#11111F]"
@@ -728,7 +728,7 @@ function BackboneSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Backbone</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Technology Built by Mentor Innovation. Intelligence Powered by DEXA.
           </h2>
           <div className="mt-8 max-w-4xl space-y-4">
@@ -756,8 +756,8 @@ function BackboneSection() {
             {/* Top: Mentor Global */}
             <div className="flex justify-center">
               <div className="border-2 border-[#0048FF] bg-[#0048FF]/5 px-6 sm:px-10 py-5 text-center w-full max-w-[260px]">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-1">
-                  Holding Company
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-1">
+                  Technology Engine
                 </p>
                 <p className="text-xl font-bold text-[#11111F]">
                   Mentor Global
@@ -774,14 +774,14 @@ function BackboneSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="border border-[#0048FF]/40 bg-[#11111F] text-white p-6 text-center">
                 <Network className="w-5 h-5 text-[#0048FF] mx-auto mb-3" />
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-1">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-1">
                   Technology Engine
                 </p>
                 <p className="text-lg font-bold">Mentor Innovation</p>
               </div>
               <div className="border border-[#0048FF]/40 bg-[#0048FF] text-white p-6 text-center">
                 <Sparkles className="w-5 h-5 text-white mx-auto mb-3" />
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/70 font-bold mb-1">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/70 font-bold mb-1">
                   Intelligence Processing Engine
                 </p>
                 <p className="text-lg font-bold">DEXA</p>
@@ -833,7 +833,7 @@ function Philosophy() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">Our Philosophy</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Value for Our Clients. Growth for Our Employees.
           </h2>
           <div className="mt-8 max-w-4xl space-y-4">
@@ -863,8 +863,8 @@ function Philosophy() {
             <div className="bg-[#0048FF]/[0.05] p-8 md:p-10 h-full border-l-2 border-[#0048FF]">
               <div className="flex items-center gap-3 mb-8">
                 <Users className="w-5 h-5 text-[#0048FF]" />
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold">
-                  Pillar 01
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0048FF] font-bold">
+                  Group Governance
                 </p>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -889,7 +889,7 @@ function Philosophy() {
             <div className="bg-[#11111F] p-8 md:p-10 h-full">
               <div className="flex items-center gap-3 mb-8">
                 <Sparkles className="w-5 h-5 text-[#0048FF]" />
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold">
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0048FF] font-bold">
                   Pillar 02
                 </p>
               </div>
@@ -925,7 +925,7 @@ function Belief() {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-6">Our Belief</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             The Systems We Connect
           </h2>
         </ScrollReveal>
@@ -957,7 +957,7 @@ function Values() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Our Values</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             What Drives Us
           </h2>
         </ScrollReveal>
@@ -971,7 +971,7 @@ function Values() {
                 } ${i === valuesCards.length - 1 ? "lg:col-span-1" : ""}`}
               >
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[#0048FF] text-xs font-bold font-mono">
+                  <span className="text-[#0048FF] text-sm font-bold font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="w-6 h-6 rounded-full border border-[#0048FF]/30 flex items-center justify-center">
@@ -1006,7 +1006,7 @@ function BuiltByOperators() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <ScrollReveal className="lg:col-span-7">
               <p className="eyebrow mb-4">Built by Operators</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05]">
+              <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.05]">
                 Built by Operators, Architects, and Builders
               </h2>
               <p className="mt-8 text-base md:text-lg text-[#11111F] leading-relaxed">
@@ -1033,10 +1033,10 @@ function BuiltByOperators() {
             <ScrollReveal className="lg:col-span-5" delay={0.15}>
               <div className="border border-[#11111F]/10 bg-white p-6">
                 <div className="flex items-center justify-between mb-5">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold">
-                    Operator Signals
+                  <span className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+                    System Core
                   </span>
-                  <span className="text-[10px] text-[#666666]">Live</span>
+                  <span className="text-sm text-[#666666]">Live</span>
                 </div>
                 <div className="space-y-2">
                   {[
@@ -1048,18 +1048,18 @@ function BuiltByOperators() {
                     "Finance structured",
                     "Technology deployed",
                     "Regulated businesses governed",
-                  ].map((s, i) => (
+                  ].map((node, i) => (
                     <div
-                      key={s}
+                      key={node}
                       className="flex items-center gap-3 border border-[#11111F]/10 p-2.5"
                     >
                       <span className="w-5 h-5 bg-[#0048FF]/10 border border-[#0048FF]/30 flex items-center justify-center flex-shrink-0">
                         <Check className="w-2.5 h-2.5 text-[#0048FF]" />
                       </span>
-                      <span className="text-xs font-semibold text-[#11111F]">
-                        {s}
+                      <span className="text-sm font-semibold text-[#11111F]">
+                        {node}
                       </span>
-                      <span className="ml-auto text-[9px] text-[#0048FF] font-bold font-mono">
+                      <span className="ml-auto text-[10px] text-[#0048FF] font-bold font-mono">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -1085,7 +1085,7 @@ function Differentiators() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">Differentiators</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             What Makes Mentor Global Different
           </h2>
         </ScrollReveal>
@@ -1094,7 +1094,7 @@ function Differentiators() {
             <ScrollReveal key={d.title} delay={i * 0.06}>
               <div className="bg-[#11111F] p-7 h-full hover:bg-white/[0.02] transition-colors group">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[#0048FF] text-xs font-bold font-mono">
+                  <span className="text-[#0048FF] text-sm font-bold font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="w-6 h-[2px] bg-[#0048FF] group-hover:w-12 transition-all duration-300" />
@@ -1126,7 +1126,7 @@ function FutureBuilding() {
       <div className="relative max-w-6xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">The Future</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.02] max-w-4xl">
+          <h2 className="text-[var(--fs-hero)] font-bold text-white tracking-tight leading-[1.02] max-w-4xl">
             The Future Will Be Built on Intelligent Infrastructure
           </h2>
           <div className="mt-10 max-w-3xl space-y-5">
@@ -1178,7 +1178,7 @@ function FinalCTA() {
       <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Build With Mentor Global</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05]">
+          <h2 className="text-[var(--fs-hero)] font-bold text-[#11111F] tracking-tighter leading-[1.05]">
             Build on infrastructure designed for global health fintech systems.
           </h2>
         </ScrollReveal>

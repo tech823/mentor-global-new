@@ -66,7 +66,7 @@ function Hero() {
               <p className="eyebrow mb-6 font-bold tracking-[0.2em] text-[#0048FF]">
                 COMPANY OPERATING INFRASTRUCTURE
               </p>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05] max-w-xl">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05] max-w-xl">
                 Company Operating Infrastructure for Execution, Growth,
                 Intelligence, Finance, and Control
               </h1>
@@ -138,7 +138,7 @@ function ProblemSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Companies do not fail only because of strategy. They fail because
             execution is invisible.
           </h2>
@@ -147,10 +147,10 @@ function ProblemSection() {
           {osProblems.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.03}>
               <div className="bg-white p-5 md:p-6 card-hover h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-sm font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-sm text-[#11111F] font-medium leading-relaxed">
+                <p className="mt-2 text-base text-[#11111F] font-medium leading-relaxed">
                   {p}
                 </p>
               </div>
@@ -172,7 +172,7 @@ function InfrastructureStack() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Operating Stack</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             One company operating stack. Multiple execution rails.
           </h2>
         </ScrollReveal>
@@ -182,10 +182,10 @@ function InfrastructureStack() {
               <div className="bg-[#11111F] border border-white/10 p-4 md:p-5">
                 <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
                   <div className="md:w-48 shrink-0">
-                    <span className="text-[#0048FF] text-xs font-bold">
+                    <span className="text-[#0048FF] text-sm font-bold">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="text-xs font-bold text-white mt-1">
+                    <h3 className="text-sm font-bold text-white mt-1">
                       {rail.name}
                     </h3>
                   </div>
@@ -193,7 +193,7 @@ function InfrastructureStack() {
                     {rail.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[10px] text-[#8A8A93] px-2 py-0.5 border border-white/10"
+                        className="text-sm text-[#8A8A93] px-2 py-0.5 border border-white/10"
                       >
                         {item}
                       </span>
@@ -229,7 +229,7 @@ function ConnectedLoop() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Operating Loop</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight mb-16">
             From strategy to execution to financial truth
           </h2>
         </ScrollReveal>
@@ -240,7 +240,7 @@ function ConnectedLoop() {
           <div className="flex flex-wrap justify-center items-center gap-1">
             {loopSteps.map((step, i) => (
               <span key={step} className="flex items-center gap-1">
-                <span className="text-[10px] px-2.5 py-1.5 border border-[#11111F]/10 text-[#11111F] font-medium bg-white">
+                <span className="text-sm px-2.5 py-1.5 border border-[#11111F]/10 text-[#11111F] font-medium bg-white">
                   {step}
                 </span>
                 {i < loopSteps.length - 1 && (
@@ -249,7 +249,7 @@ function ConnectedLoop() {
               </span>
             ))}
           </div>
-          <p className="mt-6 text-xs text-[#666666]">
+          <p className="mt-6 text-sm text-[#666666]">
             Powered by{" "}
             <span className="font-bold text-[#0048FF]">Mentor Innovation</span>{" "}
             and <span className="font-bold text-[#0048FF]">DEXA</span>
@@ -270,7 +270,7 @@ function WhoItServes() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Who It Serves</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built for forward looking companies that need system driven
             execution
           </h2>
@@ -279,12 +279,12 @@ function WhoItServes() {
           {osStakeholders.map((s, i) => (
             <ScrollReveal key={s.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 card-hover-dark h-full">
-                <h3 className="text-xs font-bold text-white mb-2">{s.name}</h3>
-                <p className="text-[10px] text-[#8A8A93] mb-1">
+                <h3 className="text-sm font-bold text-white mb-2">{s.name}</h3>
+                <p className="text-sm text-[#8A8A93] mb-1">
                   <span className="text-[#0048FF] font-bold">Pain:</span>{" "}
                   {s.pain}
                 </p>
-                <p className="text-[10px] text-[#8A8A93]">
+                <p className="text-sm text-[#8A8A93]">
                   <span className="text-[#0048FF] font-bold">Outcome:</span>{" "}
                   {s.outcome}
                 </p>
@@ -303,7 +303,7 @@ function Journeys() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Stakeholder Journeys</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Company operating infrastructure becomes real when every user has a
             clear journey
           </h2>
@@ -318,7 +318,7 @@ function Journeys() {
                 <div className="flex flex-wrap items-center gap-1">
                   {j.steps.map((step, i) => (
                     <span key={step} className="flex items-center gap-1">
-                      <span className="text-[11px] px-2 py-1 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
+                      <span className="text-sm px-2 py-1 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
                         {step}
                       </span>
                       {i < j.steps.length - 1 && (
@@ -346,7 +346,7 @@ function CoreModules() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Core Modules</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Modular infrastructure for company operations
           </h2>
         </ScrollReveal>
@@ -354,13 +354,13 @@ function CoreModules() {
           {osModules.map((m, i) => (
             <ScrollReveal key={m.name} delay={i * 0.02}>
               <div className="bg-[#11111F] p-5 md:p-6 card-hover-dark h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-sm font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-sm font-bold text-white mt-1 mb-2">
+                <h3 className="text-base font-bold text-white mt-1 mb-2">
                   {m.name}
                 </h3>
-                <p className="text-[11px] text-[#8A8A93] leading-relaxed">
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {m.desc}
                 </p>
               </div>
@@ -382,7 +382,7 @@ function GrowthOS() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Growth OS</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Turn personal ambition into measurable company growth
           </h2>
         </ScrollReveal>
@@ -401,23 +401,23 @@ function GrowthOS() {
                   key={step}
                   className={`p-4 flex items-center gap-3 ${i > 0 ? "border-t border-[#11111F]/10" : ""}`}
                 >
-                  <span className="text-[#0048FF] text-xs font-bold w-6">
+                  <span className="text-[#0048FF] text-sm font-bold w-6">
                     {i + 1}
                   </span>
-                  <p className="text-xs text-[#11111F] font-medium">{step}</p>
+                  <p className="text-sm text-[#11111F] font-medium">{step}</p>
                 </div>
               ))}
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div className="border border-[#11111F]/10 p-6 bg-[#11111F]/[0.02]">
-              <p className="text-xs font-bold text-[#0048FF] mb-3">
+              <p className="text-sm font-bold text-[#0048FF] mb-3">
                 Sample Scenario
               </p>
               <p className="text-sm font-bold text-[#11111F] mb-4">
                 Employee goal: I want to earn extra 100,000 this quarter.
               </p>
-              <div className="space-y-2 text-xs text-[#666666]">
+              <div className="space-y-2 text-sm text-[#666666]">
                 <p>
                   <span className="font-bold text-[#11111F]">
                     Required margin:
@@ -472,7 +472,7 @@ function DexaIntelligence() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA Intelligence</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             DEXA is the intelligence layer inside Mentor OS
           </h2>
         </ScrollReveal>
@@ -485,7 +485,7 @@ function DexaIntelligence() {
                 </p>
                 <div className="space-y-1.5">
                   {cap.items.map((item) => (
-                    <p key={item} className="text-[11px] text-[#8A8A93]">
+                    <p key={item} className="text-sm text-[#8A8A93]">
                       {item}
                     </p>
                   ))}
@@ -509,7 +509,7 @@ function DexaScenarios() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA in Action</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From operating confusion to governed next action
           </h2>
         </ScrollReveal>
@@ -535,7 +535,7 @@ function Architecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Architecture</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built as company operating infrastructure, not disconnected business
             software
           </h2>
@@ -547,10 +547,10 @@ function Architecture() {
                 className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? "border-t border-white/10" : ""}`}
               >
                 <div className="md:col-span-3 p-4 border-b md:border-b-0 md:border-r border-white/10">
-                  <span className="text-[#0048FF] text-xs font-bold">
+                  <span className="text-[#0048FF] text-sm font-bold">
                     L{idx + 1}
                   </span>
-                  <p className="text-xs font-bold text-white mt-0.5">
+                  <p className="text-sm font-bold text-white mt-0.5">
                     {layer.name}
                   </p>
                 </div>
@@ -559,7 +559,7 @@ function Architecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[10px] px-2 py-0.5 border border-white/10 text-[#8A8A93]"
+                        className="text-sm px-2 py-0.5 border border-white/10 text-[#8A8A93]"
                       >
                         {item}
                       </span>
@@ -581,7 +581,7 @@ function DeploymentModels() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Deployment</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             Deploy company operating infrastructure according to your operating
             model
           </h2>
@@ -615,7 +615,7 @@ function UseCasesSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Company operating infrastructure that can power multiple business
             models
           </h2>
@@ -654,7 +654,7 @@ function OutcomesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Outcomes</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             What company operating infrastructure should deliver
           </h2>
         </ScrollReveal>
@@ -692,7 +692,7 @@ function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl mx-auto">
             Build operating infrastructure that connects strategy, execution,
             people, finance, growth, and intelligence
           </h2>

@@ -72,8 +72,8 @@ function DexaInAction() {
                   <div key={step.label} className="flex gap-4">
                     <div className="w-1.5 h-1.5 bg-[#0048FF] mt-2 shrink-0" />
                     <div>
-                      <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{step.label}</p>
-                      <p className="text-sm text-[#8A8A93]">{step.desc}</p>
+                      <p className="text-base font-bold text-white uppercase tracking-widest mb-1">{step.label}</p>
+                      <p className="text-base text-[#8A8A93]">{step.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -155,7 +155,7 @@ export default function Dexa() {
                 <p className="eyebrow mb-6">What DEXA Is</p>
                 <div className="space-y-4">
                   {whatDexaIs.map((item) => (
-                    <p key={item} className="text-sm text-[#666666] leading-relaxed">{item}</p>
+                    <p key={item} className="text-base text-[#666666] leading-relaxed">{item}</p>
                   ))}
                 </div>
               </ScrollReveal>
@@ -184,7 +184,7 @@ export default function Dexa() {
                   <div className="md:col-span-8 p-6 md:p-8">
                     <div className="flex flex-wrap gap-3">
                       {domain.items.map((item) => (
-                        <span key={item} className="text-sm text-[#8A8A93] px-3 py-1 border border-white/10">
+                        <span key={item} className="text-base text-[#8A8A93] px-3 py-1 border border-white/10">
                           {item}
                         </span>
                       ))}
@@ -224,7 +224,7 @@ export default function Dexa() {
             {["Work Intelligence", "Daily employee guidance", "Leadership AI Window", "Productivity insights", "Task validation", "Project breakdown", "Training recommendations", "Growth OS coaching", "Finance summaries", "Operational exceptions"].map((item, i) => (
               <ScrollReveal key={item} delay={i * 0.03}>
                 <div className="bg-white p-4 md:p-5 card-hover h-full">
-                  <p className="text-sm text-[#11111F] font-medium">{item}</p>
+                  <p className="text-base text-[#11111F] font-medium">{item}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -245,7 +245,7 @@ export default function Dexa() {
                     <div className="w-3 h-3 bg-[#0048FF]" />
                   </div>
                   <h3 className="text-base font-bold text-[#11111F] mb-2">{pod.name}</h3>
-                  <p className="text-sm text-[#666666] leading-relaxed">{pod.desc}</p>
+                  <p className="text-base text-[#666666] leading-relaxed">{pod.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -268,7 +268,7 @@ export default function Dexa() {
               <ScrollReveal key={g.title} delay={i * 0.08}>
                 <div className="bg-[#11111F] p-6 md:p-8 card-hover-dark h-full">
                   <h3 className="text-base font-bold text-white mb-3">{g.title}</h3>
-                  <p className="text-sm text-[#8A8A93] leading-relaxed">{g.desc}</p>
+                  <p className="text-base text-[#8A8A93] leading-relaxed">{g.desc}</p>
                 </div>
               </ScrollReveal>
             ))}

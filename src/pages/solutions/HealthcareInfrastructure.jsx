@@ -67,7 +67,7 @@ const HealthcareDashboard = () => {
     <div className="w-full h-full p-6 md:p-8 flex flex-col bg-[#0A1128] relative overflow-hidden font-sans">
       {/* Header bar */}
       <div className="h-10 border-b border-white/5 flex items-center justify-between mb-6 pb-3 bg-black/40 backdrop-blur-md -mx-6 -mt-6 md:-mx-8 md:-mt-8 px-6 md:px-8">
-        <span className="text-[10px] font-black tracking-[0.2em] text-white/40 uppercase">
+        <span className="text-xs font-black tracking-[0.2em] text-white/40 uppercase">
           Corporate Health Dashboard
         </span>
         <div className="flex items-center gap-4 text-white/20">
@@ -107,7 +107,7 @@ const HealthcareDashboard = () => {
             }}
             className="border p-4 rounded-2xl transition-all duration-500"
           >
-            <p className="text-white/30 text-[8px] font-black uppercase tracking-widest">
+            <p className="text-white/30 text-[10px] font-black uppercase tracking-widest">
               {kpi.label}
             </p>
             <p className="text-white text-lg font-black mt-1">{kpi.value}</p>
@@ -120,7 +120,7 @@ const HealthcareDashboard = () => {
         {/* Graph */}
         <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-5 relative overflow-hidden">
           <div className="flex justify-between items-center mb-4">
-            <p className="text-white/40 text-[9px] font-black uppercase tracking-widest">
+            <p className="text-white/40 text-xs font-black uppercase tracking-widest">
               Utilization Trend
             </p>
             <div className="flex gap-1">
@@ -165,11 +165,9 @@ const HealthcareDashboard = () => {
               </defs>
             </svg>
           </div>
-          <div className="flex justify-between text-[7px] text-white/20 font-bold mt-2">
             {["Jan", "Feb", "Mar", "Apr", "May", "Jun"].map((m) => (
               <span key={m}>{m}</span>
             ))}
-          </div>
         </div>
 
         {/* AI Recommendation */}
@@ -178,7 +176,7 @@ const HealthcareDashboard = () => {
             <div className="w-5 h-5 rounded-lg bg-[#0048ff]/20 flex items-center justify-center">
               <Brain className="w-3 h-3 text-[#0048FF]" />
             </div>
-            <p className="text-[#0048ff] text-[9px] font-black uppercase tracking-widest">
+            <p className="text-[#0048ff] text-xs font-black uppercase tracking-widest">
               AI Recommendation
             </p>
           </div>
@@ -191,7 +189,7 @@ const HealthcareDashboard = () => {
                     <motion.p
                       initial={{ opacity: 0, y: 5 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-[9px] text-white/60 leading-relaxed flex gap-2"
+                      className="text-xs text-white/60 leading-relaxed flex gap-2"
                     >
                       <span className="text-[#0048FF]">•</span> {rec}
                     </motion.p>
@@ -206,7 +204,7 @@ const HealthcareDashboard = () => {
                 className="flex items-center gap-2 pt-2 border-t border-white/5"
               >
                 <CheckCircle2 className="w-3 h-3 text-[#10b981]" />
-                <span className="text-[8px] text-[#10b981] font-bold uppercase tracking-widest">
+                <span className="text-[10px] text-[#10b981] font-bold uppercase tracking-widest">
                   Strategies Optimized
                 </span>
               </motion.div>
@@ -247,17 +245,17 @@ const MentorHealthApp = () => {
       {/* Header */}
       <div className="flex justify-between items-start mt-6">
         <div className="flex flex-col gap-1">
-          <p className="text-white/60 text-[9px] font-bold">
+          <p className="text-white/60 text-xs font-bold">
             Available Balance
           </p>
           <p className="text-xl font-black mt-0.5 tracking-tight">
-            <span className="text-[9px] mr-0.5">PKR</span>12,450
+            <span className="text-xs mr-0.5">PKR</span>12,450
           </p>
         </div>
         <motion.div
           animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="px-2 py-0.5 bg-white/20 rounded-full text-[7px] font-black uppercase tracking-widest border border-white/20"
+          className="px-2 py-0.5 bg-white/20 rounded-full text-xs font-black uppercase tracking-widest border border-white/20"
         >
           Active
         </motion.div>
@@ -290,7 +288,7 @@ const MentorHealthApp = () => {
             className="bg-white/10 rounded-xl p-3 flex flex-col items-center gap-1.5 border border-white/10 transition-all duration-300"
           >
             <act.Icon className="w-5 h-5" />
-            <span className="text-[8px] font-bold">{act.label}</span>
+            <span className="text-[10px] font-bold">{act.label}</span>
           </motion.div>
         ))}
       </div>
@@ -318,7 +316,7 @@ const MentorHealthApp = () => {
                 ? "0 0 20px rgba(255,255,255,0.2)"
                 : "none",
             }}
-            className="bg-white/10 rounded-lg py-3 px-3 text-center text-[9px] font-black uppercase tracking-widest border border-white/10 transition-all duration-500 cursor-pointer"
+            className="bg-white/10 rounded-lg py-3 px-3 text-center text-xs font-black uppercase tracking-widest border border-white/10 transition-all duration-500 cursor-pointer"
           >
             {btn.label}
           </motion.div>
@@ -372,11 +370,11 @@ function Hero() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-white/80">
+                <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white/80">
                   HEALTHCARE INFRASTRUCTURE
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 Infrastructure for Access, Claims, Benefits, and Finance
               </h1>
             </ScrollReveal>
@@ -426,7 +424,7 @@ function ProblemSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Healthcare is not broken because people do not care. It is broken
             because the rails do not connect.
           </h2>
@@ -438,7 +436,7 @@ function ProblemSection() {
                 <span className="text-[#0048FF] text-xs font-bold">
                   0{i + 1}
                 </span>
-                <p className="mt-3 text-sm text-[#11111F] font-medium leading-relaxed">
+                <p className="mt-3 text-base text-[#11111F] font-medium leading-relaxed">
                   {p}
                 </p>
               </div>
@@ -460,7 +458,7 @@ function InfrastructureStack() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Infrastructure Stack</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             One Healthcare Infrastructure Stack. Multiple Connected Rails.
           </h2>
         </ScrollReveal>
@@ -481,7 +479,7 @@ function InfrastructureStack() {
                     {rail.items.map((item) => (
                       <span
                         key={item}
-                        className="text-xs text-[#8A8A93] px-3 py-1.5 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
+                        className="text-sm text-[#8A8A93] px-3 py-1.5 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
                       >
                         {item}
                       </span>
@@ -503,7 +501,7 @@ function ConnectedRailsVisual() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Connected Rails</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight mb-16">
             Six Connected Rails. One Infrastructure.
           </h2>
         </ScrollReveal>
@@ -523,7 +521,7 @@ function ConnectedRailsVisual() {
                   className="p-6 md:p-8 text-center bg-white card-hover flex flex-col items-center justify-center min-h-[120px]"
                 >
                   <div className="w-2 h-2 bg-[#0048FF] mb-4" />
-                  <p className="text-xs font-black uppercase tracking-widest text-[#11111F] leading-tight">
+                  <p className="text-sm font-black uppercase tracking-widest text-[#11111F] leading-tight">
                     {rail.name}
                   </p>
                 </div>
@@ -531,12 +529,12 @@ function ConnectedRailsVisual() {
             </div>
             {/* Powered by */}
             <div className="mt-6 flex items-center justify-center gap-4">
-              <span className="text-xs text-[#666666]">Powered by</span>
-              <span className="text-xs font-bold text-[#0048FF]">
+              <span className="text-sm text-[#666666]">Powered by</span>
+              <span className="text-sm font-bold text-[#0048FF]">
                 Mentor Innovation
               </span>
-              <span className="text-xs text-[#666666]">and</span>
-              <span className="text-xs font-bold text-[#0048FF]">DEXA</span>
+              <span className="text-sm text-[#666666]">and</span>
+              <span className="text-sm font-bold text-[#0048FF]">DEXA</span>
             </div>
           </div>
         </ScrollReveal>
@@ -555,7 +553,7 @@ function WhoItServes() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Stakeholders</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built for every stakeholder in the healthcare value chain
           </h2>
         </ScrollReveal>
@@ -566,17 +564,17 @@ function WhoItServes() {
                 <h3 className="text-base font-bold text-white mb-3">
                   {s.name}
                 </h3>
-                <p className="text-xs text-[#8A8A93] mb-3">
+                <p className="text-sm text-[#8A8A93] mb-3">
                   <span className="text-[#0048FF] font-bold">Pain:</span>{" "}
                   {s.pain}
                 </p>
-                <p className="text-xs text-[#8A8A93] mb-3">
+                <p className="text-sm text-[#8A8A93] mb-3">
                   <span className="text-[#0048FF] font-bold">
                     Infrastructure:
                   </span>{" "}
                   {s.infra}
                 </p>
-                <p className="text-xs text-[#8A8A93]">
+                <p className="text-sm text-[#8A8A93]">
                   <span className="text-[#0048FF] font-bold">Outcome:</span>{" "}
                   {s.outcome}
                 </p>
@@ -595,7 +593,7 @@ function UserJourneys() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">User Journeys</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Healthcare infrastructure becomes real when every user has a clear
             journey
           </h2>
@@ -638,7 +636,7 @@ function CoreModules() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Core Modules</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Modular infrastructure for healthcare operations
           </h2>
         </ScrollReveal>
@@ -670,7 +668,7 @@ function DexaIntelligence() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA Intelligence</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             DEXA is the intelligence layer inside healthcare infrastructure
           </h2>
         </ScrollReveal>
@@ -718,7 +716,7 @@ function DexaScenarios() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA in Action</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From confusion to governed next action
           </h2>
         </ScrollReveal>
@@ -773,7 +771,7 @@ function Architecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Architecture</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Built as healthcare infrastructure, not a collection of screens
           </h2>
         </ScrollReveal>
@@ -823,7 +821,7 @@ function DeploymentModels() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Deployment</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Deploy it as infrastructure, not as a one size fits all product
           </h2>
         </ScrollReveal>
@@ -852,7 +850,7 @@ function UseCasesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Healthcare infrastructure that can power multiple business models
           </h2>
         </ScrollReveal>
@@ -896,7 +894,7 @@ function OutcomesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Outcomes</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             What healthcare infrastructure should deliver
           </h2>
         </ScrollReveal>
@@ -929,7 +927,7 @@ function FinalCTA() {
     <section data-testid="hc-final-cta" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
             Build healthcare infrastructure that connects care, claims,
             benefits, finance, and intelligence
           </h2>

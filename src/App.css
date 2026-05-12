@@ -130,36 +130,36 @@ input:focus, textarea:focus, select:focus {
 
 /* Hero description — appears directly below h1 on dark backgrounds */
 .hero-desc {
-  font-size: var(--fs-lg);
+  font-size: 20px;
   line-height: 1.7;
   color: #8A8A93;
-  max-width: 36rem;
+  max-width: 42rem;
 }
 
 /* Section description — lead paragraph below h2 on light backgrounds */
 .section-desc {
-  font-size: var(--fs-base);
+  font-size: 18px;
   line-height: 1.625;
   color: #666666;
 }
 
 /* Section description — lead paragraph below h2 on dark backgrounds */
 .section-desc-dark {
-  font-size: var(--fs-base);
+  font-size: 18px;
   line-height: 1.625;
   color: #8A8A93;
 }
 
 /* Body text — standard paragraph content on light backgrounds */
 .body-text {
-  font-size: var(--fs-base);
+  font-size: 17px;
   line-height: 1.625;
   color: #666666;
 }
 
 /* Body text — standard paragraph content on dark backgrounds */
 .body-text-dark {
-  font-size: var(--fs-base);
+  font-size: 17px;
   line-height: 1.625;
   color: #8A8A93;
 }
@@ -174,7 +174,7 @@ input:focus, textarea:focus, select:focus {
 
 /* Card description */
 .card-desc {
-  font-size: 0.875rem;         /* text-sm */
+  font-size: 15px;
   line-height: 1.625;
   color: #666666;
 }

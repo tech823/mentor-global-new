@@ -42,7 +42,7 @@ function Hero() {
           <div>
             <ScrollReveal>
               <p className="eyebrow mb-6">Insurance Infrastructure</p>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 Insurance Infrastructure for Insurers, Reinsurers, Brokers,
                 MGAs, TPAs, and Embedded Partners
               </h1>
@@ -56,7 +56,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.25}>
-              <p className="mt-4 text-sm text-[#8A8A93]/70 max-w-xl">
+              <p className="mt-4 text-base text-[#8A8A93]/70 max-w-xl">
                 Mentor Global does not build isolated insurance tools. It builds
                 the infrastructure that connects the insurance value chain from
                 product to policy, claim, service, settlement, reinsurance, and
@@ -110,7 +110,7 @@ function ProblemSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Insurance is not slow because people are slow. It is slow because
             the rails are fragmented.
           </h2>
@@ -122,7 +122,7 @@ function ProblemSection() {
                 <span className="text-[#0048FF] text-xs font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-3 text-sm text-[#11111F] font-medium leading-relaxed">
+                <p className="mt-3 text-base text-[#11111F] font-medium leading-relaxed">
                   {p}
                 </p>
               </div>
@@ -144,7 +144,7 @@ function InfrastructureStack() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Infrastructure Stack</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             One Insurance Infrastructure Stack. Multiple Connected Rails.
           </h2>
         </ScrollReveal>
@@ -165,7 +165,7 @@ function InfrastructureStack() {
                     {rail.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[11px] text-[#8A8A93] px-2.5 py-1 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
+                        className="text-sm text-[#8A8A93] px-2.5 py-1 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
                       >
                         {item}
                       </span>
@@ -187,14 +187,14 @@ function ConnectedRailsVisual() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Connected Rails</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight mb-16">
             From disconnected insurance workflows to one operating
             infrastructure layer
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <div className="mx-auto w-72 md:w-96 py-6 bg-[#11111F] text-white text-center mb-8">
-            <p className="text-sm font-bold">Mentor Insurance Infrastructure</p>
+            <p className="text-base font-bold">Mentor Insurance Infrastructure</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-[#11111F]/10 border border-[#11111F]/10">
             {insuranceRails.map((rail, i) => (
@@ -203,19 +203,19 @@ function ConnectedRailsVisual() {
                 className="p-5 md:p-6 text-center bg-white card-hover flex flex-col items-center justify-center min-h-[100px]"
               >
                 <div className="w-2 h-2 bg-[#0048FF] mx-auto mb-3" />
-                <p className="text-[10px] md:text-xs font-black uppercase tracking-widest text-[#11111F] leading-tight">
+                <p className="text-xs md:text-sm font-black uppercase tracking-widest text-[#11111F] leading-tight">
                   {rail.name}
                 </p>
               </div>
             ))}
           </div>
           <div className="mt-6 flex items-center justify-center gap-4">
-            <span className="text-xs text-[#666666]">Powered by</span>
-            <span className="text-xs font-bold text-[#0048FF]">
+            <span className="text-sm text-[#666666]">Powered by</span>
+            <span className="text-sm font-bold text-[#0048FF]">
               Mentor Innovation
             </span>
-            <span className="text-xs text-[#666666]">and</span>
-            <span className="text-xs font-bold text-[#0048FF]">DEXA</span>
+            <span className="text-sm text-[#666666]">and</span>
+            <span className="text-sm font-bold text-[#0048FF]">DEXA</span>
           </div>
         </ScrollReveal>
       </div>
@@ -233,7 +233,7 @@ function InsuranceCompaniesSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Insurance and Reinsurance</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Built for insurance companies and reinsurance companies
           </h2>
         </ScrollReveal>
@@ -248,9 +248,9 @@ function InsuranceCompaniesSection() {
                   {type.items.map((item) => (
                     <p
                       key={item}
-                      className="text-xs text-[#8A8A93] flex items-start gap-2"
+                      className="text-sm text-[#8A8A93] flex items-start gap-2"
                     >
-                      <span className="text-[#0048FF] mt-0.5 text-[10px]">
+                      <span className="text-[#0048FF] mt-0.5 text-xs">
                         &#9632;
                       </span>{" "}
                       {item}
@@ -272,7 +272,7 @@ function InsuranceLinesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Insurance Lines</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             Across all major insurance and reinsurance verticals
           </h2>
         </ScrollReveal>
@@ -280,12 +280,12 @@ function InsuranceLinesSection() {
           {insuranceLines.map((group, idx) => (
             <ScrollReveal key={group.group} delay={idx * 0.05}>
               <div className="border border-[#11111F]/10 p-5 md:p-6 card-hover h-full">
-                <p className="text-xs uppercase tracking-[0.15em] font-bold text-[#0048FF] mb-4">
+                <p className="text-sm uppercase tracking-[0.15em] font-bold text-[#0048FF] mb-4">
                   {group.group}
                 </p>
                 <div className="space-y-2">
                   {group.items.map((item) => (
-                    <p key={item} className="text-sm text-[#11111F]">
+                    <p key={item} className="text-base text-[#11111F]">
                       {item}
                     </p>
                   ))}
@@ -309,7 +309,7 @@ function WhoItServes() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Stakeholders</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built for every stakeholder in the insurance value chain
           </h2>
         </ScrollReveal>
@@ -318,11 +318,11 @@ function WhoItServes() {
             <ScrollReveal key={s.name} delay={i * 0.03}>
               <div className="bg-[#11111F] p-5 md:p-6 card-hover-dark h-full">
                 <h3 className="text-sm font-bold text-white mb-3">{s.name}</h3>
-                <p className="text-[11px] text-[#8A8A93] mb-2">
+                <p className="text-sm text-[#8A8A93] mb-2">
                   <span className="text-[#0048FF] font-bold">Pain:</span>{" "}
                   {s.pain}
                 </p>
-                <p className="text-[11px] text-[#8A8A93]">
+                <p className="text-sm text-[#8A8A93]">
                   <span className="text-[#0048FF] font-bold">Outcome:</span>{" "}
                   {s.outcome}
                 </p>
@@ -341,7 +341,7 @@ function StakeholderJourneys() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Stakeholder Journeys</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Insurance infrastructure becomes real when each stakeholder has a
             clear journey
           </h2>
@@ -356,7 +356,7 @@ function StakeholderJourneys() {
                 <div className="flex flex-wrap items-center gap-1.5">
                   {j.steps.map((step, i) => (
                     <span key={step} className="flex items-center gap-1.5">
-                      <span className="text-xs px-2.5 py-1 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
+                      <span className="text-sm px-2.5 py-1 bg-[#11111F]/[0.03] border border-[#11111F]/10 text-[#11111F] font-medium">
                         {step}
                       </span>
                       {i < j.steps.length - 1 && (
@@ -384,7 +384,7 @@ function CoreModules() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Core Modules</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Modular infrastructure for insurance operations
           </h2>
         </ScrollReveal>
@@ -398,7 +398,7 @@ function CoreModules() {
                 <h3 className="text-sm font-bold text-white mt-2 mb-2">
                   {m.name}
                 </h3>
-                <p className="text-[11px] text-[#8A8A93] leading-relaxed">
+                <p className="text-sm text-[#8A8A93] leading-relaxed">
                   {m.desc}
                 </p>
               </div>
@@ -416,7 +416,7 @@ function BrokerSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Broker Infrastructure</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Brokers need operating infrastructure, not just a website
           </h2>
           <p className="mt-6 section-desc max-w-3xl">
@@ -429,7 +429,7 @@ function BrokerSection() {
           {brokerModules.map((mod, i) => (
             <ScrollReveal key={mod} delay={i * 0.02}>
               <div className="bg-white p-4 md:p-5 card-hover h-full">
-                <p className="text-xs text-[#11111F] font-medium">{mod}</p>
+                <p className="text-sm text-[#11111F] font-medium">{mod}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -449,7 +449,7 @@ function ReinsuranceSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Reinsurance Infrastructure</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Reinsurance infrastructure for cedents, reinsurers, and reinsurance
             brokers
           </h2>
@@ -475,7 +475,7 @@ function ReinsuranceSection() {
                     {rail.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[11px] text-[#8A8A93] px-2.5 py-1 border border-white/10"
+                        className="text-sm text-[#8A8A93] px-2.5 py-1 border border-white/10"
                       >
                         {item}
                       </span>
@@ -500,7 +500,7 @@ function ServiceCenterSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Digital Service Center</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Self service insurance operations for customers, brokers, and
             partners
           </h2>
@@ -512,7 +512,7 @@ function ServiceCenterSection() {
                 <div className="w-6 h-6 border border-[#0048FF]/20 flex items-center justify-center mx-auto mb-3">
                   <div className="w-1.5 h-1.5 bg-[#0048FF]" />
                 </div>
-                <p className="text-[10px] font-black uppercase tracking-widest text-[#11111F] leading-tight">
+                <p className="text-xs font-black uppercase tracking-widest text-[#11111F] leading-tight">
                   {item}
                 </p>
               </div>
@@ -534,7 +534,7 @@ function DexaIntelligence() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA Intelligence</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             DEXA is the intelligence layer inside insurance infrastructure
           </h2>
           <p className="mt-6 text-base text-[#8A8A93] max-w-3xl leading-relaxed">
@@ -556,7 +556,7 @@ function DexaIntelligence() {
                 </p>
                 <div className="space-y-2">
                   {cap.items.map((item) => (
-                    <p key={item} className="text-xs text-[#8A8A93]">
+                    <p key={item} className="text-sm text-[#8A8A93]">
                       {item}
                     </p>
                   ))}
@@ -580,7 +580,7 @@ function DexaScenarios() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA in Action</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From insurance complexity to governed next action
           </h2>
         </ScrollReveal>
@@ -635,7 +635,7 @@ function Architecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Architecture</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built as insurance infrastructure, not a collection of screens
           </h2>
         </ScrollReveal>
@@ -682,7 +682,7 @@ function DeploymentModels() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Deployment</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             Deploy insurance infrastructure according to your operating model
           </h2>
         </ScrollReveal>
@@ -715,7 +715,7 @@ function UseCasesSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Insurance infrastructure that can power multiple business models
           </h2>
         </ScrollReveal>
@@ -757,7 +757,7 @@ function OutcomesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Outcomes</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             What insurance infrastructure should deliver
           </h2>
         </ScrollReveal>
@@ -795,7 +795,7 @@ function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl mx-auto">
             Build insurance infrastructure that connects products, policies,
             claims, reinsurance, brokers, partners, and intelligence
           </h2>

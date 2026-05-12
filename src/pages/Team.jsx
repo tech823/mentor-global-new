@@ -66,7 +66,7 @@ function PhotoFrame({ src, alt, name, size = "md", virtual = false }) {
             }}
           />
         ))}
-        <span className="absolute bottom-2 left-2 text-[9px] uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+        <span className="absolute bottom-2 left-2 text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
           DEXA Intelligence Core
         </span>
       </div>
@@ -94,7 +94,7 @@ function PhotoFrame({ src, alt, name, size = "md", virtual = false }) {
       <span className="relative text-2xl font-bold text-white/40 tracking-wider">
         {initials}
       </span>
-      <span className="absolute bottom-1.5 left-1.5 text-[8px] uppercase tracking-[0.15em] text-white/40 font-bold">
+      <span className="absolute bottom-1.5 left-1.5 text-xs uppercase tracking-[0.15em] text-white/40 font-bold">
         Photo Coming Soon
       </span>
     </div>
@@ -109,7 +109,7 @@ function LinkedInButton({ url, testId }) {
         target="_blank"
         rel="noreferrer"
         data-testid={testId}
-        className="inline-flex items-center gap-2 px-4 py-2 border border-[#11111F]/15 text-[#11111F] text-xs font-semibold hover:bg-[#11111F] hover:text-white transition-colors"
+        className="inline-flex items-center gap-2 px-4 py-2 border border-[#11111F]/15 text-[#11111F] text-base font-semibold hover:bg-[#11111F] hover:text-white transition-colors"
       >
         <Linkedin className="w-3.5 h-3.5" /> View LinkedIn
       </a>
@@ -118,7 +118,7 @@ function LinkedInButton({ url, testId }) {
   return (
     <span
       data-testid={testId}
-      className="inline-flex items-center gap-2 px-4 py-2 border border-dashed border-[#11111F]/20 text-[#666666] text-xs font-semibold"
+      className="inline-flex items-center gap-2 px-4 py-2 border border-dashed border-[#11111F]/20 text-[#666666] text-base font-semibold"
     >
       <Linkedin className="w-3.5 h-3.5" /> LinkedIn Coming Soon
     </span>
@@ -152,7 +152,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.18}>
-              <p className="mt-4 text-sm text-white/50 max-w-2xl leading-relaxed">
+              <p className="mt-4 text-base text-white/50 max-w-2xl leading-relaxed">
                 The leadership team behind Mentor Global is designed like the
                 company itself: structured, cross functional, infrastructure
                 focused, and built for global scale.
@@ -183,23 +183,23 @@ function Hero() {
             <div className="border border-white/10 bg-white/[0.02] p-5">
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-2 h-2 bg-[#0048FF] animate-pulse" />
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0048FF]">
+                <span className="text-sm uppercase tracking-[0.2em] font-bold text-[#0048FF]">
                   Leadership Architecture
                 </span>
-                <span className="text-[10px] text-[#8A8A93] ml-auto">
+                <span className="text-sm text-[#8A8A93] ml-auto">
                   Active
                 </span>
               </div>
 
               {/* Dr. Ali as center */}
               <div className="border border-[#0048FF]/30 bg-[#0048FF]/5 p-3 mb-3">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
+                <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
                   Founder · Board · Group CEO
                 </p>
                 <p className="text-sm text-white font-bold">
                   Dr. Ali Azeem Rajwani
                 </p>
-                <p className="text-[10px] text-white/60 mt-1">
+                <p className="text-sm text-white/60 mt-1">
                   Vision, Healthcare Ecosystem & Group Architecture
                 </p>
               </div>
@@ -211,10 +211,10 @@ function Hero() {
                     key={a.name}
                     className="border border-white/10 bg-white/[0.02] p-2.5 hover:border-[#0048FF]/30 transition-colors"
                   >
-                    <p className="text-[9px] uppercase tracking-[0.1em] text-[#0048FF] font-bold mb-1">
+                    <p className="text-sm uppercase tracking-[0.1em] text-[#0048FF] font-bold mb-1">
                       {a.short}
                     </p>
-                    <p className="text-[11px] text-white font-semibold leading-tight">
+                    <p className="text-sm text-white font-semibold leading-tight">
                       {a.name}
                     </p>
                   </div>
@@ -227,10 +227,10 @@ function Hero() {
                   <div className="w-2 h-2 bg-[#0048FF] rounded-full" />
                 </div>
                 <div>
-                  <p className="text-[9px] uppercase tracking-[0.15em] text-[#0048FF] font-bold">
+                   <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
                     Virtual Intelligence Layer
                   </p>
-                  <p className="text-[11px] text-white font-semibold">
+                  <p className="text-sm text-white font-semibold">
                     DEXA · AI Intelligence Architecture
                   </p>
                 </div>
@@ -238,7 +238,7 @@ function Hero() {
 
               {/* Infrastructure nodes */}
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
+                 <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
                   Infrastructure Nodes
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -249,9 +249,9 @@ function Hero() {
                     "AI",
                     "Company OS",
                   ].map((n) => (
-                    <span
+                     <span
                       key={n}
-                      className="text-[9px] px-2 py-0.5 border border-white/10 text-white/70"
+                      className="text-sm px-2 py-0.5 border border-white/10 text-white/70"
                     >
                       {n}
                     </span>
@@ -263,7 +263,7 @@ function Hero() {
         </div>
 
         <ScrollReveal delay={0.35}>
-          <p className="mt-14 text-xs uppercase tracking-[0.25em] text-white/30 font-bold border-t border-white/10 pt-8">
+           <p className="mt-14 text-base uppercase tracking-[0.25em] text-white/30 font-bold border-t border-white/10 pt-8">
             This team is building infrastructure, not managing departments.
           </p>
         </ScrollReveal>
@@ -320,7 +320,7 @@ function FounderQuote() {
                 <p className="text-base font-bold text-white italic">
                   — {founderQuote.author}
                 </p>
-                <p className="text-sm text-[#8A8A93] mt-1">{founderQuote.role}</p>
+                <p className="text-base text-[#8A8A93] mt-1">{founderQuote.role}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -361,13 +361,13 @@ function LeadershipPhilosophy() {
             {philosophyCards.map((c, i) => (
               <ScrollReveal key={c.title} delay={i * 0.08}>
                 <div className="bg-white p-7 h-full border-t border-[#0048FF] border-t-2">
-                  <span className="text-[#0048FF] text-xs font-bold">
+                   <span className="text-[#0048FF] text-base font-bold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-base font-bold text-[#11111F] mt-3 mb-3 leading-snug">
                     {c.title}
                   </h3>
-                  <p className="text-sm text-[#666666] leading-relaxed">
+                  <p className="text-base text-[#666666] leading-relaxed">
                     {c.desc}
                   </p>
                 </div>
@@ -420,13 +420,13 @@ function ArchitectureMap() {
 
               {/* Center hub */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-[#0048FF] flex flex-col items-center justify-center text-center px-3">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-white/70 font-bold">
+                 <p className="text-sm uppercase tracking-[0.2em] text-white/70 font-bold">
                   Center
                 </p>
                 <p className="text-base font-bold text-white mt-1 leading-tight">
                   Mentor Global
                 </p>
-                <p className="text-[10px] text-white/70 mt-2 leading-tight">
+                 <p className="text-sm text-white/70 mt-2 leading-tight">
                   Infrastructure Mission
                 </p>
               </div>
@@ -454,10 +454,10 @@ function ArchitectureMap() {
                           : "border-white/15 bg-white/[0.03]"
                       }`}
                     >
-                      <p className="text-[9px] uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
+                       <p className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold mb-1">
                         {a.short}
                       </p>
-                      <p className="text-[11px] font-bold text-white leading-tight">
+                      <p className="text-sm font-bold text-white leading-tight">
                         {a.name}
                       </p>
                     </div>
@@ -481,11 +481,11 @@ function ArchitectureMap() {
                     : "bg-[#11111F]"
                 }`}
               >
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
+                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                   {a.short}
                 </p>
                 <p className="text-base font-bold text-white mb-1">{a.name}</p>
-                <p className="text-xs text-white/60 leading-relaxed">
+                <p className="text-sm text-white/60 leading-relaxed">
                   {a.domain}
                 </p>
               </div>
@@ -527,21 +527,21 @@ function FounderFeature() {
               size="xl"
             />
             <div className="mt-6 border border-[#11111F]/10 p-5 bg-[#f8f8f9]">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                 Architecture Domain
               </p>
-              <p className="text-sm font-bold text-[#11111F] leading-snug">
+               <p className="text-base font-bold text-[#11111F] leading-snug">
                 {founderFeature.architectureDomain}
               </p>
               <div className="mt-5 pt-5 border-t border-[#11111F]/10">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+                 <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
                   Infrastructure Pillars
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {founderFeature.pillars.map((p) => (
-                    <span
+                     <span
                       key={p}
-                      className="text-[10px] px-2.5 py-1 border border-[#0048FF]/30 text-[#0048FF] font-semibold"
+                      className="text-sm px-2.5 py-1 border border-[#0048FF]/30 text-[#0048FF] font-semibold"
                     >
                       {p}
                     </span>
@@ -552,10 +552,10 @@ function FounderFeature() {
                 <LinkedInButton url={founderFeature.linkedin} testId="founder-linkedin" />
                 <a
                   href="#founder-profile"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#0048FF] text-white text-xs font-semibold hover:bg-[#0030CC] transition-colors"
+                   className="inline-flex items-center gap-2 px-4 py-2 bg-[#0048FF] text-white text-base font-semibold hover:bg-[#0030CC] transition-colors"
                   data-testid="founder-read-profile"
                 >
-                  Read Founder Profile <ArrowRight className="w-3.5 h-3.5" />
+                   Read Founder Profile <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -564,7 +564,7 @@ function FounderFeature() {
           {/* Content */}
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
             <div id="founder-profile">
-              <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+               <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                 Profile Summary
               </p>
               <p className="text-base md:text-lg text-[#11111F] leading-relaxed">
@@ -573,14 +573,14 @@ function FounderFeature() {
 
               <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                   <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                     Experience
                   </p>
                   <ul className="space-y-3">
                     {founderFeature.experience.map((e) => (
                       <li
                         key={e}
-                        className="flex gap-3 text-sm text-[#11111F] leading-relaxed"
+                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
                       >
                         <span className="text-[#0048FF] font-bold flex-shrink-0">
                           ▸
@@ -591,14 +591,14 @@ function FounderFeature() {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                   <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                     What he is building for Mentor Global
                   </p>
                   <ul className="space-y-3">
                     {founderFeature.building.map((e) => (
-                      <li
+                       <li
                         key={e}
-                        className="flex gap-3 text-sm text-[#11111F] leading-relaxed"
+                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
                       >
                         <span className="text-[#0048FF] font-bold flex-shrink-0">
                           ▸
@@ -614,7 +614,7 @@ function FounderFeature() {
                 <p className="text-base md:text-lg text-[#11111F] italic leading-relaxed">
                   “{founderQuote.text}”
                 </p>
-                <p className="mt-4 text-sm font-bold text-[#11111F]">
+                <p className="mt-4 text-base font-bold text-[#11111F]">
                   — {founderQuote.author}
                 </p>
               </div>
@@ -647,27 +647,27 @@ function BoardLeadership() {
             <ScrollReveal key={p.name} delay={i * 0.08}>
               <div className="bg-white p-8 h-full">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+                   <span className="text-base uppercase tracking-[0.2em] text-[#0048FF] font-bold">
                     Board Director
                   </span>
-                  <span className="text-xs text-[#666666] font-mono">
+                   <span className="text-base text-[#666666] font-mono">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-[#11111F] leading-snug">
                   {p.name}
                 </h3>
-                <p className="text-xs text-[#0048FF] font-semibold mt-1 mb-6">
+                 <p className="text-base text-[#0048FF] font-semibold mt-1 mb-6">
                   {p.title}
                 </p>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+                 <p className="text-base uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
                   Board Role
                 </p>
                 <ul className="space-y-2">
                   {p.role.map((r) => (
                     <li
                       key={r}
-                      className="flex gap-2 text-sm text-[#11111F] leading-relaxed"
+                      className="flex gap-2 text-base text-[#11111F] leading-relaxed"
                     >
                       <span className="text-[#0048FF] flex-shrink-0">•</span>
                       <span>{r}</span>
@@ -709,15 +709,15 @@ function ExecutiveLeadership() {
                 }`}
               >
                 <div className="flex items-center justify-between mb-5">
-                  <span
-                    className={`text-[9px] uppercase tracking-[0.2em] font-bold ${
+                   <span
+                    className={`text-base uppercase tracking-[0.2em] font-bold ${
                       l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
                     }`}
                   >
                     {l.virtual ? "Virtual Layer" : "Executive"}
                   </span>
-                  <span
-                    className={`text-xs font-mono ${
+                   <span
+                    className={`text-base font-mono ${
                       l.virtual ? "text-white/40" : "text-[#666666]"
                     }`}
                   >
@@ -731,15 +731,15 @@ function ExecutiveLeadership() {
                 >
                   {l.name}
                 </h3>
-                <p
-                  className={`text-xs font-semibold mt-2 leading-snug ${
+                 <p
+                  className={`text-base font-semibold mt-2 leading-snug ${
                     l.virtual ? "text-[#0048FF]" : "text-[#0048FF]"
                   }`}
                 >
                   {l.title}
                 </p>
                 {l.subtitle && (
-                  <p className="text-[11px] text-white/60 mt-1 italic">
+                   <p className="text-sm text-white/60 mt-1 italic">
                     {l.subtitle}
                   </p>
                 )}
@@ -784,29 +784,29 @@ function DexaSection() {
               virtual
             />
             <div className="mt-6 border border-white/10 p-5 bg-white/[0.02]">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-2">
                 Architecture Domain
               </p>
-              <p className="text-sm font-bold text-white leading-snug">
+               <p className="text-base font-bold text-white leading-snug">
                 {dexaProfile.architectureDomain}
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
-            <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+             <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
               Profile Summary
             </p>
             <p className="text-base md:text-lg text-white leading-relaxed">
               {dexaProfile.summary}
             </p>
-            <p className="mt-4 text-sm text-[#8A8A93] leading-relaxed italic">
+             <p className="mt-4 text-base text-[#8A8A93] leading-relaxed italic">
               {dexaProfile.distinction}
             </p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                   Experience — Deployed Across
                 </p>
                 <ul className="space-y-2.5">
@@ -822,7 +822,7 @@ function DexaSection() {
                 </ul>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
+                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-4">
                   What DEXA is building for Mentor Global
                 </p>
                 <ul className="space-y-2.5">
@@ -842,13 +842,13 @@ function DexaSection() {
             <div className="mt-10 border border-[#0048FF]/30 bg-[#0048FF]/[0.05] p-6">
               <div className="flex items-start gap-3 mb-4">
                 <ShieldCheck className="w-5 h-5 text-[#0048FF] flex-shrink-0 mt-0.5" />
-                <p className="text-xs uppercase tracking-[0.2em] text-[#0048FF] font-bold">
+                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold">
                   Governance Positioning
                 </p>
               </div>
-              <ul className="space-y-2">
+               <ul className="space-y-2">
                 {dexaProfile.governance.map((g) => (
-                  <li key={g} className="text-sm text-white/85 leading-relaxed">
+                  <li key={g} className="text-base text-white/85 leading-relaxed">
                     — {g}
                   </li>
                 ))}
@@ -859,7 +859,7 @@ function DexaSection() {
               <p className="text-xl md:text-2xl text-white italic leading-relaxed">
                 “{dexaProfile.quote}”
               </p>
-              <p className="mt-3 text-sm font-bold text-[#0048FF]">— DEXA</p>
+               <p className="mt-3 text-base font-bold text-[#0048FF]">— DEXA</p>
             </div>
           </ScrollReveal>
         </div>
@@ -887,7 +887,7 @@ function LeaderCard({ leader, index }) {
             size="xl"
           />
           <div className="absolute top-4 left-4 bg-[#0048FF] px-3 py-1">
-            <span className="text-[9px] uppercase tracking-[0.2em] text-white font-bold">
+             <span className="text-xs uppercase tracking-[0.2em] text-white font-bold">
               {String(index + 1).padStart(2, "0")} · Architect
             </span>
           </div>
@@ -903,19 +903,19 @@ function LeaderCard({ leader, index }) {
           </p>
           <div className="mt-4 inline-flex items-center gap-2 self-start border border-[#0048FF]/30 px-3 py-1">
             <span className="w-1 h-1 bg-[#0048FF] rounded-full" />
-            <span className="text-[10px] uppercase tracking-[0.15em] text-[#0048FF] font-bold">
+             <span className="text-sm uppercase tracking-[0.15em] text-[#0048FF] font-bold">
               {leader.architectureDomain}
             </span>
           </div>
 
-          <p className="mt-6 text-sm text-[#11111F] leading-relaxed">
+           <p className="mt-6 text-base text-[#11111F] leading-relaxed whitespace-pre-line">
             {leader.summary}
           </p>
 
           {expanded && (
             <div className="mt-6 border-t border-[#11111F]/10 pt-6 space-y-6">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   Experience
                 </p>
                 <ul className="space-y-2">
@@ -931,7 +931,7 @@ function LeaderCard({ leader, index }) {
                 </ul>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   What they are building for Mentor Global
                 </p>
                 <ul className="space-y-2">
@@ -947,7 +947,7 @@ function LeaderCard({ leader, index }) {
                 </ul>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
+                 <p className="text-sm uppercase tracking-[0.2em] text-[#0048FF] font-bold mb-3">
                   Infrastructure Pillars
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -968,7 +968,7 @@ function LeaderCard({ leader, index }) {
             <p className="text-sm md:text-base text-[#11111F] italic leading-relaxed">
               “{leader.quote}”
             </p>
-            <p className="mt-2 text-xs font-bold text-[#11111F]">
+             <p className="mt-2 text-sm font-bold text-[#11111F]">
               — {leader.name}
             </p>
           </div>
@@ -978,7 +978,7 @@ function LeaderCard({ leader, index }) {
             <button
               data-testid={`expand-${leader.id}`}
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#0048FF] text-white text-xs font-semibold hover:bg-[#0030CC] transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#0048FF] text-white text-sm font-semibold hover:bg-[#0030CC] transition-colors"
             >
               {expanded ? "Show Less" : "Read Full Profile"}
               {expanded ? (
@@ -1100,7 +1100,7 @@ function OwnershipMatrix() {
             <table className="w-full min-w-[900px] text-sm">
               <thead>
                 <tr className="bg-[#11111F] text-white">
-                  <th className="text-left px-5 py-4 text-[10px] uppercase tracking-[0.2em] font-bold border-r border-white/10">
+                   <th className="text-left px-5 py-4 text-sm uppercase tracking-[0.2em] font-bold border-r border-white/10">
                     Infrastructure Layer
                   </th>
                   {matrixColumns.map((c) => (
@@ -1138,7 +1138,7 @@ function OwnershipMatrix() {
                               <span className="text-[#11111F]/20 text-xs">—</span>
                             ) : (
                               <span
-                                className={`inline-block px-2 py-0.5 text-[10px] font-bold ${
+                                className={`inline-block px-2 py-0.5 text-sm font-bold ${
                                   v === "DEXA"
                                     ? "bg-[#0048FF]/10 text-[#0048FF] border border-[#0048FF]/30"
                                     : "bg-[#11111F]/5 text-[#11111F]"
@@ -1159,7 +1159,7 @@ function OwnershipMatrix() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="mt-4 text-[11px] text-[#666666] italic">
+          <p className="mt-4 text-sm text-[#666666] italic">
             Ali = Dr. Ali Azeem Rajwani · Navroz = Navroz Mansiya · Rafique =
             Rafique Awan · Jawwad = Jawwad Razvi · Khubaib = Syed Khubaib Hikmat
             · Sarmad = Sarmad Siddiqui · Ovais = Ovais Khan · DEXA = Virtual
@@ -1191,13 +1191,13 @@ function BuilderCredibility() {
           {credibilityCards.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.05}>
               <div className="bg-white p-6 h-full card-hover">
-                <span className="text-[#0048FF] text-xs font-bold font-mono">
+                 <span className="text-[#0048FF] text-sm font-bold font-mono">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-sm font-bold text-[#11111F] mt-3 mb-3 leading-snug">
                   {c.title}
                 </h3>
-                <p className="text-xs text-[#666666] leading-relaxed">{c.desc}</p>
+                 <p className="text-sm text-[#666666] leading-relaxed">{c.desc}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -1221,7 +1221,7 @@ function GovernanceNote() {
             <div className="flex items-start gap-4">
               <ShieldCheck className="w-8 h-8 text-[#0048FF] flex-shrink-0" />
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-2">
+                 <p className="text-base uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-2">
                   Governance Note
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug mb-5">
@@ -1263,13 +1263,13 @@ function FutureAdvisors() {
           {futurePlaceholders.map((f, i) => (
             <ScrollReveal key={f} delay={i * 0.04}>
               <div className="bg-white p-6 h-full border-t-2 border-t-[#0048FF]/20 hover:border-t-[#0048FF] transition-colors">
-                <span className="text-[#0048FF]/60 text-xs font-bold font-mono">
+                 <span className="text-[#0048FF]/60 text-sm font-bold font-mono">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-sm font-bold text-[#11111F] mt-3 mb-2 leading-snug">
                   {f}
                 </h3>
-                <p className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-bold">
+                 <p className="text-sm uppercase tracking-[0.15em] text-[#666666] font-bold">
                   Invitations Opening Soon
                 </p>
               </div>

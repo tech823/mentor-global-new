@@ -178,10 +178,10 @@ const MoneyMovementArchitecture = () => {
                 <Cpu className="w-4 h-4 text-[#6366F1]" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[9px] font-black tracking-[0.2em] text-[#6366F1] uppercase">
+                <span className="text-xs font-black tracking-[0.2em] text-[#6366F1] uppercase">
                   DEXA Intelligence
                 </span>
-                <span className="text-[8px] text-[#8A8A93] -mt-0.5 uppercase tracking-tighter">
+                <span className="text-[10px] text-[#8A8A93] -mt-0.5 uppercase tracking-tighter">
                   Financial OS Governance
                 </span>
               </div>
@@ -200,7 +200,7 @@ const MoneyMovementArchitecture = () => {
                 ].map((msg, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="w-1 h-1 bg-[#6366F1]" />
-                    <span className="text-[8px] font-mono text-[#8A8A93] uppercase">
+                    <span className="text-xs font-mono text-[#8A8A93] uppercase">
                       {msg}
                     </span>
                   </div>
@@ -212,11 +212,11 @@ const MoneyMovementArchitecture = () => {
               <div className="flex flex-col items-end">
                 <div className="flex items-center gap-1.5">
                   <div className="w-1.5 h-1.5 bg-[#6366F1] animate-pulse" />
-                  <span className="text-[9px] font-bold text-white uppercase tracking-wider">
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">
                     System Active
                   </span>
                 </div>
-                <span className="text-[7px] text-[#8A8A93] uppercase font-mono">
+                <span className="text-[10px] text-[#8A8A93] uppercase font-mono">
                   v3.0.4.FIN
                 </span>
               </div>
@@ -242,7 +242,7 @@ const MoneyMovementArchitecture = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full px-4 sm:px-6 lg:px-8 items-center relative z-10 mt-12 mb-10 h-[calc(100%-100px)]">
             {/* Sources - Left */}
             <div className="col-span-1 lg:col-span-3 flex flex-col gap-2.5">
-              <p className="text-[8px] uppercase tracking-[0.2em] text-[#8A8A93] font-bold mb-1 text-center lg:text-left">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#8A8A93] font-bold mb-1 text-center lg:text-left">
                 Money Sources
               </p>
               {sources.map((s) => (
@@ -253,7 +253,7 @@ const MoneyMovementArchitecture = () => {
                   <div className="w-6 h-6 border border-white/10 flex items-center justify-center bg-white/[0.02] group-hover:bg-[#0048FF]/10 transition-all">
                     <s.icon className="w-3 h-3 text-[#8A8A93] group-hover:text-[#0048FF]" />
                   </div>
-                  <span className="text-[9px] font-medium text-white/50 group-hover:text-white transition-all">
+                  <span className="text-xs font-medium text-white/50 group-hover:text-white transition-all">
                     {s.label}
                   </span>
                 </div>
@@ -294,7 +294,7 @@ const MoneyMovementArchitecture = () => {
                   <h3 className="text-lg font-bold text-white tracking-tight uppercase leading-tight">
                     Mentor Fintech Core
                   </h3>
-                  <p className="text-[8px] text-[#8A8A93] mt-1.5 tracking-[0.1em] uppercase">
+                  <p className="text-xs text-[#8A8A93] mt-1.5 tracking-[0.1em] uppercase">
                     Wallets · Payments · Ledgers · Settlement · Intelligence
                   </p>
 
@@ -309,7 +309,7 @@ const MoneyMovementArchitecture = () => {
                         <rail.icon
                           className={`w-3 ${hoveredRail?.id === rail.id ? "text-[#0048FF]" : "text-white/40"}`}
                         />
-                        <span className="text-[7px] font-bold text-white/50 uppercase tracking-tighter">
+                        <span className="text-xs font-bold text-white/50 uppercase tracking-tighter">
                           {rail.label.split(" ")[0]}
                         </span>
                       </motion.div>
@@ -345,7 +345,7 @@ const MoneyMovementArchitecture = () => {
 
             {/* Destinations - Right */}
             <div className="col-span-1 lg:col-span-3 flex flex-col gap-2.5">
-              <p className="text-[8px] uppercase tracking-[0.2em] text-[#8A8A93] font-bold mb-1 text-center lg:text-right">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#8A8A93] font-bold mb-1 text-center lg:text-right">
                 Money Destinations
               </p>
               {destinations.map((d) => (
@@ -353,7 +353,7 @@ const MoneyMovementArchitecture = () => {
                   key={d.id}
                   className="bg-white/[0.04] border border-white/10 p-2 flex items-center justify-end gap-2.5 group hover:border-[#0048FF]/40 transition-all text-right"
                 >
-                  <span className="text-[9px] font-medium text-white/50 group-hover:text-white transition-all">
+                  <span className="text-xs font-medium text-white/50 group-hover:text-white transition-all">
                     {d.label}
                   </span>
                   <div className="w-6 h-6 border border-white/10 flex items-center justify-center bg-white/[0.02] group-hover:bg-[#0048FF]/10 transition-all">
@@ -368,13 +368,13 @@ const MoneyMovementArchitecture = () => {
           <div className="absolute bottom-0 inset-x-0 h-10 border-t border-white/5 bg-black/80 backdrop-blur-md flex items-center justify-between px-6 z-[40]">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <span className="text-[7px] text-[#8A8A93] uppercase tracking-[0.15em] font-black">
+                <span className="text-xs text-[#8A8A93] uppercase tracking-[0.15em] font-black">
                   Governance Network
                 </span>
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
               </div>
               <div className="h-3 w-px bg-white/10" />
-              <div className="flex items-center gap-3 text-[9px] font-mono">
+              <div className="flex items-center gap-3 text-xs font-mono">
                 {hoveredRail ? (
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -400,16 +400,16 @@ const MoneyMovementArchitecture = () => {
             </div>
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <span className="text-[7px] text-[#8A8A93] uppercase tracking-widest font-bold">
+                <span className="text-xs text-[#8A8A93] uppercase tracking-widest font-bold">
                   Processed
                 </span>
-                <span className="text-[9px] text-white font-mono">$1.2B+</span>
+                <span className="text-xs text-white font-mono">$1.2B+</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-[7px] text-[#8A8A93] uppercase tracking-widest font-bold">
+                <span className="text-xs text-[#8A8A93] uppercase tracking-widest font-bold">
                   Node
                 </span>
-                <span className="text-[9px] text-[#6366F1] font-mono">
+                <span className="text-xs text-[#6366F1] font-mono">
                   FIN-01
                 </span>
               </div>
@@ -446,7 +446,7 @@ function Hero() {
               <p className="eyebrow mb-6 font-bold tracking-[0.2em] text-[#0048FF]">
                 FINTECH INFRASTRUCTURE
               </p>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05] max-w-xl">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05] max-w-xl">
                 Fintech Infrastructure for the Movement of Money
               </h1>
             </ScrollReveal>
@@ -505,7 +505,7 @@ function ProblemSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Financial systems fail when money moves faster than the
             infrastructure behind it.
           </h2>
@@ -517,7 +517,7 @@ function ProblemSection() {
                 <span className="text-[#0048FF] text-xs font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-sm text-[#11111F] font-medium leading-relaxed">
+                <p className="mt-2 text-base text-[#11111F] font-medium leading-relaxed">
                   {p}
                 </p>
               </div>
@@ -539,7 +539,7 @@ function InfrastructureStack() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Infrastructure Stack</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             One fintech infrastructure stack. Multiple connected money rails.
           </h2>
         </ScrollReveal>
@@ -560,7 +560,7 @@ function InfrastructureStack() {
                     {rail.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[10px] text-[#8A8A93] px-2 py-1 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
+                        className="text-sm text-[#8A8A93] px-2 py-1 border border-white/10 hover:border-[#0048FF]/30 transition-colors"
                       >
                         {item}
                       </span>
@@ -582,7 +582,7 @@ function ConnectedRailsVisual() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Connected Money Rails</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight mb-16">
             From disconnected money movement to one financial operating layer
           </h2>
         </ScrollReveal>
@@ -597,7 +597,7 @@ function ConnectedRailsVisual() {
                 className="p-5 md:p-6 text-center bg-white card-hover flex flex-col items-center justify-center min-h-[100px]"
               >
                 <div className="w-2 h-2 bg-[#0048FF] mx-auto mb-3" />
-                <p className="text-[10px] font-black uppercase tracking-widest text-[#11111F] leading-tight">
+                <p className="text-sm font-black uppercase tracking-widest text-[#11111F] leading-tight">
                   {rail.name.replace(" Rail", "")}
                 </p>
               </div>
@@ -627,7 +627,7 @@ function WhoItServes() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Stakeholders</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Built for organizations managing complex money flows
           </h2>
         </ScrollReveal>
@@ -659,7 +659,7 @@ function MoneyJourneys() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Money Journeys</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Financial infrastructure becomes real when every money journey is
             visible
           </h2>
@@ -702,7 +702,7 @@ function CoreModules() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Core Modules</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Modular infrastructure for financial operations
           </h2>
         </ScrollReveal>
@@ -734,7 +734,7 @@ function WalletSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Mentor Wallet</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Mentor Wallet, a financial access layer for health fintech
             ecosystems
           </h2>
@@ -817,7 +817,7 @@ function CardSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Mentor Card</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Mentor Card, controlled spending for benefits, expenses, and
             payments
           </h2>
@@ -873,7 +873,7 @@ function HealthcareUseCasesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Healthcare Fintech</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Financial infrastructure for healthcare access and administration
           </h2>
         </ScrollReveal>
@@ -916,7 +916,7 @@ function InsuranceUseCasesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Insurance Fintech</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             Financial infrastructure for insurance collections, payouts, and
             commissions
           </h2>
@@ -951,7 +951,7 @@ function DexaIntelligence() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA Intelligence</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             DEXA is the intelligence layer inside financial infrastructure
           </h2>
         </ScrollReveal>
@@ -999,7 +999,7 @@ function DexaScenarios() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">DEXA in Action</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight mb-12">
             From financial confusion to governed next action
           </h2>
         </ScrollReveal>
@@ -1054,7 +1054,7 @@ function Architecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Architecture</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Built as financial infrastructure, not payment screens
           </h2>
         </ScrollReveal>
@@ -1104,7 +1104,7 @@ function DeploymentModels() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Deployment</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             Deploy fintech infrastructure according to your operating model
           </h2>
         </ScrollReveal>
@@ -1131,7 +1131,7 @@ function UseCasesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Fintech infrastructure that can power multiple business models
           </h2>
         </ScrollReveal>
@@ -1171,7 +1171,7 @@ function OutcomesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Outcomes</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             What fintech infrastructure should deliver
           </h2>
         </ScrollReveal>
@@ -1205,7 +1205,7 @@ function FinalCTA() {
     <section data-testid="fin-final-cta" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl mx-auto">
             Build fintech infrastructure that connects wallets, cards, payroll,
             expenses, payments, credit, settlement, and intelligence
           </h2>

@@ -8,7 +8,9 @@ import ovaisPhoto from "../assets/ovais-khan.png";
 import drAli from "../assets/dr ali.jpeg";
 import farhatPhoto from "../assets/farhat_shaikh.png";
 import faizaPhoto from "../assets/faiza_barkat.jpeg";
+// import naheedPhoto from "../assets/ms-naheed.jpeg";
 import suhailPhoto from "../assets/suhail_shaikh.jpeg";
+import naheedPhoto from "../assets/ms-naheed.jpeg";
 
 // Leadership Architects — BRD compliant content (Mentor Global Leadership Page)
 
@@ -91,6 +93,16 @@ export const architectureDomains = [
     name: "Dr. Faiza Barkat",
     domain: "Clinical Operations and Regulatory Architecture",
     short: "Clinical Ops",
+  },
+  {
+    name: "Dr. Siza Barkat",
+    domain: "Clinical Operations and Regulatory Architecture",
+    short: "Clinical Ops",
+  },
+  {
+    name: "Ms. Naheed Ali",
+    domain: "Financial Control, Business Structuring, and Sustainable Growth",
+    short: "Finance Architecture",
   },
   {
     name: "Suhail Shaikh",
@@ -522,6 +534,45 @@ export const leaderProfiles = [
       "Operational excellence in healthcare is not just about efficiency; it is about building systems that protect clinical integrity while ensuring sustainable growth.",
     linkedin: "",
   },
+  {
+    id: "ms-naheed-ali",
+    name: "Ms. Naheed Ali",
+    title: "Chief Financial Officer, MedPreneur",
+    architectureDomain:
+      "Financial Control, Business Structuring, and Sustainable Growth, Financial Control, Business Structuring, and Sustainable Growth",
+    photo: naheedPhoto,
+    summary: `Ms. Naheed Ali is a finance professional with an MBA in Finance and more than 15 years of experience across healthcare, hospitality, and consulting-led business environments. As CFO of MedPreneur, she leads the financial discipline of the company, ensuring that growth is supported by strong controls, structured reporting, budget discipline, investor confidence, and long-term financial sustainability.
+
+Her finance experience includes notable leadership roles and financial responsibilities across Clifton Hospital, Paradise Sukhumvit Hotel, and Health Management Consultants. This diverse exposure gives her a practical understanding of healthcare operations, service businesses, cost management, revenue planning, and institutional financial governance.
+
+At MedPreneur, her role is central to building a financially sound platform for healthcare professionals, franchise owners, and investors. She strengthens MedPreneur’s ability to convert outpatient healthcare ventures into structured, measurable, and professionally managed assets. Her focus includes financial planning, internal controls, unit economics, investor reporting, cost governance, and scalable business models.`,
+    experience: [
+      "Chief Financial Officer, Financial discipline and governance",
+      "Budgeting, forecasting, and cost control",
+      "Healthcare and service business financial management",
+      "Investor reporting and financial transparency",
+      "Business feasibility and unit economics",
+      "Cash flow planning and operational finance",
+      "Structured financial systems for scalable growth",
+    ],
+    building: [
+      "Scalable business models and unit economics",
+      "Robust internal financial controls and cost governance",
+      "Structured investor reporting and financial transparency",
+      "Healthcare venture capital allocation models",
+      "Revenue planning and long-term sustainability frameworks",
+      "Corporate financial discipline and audit-readiness",
+    ],
+    pillars: [
+      "Financial Planning",
+      "Internal Controls",
+      "Investor Reporting",
+    ],
+    quote:
+      "Growth without financial discipline is risk. Sustainable growth begins when vision, numbers, and governance move together.",
+    linkedin: "",
+  },
+  
   {
     id: "suhail",
     name: "Suhail Shaikh",

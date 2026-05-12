@@ -56,12 +56,12 @@ function Hero() {
           <div>
             <ScrollReveal>
               <p className="eyebrow mb-6">Intelligence Processing Engine</p>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 DEXA, The Intelligence Processing Engine Behind Mentor Global
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
-              <p className="mt-8 hero-desc">
+              <p className="mt-8 hero-desc max-w-2xl text-lg md:text-xl">
                 DEXA understands context, retrieves approved knowledge, applies
                 rules, coordinates agents, triggers workflows, requests human
                 approval, monitors execution, and turns healthcare, insurance,
@@ -70,7 +70,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="mt-4 text-sm text-white/50 max-w-xl italic">
+              <p className="mt-4 text-base text-white/50 max-w-xl italic">
                 DEXA is not the chat window. DEXA is the intelligence layer
                 behind the action.
               </p>
@@ -110,7 +110,7 @@ function WhatDexaIs() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">What DEXA Is</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             DEXA is the intelligence layer behind the action
           </h2>
         </ScrollReveal>
@@ -127,13 +127,13 @@ function WhatDexaIs() {
           {dexaWhatIs.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.04}>
               <div className="bg-white p-5 md:p-6 card-hover h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-base font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-sm font-bold text-[#11111F] mt-2 mb-2">
+                <h3 className="text-lg font-bold text-[#11111F] mt-2 mb-2">
                   {c.title}
                 </h3>
-                <p className="text-[11px] text-[#666666] leading-relaxed">
+                <p className="text-base text-[#666666] leading-relaxed">
                   {c.desc}
                 </p>
               </div>
@@ -154,7 +154,7 @@ function WhatDexaIsNot() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">What DEXA Is Not</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             DEXA is bigger than a chatbot
           </h2>
         </ScrollReveal>
@@ -162,10 +162,10 @@ function WhatDexaIsNot() {
           {dexaWhatIsNot.map((c, i) => (
             <ScrollReveal key={c.title} delay={i * 0.05}>
               <div className="bg-[#11111F] p-6 card-hover-dark h-full">
-                <h3 className="text-base font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-white mb-2">
                   {c.title}
                 </h3>
-                <p className="text-xs text-[#8A8A93] leading-relaxed">
+                <p className="text-base text-[#8A8A93] leading-relaxed">
                   {c.desc}
                 </p>
               </div>
@@ -183,7 +183,7 @@ function ProblemSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Infrastructure without intelligence still depends on humans to
             connect the dots
           </h2>
@@ -192,10 +192,10 @@ function ProblemSection() {
           {dexaProblems.map((p, i) => (
             <ScrollReveal key={i} delay={i * 0.03}>
               <div className="bg-white p-5 card-hover h-full">
-                <span className="text-[#0048FF] text-xs font-bold">
+                <span className="text-[#0048FF] text-base font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-sm text-[#11111F] font-medium leading-relaxed">
+                <p className="mt-2 text-lg text-[#11111F] font-medium leading-relaxed">
                   {p}
                 </p>
               </div>
@@ -217,7 +217,7 @@ function HowDexaThinks() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Processing Chain</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight">
             How DEXA turns a question into governed action
           </h2>
         </ScrollReveal>
@@ -225,7 +225,7 @@ function HowDexaThinks() {
           <div className="mt-12 flex flex-wrap items-center gap-1.5">
             {dexaThinkingChain.map((step, i) => (
               <span key={step} className="flex items-center gap-1.5">
-                <span className="text-[10px] px-3 py-2 bg-white/5 border border-white/10 text-white font-medium">
+                <span className="text-base px-3 py-2 bg-white/5 border border-white/10 text-white font-medium">
                   {step}
                 </span>
                 {i < dexaThinkingChain.length - 1 && (
@@ -249,7 +249,7 @@ function OperatingModel() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Operating Model</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight">
             From information to action
           </h2>
         </ScrollReveal>
@@ -257,13 +257,13 @@ function OperatingModel() {
           {dexaOperatingStages.map((s, i) => (
             <ScrollReveal key={s.stage} delay={i * 0.08}>
               <div className="bg-white p-6 md:p-8 card-hover h-full">
-                <span className="text-[#0048FF] text-2xl font-bold">
+                <span className="text-[#0048FF] text-3xl font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="text-xl font-bold text-[#11111F] mt-3 mb-3">
+                <h3 className="text-2xl font-bold text-[#11111F] mt-3 mb-3">
                   {s.stage}
                 </h3>
-                <p className="text-sm text-[#666666] leading-relaxed">
+                <p className="text-base text-[#666666] leading-relaxed">
                   {s.desc}
                 </p>
               </div>
@@ -285,7 +285,7 @@ function DexaAcrossPillars() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Across Infrastructure</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             One intelligence engine across five infrastructure layers
           </h2>
         </ScrollReveal>
@@ -293,7 +293,7 @@ function DexaAcrossPillars() {
           {dexaPillarPanels.map((pillar, idx) => (
             <ScrollReveal key={pillar.name} delay={idx * 0.05}>
               <div className="border border-white/10 p-6 md:p-8">
-                <h3 className="text-lg font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {pillar.name}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -302,7 +302,7 @@ function DexaAcrossPillars() {
                       {pillar.items.map((item) => (
                         <span
                           key={item}
-                          className="text-[10px] text-[#8A8A93] px-2.5 py-1 border border-white/10"
+                          className="text-base text-[#8A8A93] px-2.5 py-1 border border-white/10"
                         >
                           {item}
                         </span>
@@ -310,13 +310,13 @@ function DexaAcrossPillars() {
                     </div>
                   </div>
                   <div className="border border-[#0048FF]/20 bg-[#0048FF]/5 p-4">
-                    <p className="text-[10px] text-[#0048FF] font-bold mb-1">
+                    <p className="text-sm text-[#0048FF] font-bold mb-1">
                       Example
                     </p>
-                    <p className="text-xs text-white/70 italic mb-2">
+                    <p className="text-base text-white/70 italic mb-2">
                       {pillar.example.question}
                     </p>
-                    <p className="text-[11px] text-[#8A8A93]">
+                    <p className="text-base text-[#8A8A93]">
                       {pillar.example.context}
                     </p>
                   </div>
@@ -488,13 +488,13 @@ function DexaCodeTerminal() {
             <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
             <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
           </div>
-          <span className="ml-4 text-[10px] text-white/40 font-mono tracking-widest uppercase">
+          <span className="ml-4 text-sm text-white/40 font-mono tracking-widest uppercase">
             dexa_reasoning_engine
           </span>
         </div>
 
         {/* Terminal Body */}
-        <div className="flex-1 p-6 font-mono text-[11px] leading-relaxed relative flex flex-col min-h-0">
+        <div className="flex-1 p-6 font-mono text-sm leading-relaxed relative flex flex-col min-h-0">
           <div
             ref={scrollRef}
             className="flex-1 overflow-y-auto scrollbar-hide space-y-2 pb-4"
@@ -605,14 +605,14 @@ const interfaceSurfaces = [
         <div className="flex gap-2">
           <div className="w-6 h-6 rounded-full bg-white/10 shrink-0" />
           <div className="bg-white/5 rounded-2xl rounded-tl-none p-2 border border-white/10">
-            <p className="text-[9px] text-white/80 leading-tight italic">
+            <p className="text-sm text-white/80 leading-tight italic">
               "What is our organization's health risk this quarter?"
             </p>
           </div>
         </div>
         <div className="flex gap-2 justify-end">
           <div className="bg-[#0048FF]/10 rounded-2xl rounded-tr-none p-2 border border-[#0048FF]/20 max-w-[80%]">
-            <p className="text-[9px] text-[#00E5FF] leading-tight">
+            <p className="text-sm text-[#00E5FF] leading-tight">
               Health risk score is 72/100. Drivers: hypertension indicators,
               chronic medication use, low screening participation.
             </p>
@@ -643,7 +643,7 @@ const interfaceSurfaces = [
               className={`w-2 h-2 rounded-full ${step.status === "complete" ? "bg-[#00E5FF]" : step.status === "active" ? "bg-[#0048FF] animate-pulse" : "bg-white/10"}`}
             />
             <span
-              className={`text-[10px] ${step.status === "pending" ? "text-white/20" : "text-white/70"}`}
+              className={`text-base ${step.status === "pending" ? "text-white/20" : "text-white/70"}`}
             >
               {step.label}
             </span>
@@ -660,30 +660,30 @@ const interfaceSurfaces = [
     preview: (
       <div className="p-4 bg-[#0A0A0F] rounded-xl border border-white/5 w-full space-y-3">
         <div className="flex items-center justify-between border-b border-white/5 pb-2">
-          <span className="text-[10px] text-white/40 uppercase tracking-wider">
+          <span className="text-sm text-white/40 uppercase tracking-wider">
             Recommendation
           </span>
-          <span className="text-[10px] font-bold text-[#00E5FF]">
+          <span className="text-sm font-bold text-[#00E5FF]">
             High Confidence
           </span>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-            <p className="text-[8px] text-white/40 mb-1">Risk Level</p>
-            <p className="text-[10px] text-amber-400 font-bold">
+            <p className="text-sm text-white/40 mb-1">Risk Level</p>
+            <p className="text-base text-amber-400 font-bold">
               Moderate High
             </p>
           </div>
           <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-            <p className="text-[8px] text-white/40 mb-1">Confidence</p>
-            <p className="text-[10px] text-white/80 font-bold">94%</p>
+            <p className="text-sm text-white/40 mb-1">Confidence</p>
+            <p className="text-base text-white/80 font-bold">94%</p>
           </div>
         </div>
         <div className="bg-[#0048FF]/10 p-2 rounded-lg border border-[#0048FF]/20">
-          <p className="text-[8px] text-[#0048FF] font-bold mb-1 uppercase tracking-wider">
+          <p className="text-sm text-[#0048FF] font-bold mb-1 uppercase tracking-wider">
             Next Action
           </p>
-          <p className="text-[10px] text-white font-medium">
+          <p className="text-base text-white font-medium">
             Launch 90-day preventive screening program
           </p>
         </div>
@@ -699,23 +699,23 @@ const interfaceSurfaces = [
       <div className="p-4 bg-[#0A0A0F] rounded-xl border border-white/5 w-full relative overflow-hidden h-full">
         <div className="absolute inset-x-0 top-0 h-px bg-[#0048FF] shadow-[0_0_10px_#0048FF] animate-scan z-20" />
         <div className="space-y-2 relative z-10">
-          <div className="flex items-center gap-2 text-[9px] text-[#00E5FF]">
+          <div className="flex items-center gap-2 text-sm text-[#00E5FF]">
             <div className="w-1.5 h-1.5 rounded-full bg-[#00E5FF]" /> Invoice
             uploaded
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-[#00E5FF]">
+          <div className="flex items-center gap-2 text-sm text-[#00E5FF]">
             <div className="w-1.5 h-1.5 rounded-full bg-[#00E5FF]" />{" "}
             Prescription detected
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-white/70">
+          <div className="flex items-center gap-2 text-sm text-white/70">
             <div className="w-1.5 h-1.5 rounded-full bg-white/20" /> Amount
             extracted
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-amber-400">
+          <div className="flex items-center gap-2 text-sm text-amber-400">
             <div className="w-1.5 h-1.5 rounded-full bg-amber-400" /> Mismatch
             flagged
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-white/30">
+          <div className="flex items-center gap-2 text-sm text-white/30">
             <div className="w-1.5 h-1.5 rounded-full bg-white/10" /> Policy rule
             checked
           </div>
@@ -732,30 +732,30 @@ const interfaceSurfaces = [
       <div className="p-4 bg-[#0A0A0F] rounded-xl border border-white/5 w-full grid grid-cols-2 gap-3 h-full items-center">
         <div className="space-y-3">
           <div>
-            <p className="text-[8px] text-white/40 uppercase mb-0.5">
+            <p className="text-sm text-white/40 uppercase mb-0.5">
               Health Score
             </p>
-            <p className="text-sm font-bold text-[#00E5FF]">72</p>
+            <p className="text-lg font-bold text-[#00E5FF]">72</p>
           </div>
           <div>
-            <p className="text-[8px] text-white/40 uppercase mb-0.5">
+            <p className="text-sm text-white/40 uppercase mb-0.5">
               Claims Trend
             </p>
-            <p className="text-xs font-bold text-red-400">+14%</p>
+            <p className="text-base font-bold text-red-400">+14%</p>
           </div>
         </div>
         <div className="space-y-3">
           <div>
-            <p className="text-[8px] text-white/40 uppercase mb-0.5">
+            <p className="text-sm text-white/40 uppercase mb-0.5">
               High Risk
             </p>
-            <p className="text-xs font-bold text-white">18%</p>
+            <p className="text-base font-bold text-white">18%</p>
           </div>
           <div>
-            <p className="text-[8px] text-white/40 uppercase mb-0.5">
+            <p className="text-sm text-white/40 uppercase mb-0.5">
               Top Driver
             </p>
-            <p className="text-[10px] text-white/80 leading-tight">
+            <p className="text-base text-white/80 leading-tight">
               Chronic OPD
             </p>
           </div>
@@ -781,7 +781,7 @@ const interfaceSurfaces = [
             key={i}
             className="flex items-center justify-between bg-white/[0.03] border border-white/10 p-1.5 rounded hover:bg-[#0048FF]/10 hover:border-[#0048FF]/30 transition-colors group/btn cursor-pointer"
           >
-            <span className="text-[10px] text-white/60 group-hover/btn:text-white transition-colors">
+            <span className="text-base text-white/60 group-hover/btn:text-white transition-colors">
               {action}
             </span>
             <ArrowRight className="w-3 h-3 text-white/20 group-hover/btn:text-[#0048FF] transition-colors" />
@@ -897,7 +897,7 @@ function IntelligenceCursorTheatre() {
       `}</style>
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#0048FF] mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] font-bold text-[#0048FF] mb-4">
             INTELLIGENCE CURSOR
           </p>
           <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
@@ -919,7 +919,7 @@ function IntelligenceCursorTheatre() {
               <button
                 key={i}
                 onClick={() => handlePromptClick(p)}
-                className={`px-3 py-1.5 rounded-full text-[8px] font-bold uppercase tracking-[0.1em] transition-all border ${activePrompt?.text === p.text ? "bg-[#0048FF] border-[#0048FF] text-white shadow-[0_0_20px_rgba(0,72,255,0.4)]" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10 hover:text-white hover:border-white/30"}`}
+                className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-[0.1em] transition-all border ${activePrompt?.text === p.text ? "bg-[#0048FF] border-[#0048FF] text-white shadow-[0_0_20px_rgba(0,72,255,0.4)]" : "bg-white/5 border-white/10 text-white/40 hover:bg-white/10 hover:text-white hover:border-white/30"}`}
               >
                 {p.text}
               </button>
@@ -1030,7 +1030,7 @@ function IntelligenceCursorTheatre() {
       <div className="mb-24">
         <ScrollReveal>
           <div className="text-center mb-4">
-            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40">
+            <p className="text-sm uppercase tracking-[0.3em] font-bold text-white/40">
               Governed Action Trail
             </p>
           </div>
@@ -1054,13 +1054,13 @@ function IntelligenceCursorTheatre() {
                     className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center transition-colors duration-300"
                   >
                     <span
-                      className={`text-[10px] font-bold ${trailIndex >= i ? "text-white" : "text-white/20"}`}
+                      className={`text-sm font-bold ${trailIndex >= i ? "text-white" : "text-white/20"}`}
                     >
                       {i + 1}
                     </span>
                   </motion.div>
                   <span
-                    className={`text-[9px] uppercase tracking-widest font-bold transition-colors duration-300 ${trailIndex >= i ? "text-[#00E5FF]" : "text-white/20"}`}
+                    className={`text-[10px] uppercase tracking-widest font-bold transition-colors duration-300 ${trailIndex >= i ? "text-[#00E5FF]" : "text-white/20"}`}
                   >
                     {step}
                   </span>
@@ -1097,7 +1097,7 @@ function DexaChannelsSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <ScrollReveal>
-            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#0048FF] mb-4">
+            <p className="text-sm uppercase tracking-[0.3em] font-bold text-[#0048FF] mb-4">
               CHANNELS
             </p>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
@@ -1131,11 +1131,11 @@ function DexaChannelsSection() {
                               <h3 className="text-sm font-bold text-white">
                                 {ch.name}
                               </h3>
-                              <span className="text-[9px] px-2 py-0.5 rounded-full bg-white/10 text-white/60 font-medium uppercase tracking-wider">
+                              <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white/60 font-medium uppercase tracking-wider">
                                 {ch.tag}
                               </span>
                             </div>
-                            <p className="text-[11px] text-[#8A8A93] leading-relaxed">
+                            <p className="text-xs text-[#8A8A93] leading-relaxed">
                               {ch.useCase}
                             </p>
                           </div>
@@ -1179,7 +1179,7 @@ function DexaChannelsSection() {
                                 {ch.tag}
                               </span>
                             </div>
-                            <p className="text-[11px] text-[#8A8A93] leading-relaxed">
+                            <p className="text-xs text-[#8A8A93] leading-relaxed">
                               {ch.useCase}
                             </p>
                           </div>
@@ -1216,7 +1216,7 @@ function IntelligenceLayers() {
                 className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? "border-t border-white/10" : ""}`}
               >
                 <div className="md:col-span-4 p-5 border-b md:border-b-0 md:border-r border-white/10">
-                  <span className="text-[#0048FF] text-xs font-bold">
+                  <span className="text-[#0048FF] text-sm font-bold">
                     L{idx + 1}
                   </span>
                   <p className="text-sm font-bold text-white mt-1">
@@ -1224,7 +1224,7 @@ function IntelligenceLayers() {
                   </p>
                 </div>
                 <div className="md:col-span-8 p-5">
-                  <p className="text-xs text-[#8A8A93] leading-relaxed">
+                  <p className="text-sm text-[#8A8A93] leading-relaxed">
                     {layer.desc}
                   </p>
                 </div>
@@ -1263,7 +1263,7 @@ function AgenticPods() {
                       <h4 className="text-sm font-bold text-[#11111F] mb-2">
                         {agent.name}
                       </h4>
-                      <p className="text-[11px] text-[#666666] leading-relaxed">
+                      <p className="text-xs text-[#666666] leading-relaxed">
                         {agent.desc}
                       </p>
                     </div>
@@ -1297,7 +1297,7 @@ function GovernanceSection() {
           {governanceCards.map((cap, i) => (
             <ScrollReveal key={cap} delay={i * 0.02}>
               <div className="bg-[#11111F] p-4 md:p-5 card-hover-dark">
-                <p className="text-xs text-white/80 font-medium">{cap}</p>
+                <p className="text-sm text-white/80 font-medium">{cap}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -1323,9 +1323,9 @@ function HumanApproval() {
               <div className="bg-white p-4 card-hover h-full">
                 <div className="flex items-center gap-1.5 mb-2">
                   <div className="w-1.5 h-1.5 bg-amber-400" />
-                  <span className="text-[9px] text-[#666666]">Pending</span>
+                  <span className="text-[10px] text-[#666666]">Pending</span>
                 </div>
-                <p className="text-[11px] text-[#11111F] font-medium">{q}</p>
+                <p className="text-xs text-[#11111F] font-medium">{q}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -1406,7 +1406,7 @@ function Architecture() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Architecture</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Built as an intelligence processing engine, not a chat layer
           </h2>
         </ScrollReveal>
@@ -1417,10 +1417,10 @@ function Architecture() {
                 className={`grid grid-cols-1 md:grid-cols-12 ${idx > 0 ? "border-t border-[#11111F]/10" : ""}`}
               >
                 <div className="md:col-span-4 p-4 border-b md:border-b-0 md:border-r border-[#11111F]/10">
-                  <span className="text-[#0048FF] text-xs font-bold">
+                  <span className="text-[#0048FF] text-sm font-bold">
                     L{idx + 1}
                   </span>
-                  <p className="text-xs font-bold text-[#11111F] mt-0.5">
+                  <p className="text-sm font-bold text-[#11111F] mt-0.5">
                     {layer.name}
                   </p>
                 </div>
@@ -1429,7 +1429,7 @@ function Architecture() {
                     {layer.items.map((item) => (
                       <span
                         key={item}
-                        className="text-[10px] px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
+                        className="text-sm px-2 py-0.5 border border-[#11111F]/10 text-[#666666]"
                       >
                         {item}
                       </span>
@@ -1454,7 +1454,7 @@ function UseCasesSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Use Cases</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             DEXA use cases across Mentor Global infrastructure
           </h2>
         </ScrollReveal>
@@ -1462,10 +1462,10 @@ function UseCasesSection() {
           {dexaUseCases.map((uc, i) => (
             <ScrollReveal key={uc.name} delay={i * 0.02}>
               <div className="bg-[#11111F] p-4 card-hover-dark h-full">
-                <h3 className="text-[11px] font-bold text-white mb-1.5">
+                <h3 className="text-base font-bold text-white mb-1.5">
                   {uc.name}
                 </h3>
-                <div className="space-y-0.5 text-[9px] text-[#8A8A93]">
+                <div className="space-y-0.5 text-sm text-[#8A8A93]">
                   <p>
                     <span className="text-[#0048FF]">Who:</span> {uc.who}
                   </p>
@@ -1556,11 +1556,11 @@ function OutcomesSection() {
             <ScrollReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0048FF]/5 border border-[#0048FF]/10 mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-[#0048FF]">
+                <span className="text-xs font-bold tracking-widest uppercase text-[#0048FF]">
                   OUTCOMES
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.1] mb-8">
+              <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.1] mb-8">
                 What DEXA should deliver
               </h2>
               <p className="section-desc max-w-xl mb-12">
@@ -1609,7 +1609,7 @@ function OutcomesSection() {
                                 activeZone === zone.id ? zone.color : "#DDD",
                             }}
                           />
-                          <span className="text-[11px] text-[#666666] leading-relaxed group-hover:text-[#11111F] transition-colors">
+                          <span className="text-sm text-[#666666] leading-relaxed group-hover:text-[#11111F] transition-colors">
                             {outcome}
                           </span>
                         </div>
@@ -1619,7 +1619,8 @@ function OutcomesSection() {
                 </ScrollReveal>
               ))}
             </div>
-          </div>          {/* Right Side: High-Fidelity Animated System Visual - iPad Mockup */}
+          </div>
+          {/* Right Side: High-Fidelity Animated System Visual - iPad Mockup */}
           <div className="relative flex justify-center lg:justify-end">
             <ScrollReveal delay={0.2} direction="left" className="w-full">
               <IpadMockup orientation="landscape" className="max-w-2xl lg:mr-0 lg:ml-auto">
@@ -1704,10 +1705,10 @@ function OutcomesSection() {
                           >
                             <Cpu className="w-10 h-10 text-[#0048FF] mb-3" />
                           </motion.div>
-                          <span className="text-[10px] font-bold text-white tracking-[0.3em] uppercase mb-1">
+                          <span className="text-xs font-bold text-white tracking-[0.3em] uppercase mb-1">
                             DEXA
                           </span>
-                          <span className="text-[8px] font-bold text-white/40 tracking-[0.2em] uppercase">
+                          <span className="text-xs font-bold text-white/40 tracking-[0.2em] uppercase">
                             System Active
                           </span>
                         </div>
@@ -1785,10 +1786,10 @@ function OutcomesSection() {
 
                       <div className="absolute bottom-0 left-0 p-6">
                         <div className="text-left">
-                          <p className="text-[9px] font-bold text-[#0048FF] uppercase tracking-[0.3em] mb-1">
+                          <p className="text-xs font-bold text-[#0048FF] uppercase tracking-[0.3em] mb-1">
                             Real-time Analysis
                           </p>
-                          <p className="text-[7px] font-mono text-white/20 uppercase tracking-widest leading-relaxed">
+                          <p className="text-xs font-mono text-white/20 uppercase tracking-widest leading-relaxed">
                             Processing infrastructure events...
                             <br />
                             Applying governance rules...
@@ -1801,15 +1802,15 @@ function OutcomesSection() {
                   {/* Floating Telemetry Corner */}
                   <div className="absolute bottom-4 right-4 text-right">
                     <div className="bg-black/40 backdrop-blur-md border border-white/5 p-3 rounded-sm">
-                      <p className="text-[7px] font-mono text-white/30 mb-1 uppercase">
+                      <p className="text-xs font-mono text-white/30 mb-1 uppercase">
                         Core Operations
                       </p>
                       <div className="flex gap-4">
                         <div>
-                          <p className="text-[6px] text-white/20 uppercase">
+                          <p className="text-xs text-white/20 uppercase">
                             Latency
                           </p>
-                          <p className="text-[9px] font-mono text-[#0048FF]">
+                          <p className="text-sm font-mono text-[#0048FF]">
                             12.4ms
                           </p>
                         </div>
@@ -1819,7 +1820,7 @@ function OutcomesSection() {
                 </div>
               </IpadMockup>
             </ScrollReveal>
-          </div>l>l>
+          </div>
         </div>
       </div>
     </section>
@@ -1835,7 +1836,7 @@ function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-3xl mx-auto">
             Turn infrastructure into intelligence
           </h2>
         </ScrollReveal>

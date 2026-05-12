@@ -27,7 +27,7 @@ export default function Solutions() {
               <ScrollReveal>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
-                  <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-white/80">
+                  <span className="text-sm sm:text-base font-bold tracking-widest uppercase text-white/80">
                     SOLUTIONS
                   </span>
                 </div>
@@ -98,7 +98,7 @@ export default function Solutions() {
                         className="w-24 h-24 rounded-full border border-[#0048FF]/30 border-t-[#0048FF] absolute"
                       />
                       <div className="w-16 h-16 rounded-full bg-[#11111F] border border-[#0048FF]/50 flex items-center justify-center shadow-[0_0_30px_rgba(0,72,255,0.4)]">
-                        <span className="text-[#0048FF] font-bold text-[10px] tracking-wider">
+                        <span className="text-[#0048FF] font-bold text-sm tracking-wider">
                           CORE
                         </span>
                       </div>
@@ -226,7 +226,7 @@ export default function Solutions() {
                               <Icon className="w-4 h-4 text-white/80 group-hover:text-[#0048FF] transition-colors" />
                               <div className="absolute inset-0 bg-[#0048FF]/0 group-hover:bg-[#0048FF]/10 rounded-lg transition-colors" />
                             </motion.div>
-                            <span className="mt-2 text-[9px] font-bold tracking-widest uppercase text-white/60 whitespace-nowrap">
+                            <span className="mt-2 text-sm font-bold tracking-widest uppercase text-white/60 whitespace-nowrap">
                               {node.label}
                             </span>
                           </motion.div>
@@ -259,7 +259,7 @@ export default function Solutions() {
                           bottom: label.bottom,
                         }}
                       >
-                        <div className="px-2 py-1 bg-white/[0.03] border border-white/5 rounded text-[8px] font-mono text-[#0048FF]/80 whitespace-nowrap backdrop-blur-sm">
+                        <div className="px-2 py-1 bg-white/[0.03] border border-white/5 rounded text-sm font-mono text-[#0048FF]/80 whitespace-nowrap backdrop-blur-sm">
                           {label.text}
                         </div>
                       </motion.div>
@@ -286,7 +286,7 @@ export default function Solutions() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
                       {/* Number + Icon */}
                       <div className="lg:col-span-1 p-6 lg:p-8 flex lg:flex-col items-center lg:items-start gap-4 lg:gap-4 border-b lg:border-b-0 lg:border-r border-[#11111F]/10">
-                        <span className="text-xs font-bold text-[#0048FF]">
+                        <span className="text-base font-bold text-[#0048FF]">
                           0{i + 1}
                         </span>
                         <Icon
@@ -304,21 +304,21 @@ export default function Solutions() {
                           {pillar.shortDesc}
                         </p>
                         <div className="mb-4">
-                          <p className="text-xs uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
+                          <p className="text-base uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-2">
                             Who it serves
                           </p>
                           <div className="flex flex-wrap gap-2">
                             {pillar.whoServes.map((who) => (
                               <span
                                 key={who}
-                                className="text-xs px-3 py-1 border border-[#11111F]/10 text-[#666666]"
+                                className="text-base px-3 py-1 border border-[#11111F]/10 text-[#666666]"
                               >
                                 {who}
                               </span>
                             ))}
                           </div>
                         </div>
-                        <p className="text-xs text-[#666666] leading-relaxed">
+                        <p className="text-base text-[#666666] leading-relaxed">
                           <span className="text-[#0048FF] font-semibold">
                             DEXA:{" "}
                           </span>
@@ -329,20 +329,20 @@ export default function Solutions() {
                       {/* Modules + CTA */}
                       <div className="lg:col-span-4 p-6 lg:p-8 flex flex-col justify-between">
                         <div>
-                          <p className="text-xs uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-3">
+                          <p className="text-base uppercase tracking-[0.15em] font-bold text-[#11111F]/40 mb-3">
                             Key Modules
                           </p>
                           <div className="flex flex-wrap gap-1.5 mb-6">
                             {(pillar.modules || []).slice(0, 6).map((mod) => (
                               <span
                                 key={mod}
-                                className="text-xs text-[#666666] after:content-[','] last:after:content-['']"
+                                className="text-base text-[#666666] after:content-[','] last:after:content-['']"
                               >
                                 {mod}
                               </span>
                             ))}
                             {(pillar.modules || []).length > 6 && (
-                              <span className="text-xs text-[#0048FF] font-medium">
+                              <span className="text-base text-[#0048FF] font-medium">
                                 +{pillar.modules.length - 6} more
                               </span>
                             )}
@@ -351,7 +351,7 @@ export default function Solutions() {
                         <Link
                           to={`/solutions/${pillar.slug}`}
                           data-testid={`solution-card-${pillar.slug}`}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-[#0048FF] hover:text-[#0030CC] transition-colors"
+                          className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF] hover:text-[#0030CC] transition-colors"
                         >
                           Explore {pillar.title}{" "}
                           <ArrowRight className="w-4 h-4" />

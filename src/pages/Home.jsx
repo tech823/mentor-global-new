@@ -69,12 +69,12 @@ function Hero() {
           {/* Left - Text */}
           <div className="max-w-2xl">
             <ScrollReveal>
-              <p className="mb-2 mt-4 uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold text-primary">
+              <p className="mb-2 mt-4 uppercase tracking-[0.2em] text-xs md:text-sm font-bold text-primary">
                 GLOBAL HEALTH FINTECH INFRASTRUCTURE
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h1 className="text-[var(--fs-hero)] font-bold text-white tracking-tight leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tight leading-[1.05]">
                 The Infrastructure Behind the Future of Health Fintech
               </h1>
             </ScrollReveal>
@@ -86,7 +86,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
-              <p className="mt-4 text-sm text-[#8A8A93]/70">
+              <p className="mt-4 text-base text-[#8A8A93]/70">
                 We do not build isolated products. We build the infrastructure
                 that lets ecosystems launch, operate, automate, insure, finance,
                 and scale.
@@ -124,13 +124,13 @@ function Hero() {
             <Link
               key={i}
               to={`/solutions`}
-              className="flex-1 min-w-[260px] p-6 lg:p-8 border-r border-white/10 last:border-r-0 hover:bg-white/5 transition-colors group cursor-pointer flex flex-col justify-start"
+              className="flex-1 min-w-[260px] sm:w-full p-6 lg:p-8 border-r border-white/10 last:border-r-0 hover:bg-white/5 transition-colors group cursor-pointer flex flex-col justify-start"
             >
               <div className="w-8 h-[2px] bg-[#0048FF] mb-5 group-hover:w-12 transition-all duration-300" />
-              <p className="text-[10px] uppercase tracking-[0.1em] font-bold text-[#8A8A93] mb-3 group-hover:text-white/70 transition-colors">
+              <p className="text-sm uppercase tracking-[0.1em] font-bold text-[#8A8A93] mb-3 group-hover:text-white/70 transition-colors">
                 {card.label}
               </p>
-              <h4 className="text-sm font-medium text-white/80 leading-relaxed group-hover:text-white transition-colors">
+              <h4 className="text-base font-medium text-white/80 leading-relaxed group-hover:text-white transition-colors">
                 {card.title}
               </h4>
             </Link>
@@ -176,7 +176,7 @@ function Positioning() {
           <div className="max-w-xl">
             <ScrollReveal>
               <p className="eyebrow mb-4">Structure</p>
-              <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.1]">
+              <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.1]">
                 Built as a Global Infrastructure Holding Company
               </h2>
             </ScrollReveal>
@@ -216,13 +216,13 @@ function Positioning() {
                   ${i < layers.length - 1 ? "border-b sm:border-b lg:border-b-0 lg:border-r border-[#11111F]/10" : ""}
                 `}
               >
-                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0048FF] mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] font-bold text-[#0048FF] mb-3">
                   0{i + 1}
                 </p>
                 <h3 className="text-base font-bold text-[#11111F] mb-2 leading-tight">
                   {layer.label}
                 </h3>
-                <p className="text-xs text-[#666666] leading-relaxed">
+                <p className="text-sm text-[#666666] leading-relaxed">
                   {layer.desc}
                 </p>
               </div>
@@ -264,7 +264,7 @@ function Problem() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">The Problem</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight max-w-3xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-3xl">
             Large industries are still running on broken systems
           </h2>
         </ScrollReveal>
@@ -278,10 +278,10 @@ function Problem() {
           {problems.map((p, i) => (
             <ScrollReveal key={p.area} delay={i * 0.06}>
               <div className="bg-[#11111F] p-6 md:p-8 card-hover-dark h-full">
-                <p className="text-[#0048FF] text-sm font-bold mb-3">
+                <p className="text-[#0048FF] text-base font-bold mb-3">
                   {p.area}
                 </p>
-                <p className="text-sm text-[#8A8A93] leading-relaxed">
+                <p className="text-base text-[#8A8A93] leading-relaxed">
                   {p.issue}
                 </p>
               </div>
@@ -310,7 +310,7 @@ function Pillars() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Solutions</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight max-w-4xl">
             Five Infrastructure Pillars. One Global Architecture.
           </h2>
         </ScrollReveal>
@@ -333,10 +333,10 @@ function Pillars() {
                   <h3 className="text-xl font-bold text-[#11111F] mb-3">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-[#666666] leading-relaxed mb-6">
+                  <p className="text-base text-[#666666] leading-relaxed mb-6">
                     {pillar.shortDesc}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0048FF]">
+                  <span className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF]">
                     Explore <ArrowRight className="w-4 h-4" />
                   </span>
                 </Link>
@@ -360,7 +360,7 @@ function DexaSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Intelligence Engine</p>
-          <h2 className="text-[var(--fs-4xl)] font-bold text-white tracking-tight max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-4xl">
             DEXA Makes Infrastructure Think, Guide, and Act
           </h2>
         </ScrollReveal>
@@ -393,10 +393,10 @@ function DexaSection() {
           ].map((item, i) => (
             <ScrollReveal key={item.label} delay={i * 0.08}>
               <div className="bg-[#11111F] p-8 card-hover-dark h-full">
-                <p className="text-[#0048FF] text-sm font-bold mb-2">
+                <p className="text-[#0048FF] text-base font-bold mb-2">
                   {item.label}
                 </p>
-                <p className="text-sm text-[#8A8A93] leading-relaxed">
+                <p className="text-base text-[#8A8A93] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -408,7 +408,7 @@ function DexaSection() {
             <Link
               to="/dexa"
               data-testid="home-dexa-cta"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#0048FF] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-base font-semibold text-[#0048FF] hover:text-white transition-colors"
             >
               Explore DEXA <ArrowRight className="w-4 h-4" />
             </Link>
@@ -445,10 +445,10 @@ function InnovationSection() {
           {/* Left Side: Editorial Content */}
           <div className="max-w-xl">
             <ScrollReveal>
-              <p className="mb-4 uppercase tracking-[0.2em] text-[10px] md:text-xs font-bold text-[#0048FF]">
+              <p className="mb-4 uppercase tracking-[0.2em] text-xs md:text-sm font-bold text-[#0048FF]">
                 Technology Engine
               </p>
-              <h2 className="text-[var(--fs-4xl)] font-bold text-[#11111F] tracking-tight leading-[1.1]">
+              <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.1]">
                 Mentor Innovation Builds the Technology Backbone
               </h2>
             </ScrollReveal>
@@ -462,7 +462,7 @@ function InnovationSection() {
             <ScrollReveal delay={0.2}>
               <div className="mt-10 border-l-2 border-[#0048FF] pl-6 bg-gradient-to-r from-[#0048FF]/[0.02] to-transparent py-4">
                 <p className="text-sm text-[#11111F]/80 font-medium leading-relaxed space-y-2">
-                  <span className="block text-[#11111F]">
+                  <span className="block text-[#11111F] text-base">
                     Build on Mentor infrastructure.
                   </span>
                   <span className="block">Launch as your own brand.</span>
@@ -479,10 +479,10 @@ function InnovationSection() {
               <div className="mt-12 grid grid-cols-2 gap-y-4 gap-x-6">
                 {capabilities.map((cap, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <span className="text-[#0048FF] text-[10px] font-bold">
+                    <span className="text-[#0048FF] text-xs font-bold">
                       //
                     </span>
-                    <span className="text-sm font-medium text-[#11111F]/80">
+                    <span className="text-base font-medium text-[#11111F]/80">
                       {cap}
                     </span>
                   </div>
@@ -533,12 +533,12 @@ function InnovationSection() {
                       className="flex gap-4 w-full"
                     >
                       <div className="flex-1 p-3 sm:p-4 bg-[#11111F]/90 backdrop-blur-sm border border-white/10 rounded-xl hover:border-[#0048FF]/50 transition-colors flex items-center justify-center shadow-lg group">
-                        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-white/80 group-hover:text-white transition-colors">
+                        <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white/80 group-hover:text-white transition-colors">
                           Portals & Apps
                         </span>
                       </div>
                       <div className="flex-1 p-3 sm:p-4 bg-[#11111F]/90 backdrop-blur-sm border border-white/10 rounded-xl hover:border-[#0048FF]/50 transition-colors flex items-center justify-center shadow-lg group">
-                        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-white/80 group-hover:text-white transition-colors">
+                        <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-white/80 group-hover:text-white transition-colors">
                           Dashboards
                         </span>
                       </div>
@@ -575,7 +575,7 @@ function InnovationSection() {
                         <span className="text-xs sm:text-sm font-bold text-white">
                           API First Platforms
                         </span>
-                        <span className="text-[9px] sm:text-[10px] text-[#0048FF] font-mono border border-[#0048FF]/30 px-2 py-1 rounded bg-[#0048FF]/5">
+                        <span className="text-xs sm:text-sm text-[#0048FF] font-mono border border-[#0048FF]/30 px-2 py-1 rounded bg-[#0048FF]/5">
                           JSON/REST
                         </span>
                       </div>
@@ -638,24 +638,24 @@ function InnovationSection() {
                         }}
                         className="absolute right-0 top-0 w-32 h-32 bg-[#8A2BE2]/20 blur-[50px] pointer-events-none"
                       />
-                      <span className="text-[10px] uppercase tracking-widest text-[#0048FF] font-bold mb-3 block px-1">
+                      <span className="text-xs uppercase tracking-widest text-[#0048FF] font-bold mb-3 block px-1">
                         Core Architecture
                       </span>
                       <div className="grid grid-cols-2 gap-2 sm:gap-3">
                         <div className="bg-white/5 border border-white/5 rounded pl-3 pr-2 py-2 flex items-center justify-between hover:bg-white/10 transition-colors cursor-default">
-                          <span className="text-[10px] sm:text-[11px] font-medium text-white/80">
+                          <span className="text-sm font-medium text-white/80">
                             Workflow Engines
                           </span>
                           <Zap className="w-3 h-3 text-[#0048FF]" />
                         </div>
                         <div className="bg-white/5 border border-white/5 rounded pl-3 pr-2 py-2 flex items-center justify-between hover:bg-white/10 transition-colors cursor-default">
-                          <span className="text-[10px] sm:text-[11px] font-medium text-white/80">
+                          <span className="text-sm font-medium text-white/80">
                             Full Code Systems
                           </span>
                           <Brain className="w-3 h-3 text-[#8A2BE2]" />
                         </div>
                         <div className="bg-white/5 border border-white/5 rounded pl-3 pr-2 py-2 flex items-center justify-between col-span-2 hover:bg-white/10 transition-colors cursor-default">
-                          <span className="text-[10px] sm:text-[11px] font-medium text-white/80">
+                          <span className="text-sm font-medium text-white/80">
                             White Labelled Solutions & Custom Software
                           </span>
                           <Globe className="w-3 h-3 text-[#0048FF]" />
@@ -689,7 +689,7 @@ function ScaleSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Scale</p>
-          <h2 className="text-[var(--fs-display)] font-bold text-white tracking-tight max-w-3xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-3xl">
             Operating Infrastructure at Global Scale
           </h2>
         </ScrollReveal>
@@ -712,11 +712,11 @@ function ScaleSection() {
                     suffix={metric.suffix}
                   />
                 </p>
-                <p className="mt-3 text-sm text-[#8A8A93] leading-relaxed">
+                <p className="mt-3 text-base text-[#8A8A93] leading-relaxed">
                   {metric.label}
                 </p>
                 {metric.sub && (
-                  <p className="mt-1 text-xs text-[#8A8A93]/60">{metric.sub}</p>
+                  <p className="mt-1 text-sm text-[#8A8A93]/60">{metric.sub}</p>
                 )}
               </div>
             </ScrollReveal>
@@ -731,7 +731,7 @@ function ScaleSection() {
         </div>
 
         <ScrollReveal delay={0.5}>
-          <p className="mt-8 text-xs text-[#8A8A93]/50 max-w-3xl leading-relaxed">
+          <p className="mt-8 text-sm text-[#8A8A93]/50 max-w-3xl leading-relaxed">
             {scaleDisclaimer}
           </p>
         </ScrollReveal>
@@ -774,7 +774,7 @@ function GlobalPresenceSection() {
           <div>
             <ScrollReveal>
               <p className="eyebrow mb-4">Global Presence</p>
-              <h2 className="text-[var(--fs-display)] font-bold text-[#11111F] tracking-tight mb-4 leading-[1.1]">
+              <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight mb-4 leading-[1.1]">
                 Built in Singapore.
               </h2>
             </ScrollReveal>
@@ -802,7 +802,7 @@ function GlobalPresenceSection() {
 
             <ScrollReveal delay={0.4}>
               <div className="mt-8 p-6 border border-[#11111F]/10 bg-[#FAFAFA]">
-                <p className="text-sm text-[#666666] font-medium">
+                <p className="text-base text-[#666666] font-medium">
                   {globalFootprint}
                 </p>
               </div>
@@ -834,7 +834,7 @@ function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#0048FF]/[0.05] blur-[140px]" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mx-auto">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight max-w-3xl mx-auto">
             Build on infrastructure designed for global health fintech systems.
           </h2>
         </ScrollReveal>

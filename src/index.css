@@ -13,19 +13,14 @@
   --mentor-border-light: rgba(17, 17, 31, 0.1);
   --mentor-border-dark: rgba(255, 255, 255, 0.1);
 
-  /* Fluid Typography System */
-  --fs-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
-  --fs-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
-  --fs-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
-  --fs-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --fs-xl: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
-  --fs-2xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  --fs-3xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
-  --fs-4xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.25rem);
-  --fs-5xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
-  --fs-6xl: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
-  --fs-hero: clamp(3.5rem, 3rem + 4vw, 6.5rem);
-  --fs-display: clamp(3rem, 2.5rem + 3.5vw, 5.5rem);
+  /* Standardized Typography Tokens - Increased for readability */
+  --fs-xs: 14px;
+  --fs-sm: 16px;
+  --fs-base: 18px;
+  --fs-lg: 20px;
+  --fs-xl: 24px;
+  --fs-2xl: 30px;
+  --fs-3xl: 36px;
 }
 
 body {

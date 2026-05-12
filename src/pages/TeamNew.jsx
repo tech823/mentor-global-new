@@ -110,11 +110,11 @@ function PremiumAvatar({ name, square = false }) {
           className="w-1.5 h-1.5 rounded-none"
           style={{ background: INDIGO, boxShadow: `0 0 12px ${INDIGO}` }}
         />
-        <span className="text-[9px] uppercase tracking-[0.2em] text-white/50 font-bold">
+        <span className="text-sm uppercase tracking-[0.2em] text-white/50 font-bold">
           Architect Identity
         </span>
       </div>
-      <div className="absolute bottom-4 right-4 text-[9px] uppercase tracking-[0.15em] text-white/30 font-mono">
+      <div className="absolute bottom-4 right-4 text-sm uppercase tracking-[0.15em] text-white/30 font-mono">
         MNTR-LEAD
       </div>
     </div>
@@ -269,11 +269,11 @@ function DexaCore({ size = "lg" }) {
           className="w-1.5 h-1.5 rounded-none animate-pulse"
           style={{ background: INDIGO, boxShadow: `0 0 12px ${INDIGO}` }}
         />
-        <span className="text-[9px] uppercase tracking-[0.2em] text-white/60 font-bold">
+        <span className="text-sm uppercase tracking-[0.2em] text-white/60 font-bold">
           DEXA Intelligence Core
         </span>
       </div>
-      <div className="absolute bottom-4 right-4 text-[9px] uppercase tracking-[0.15em] text-white/40 font-mono">
+      <div className="absolute bottom-4 right-4 text-sm uppercase tracking-[0.15em] text-white/40 font-mono">
         AI · Governed
       </div>
     </div>
@@ -313,7 +313,7 @@ function Hero() {
               <p className="eyebrow mb-6 font-bold text-primary">
                 Leadership Architects
               </p>
-              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 The Architects Building Global Health Fintech Infrastructure
               </h1>
             </ScrollReveal>
@@ -326,7 +326,7 @@ function Hero() {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.18}>
-              <p className="mt-4 text-sm text-white/50 max-w-2xl leading-relaxed">
+              <p className="mt-4 text-base text-white/50 max-w-2xl leading-relaxed">
                 The leadership team behind Mentor Global is designed like the
                 company itself: structured, cross functional, infrastructure
                 focused, and built for global scale.
@@ -387,7 +387,7 @@ function Hero() {
                     Delivering Solutions.
                   </h2>
                   <div className="w-20 h-[1px] bg-white/30 my-4" />
-                  <p className="text-[10px] sm:text-xs md:text-sm text-white/80 font-bold uppercase tracking-[0.15em] leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-white/80 font-bold uppercase tracking-[0.15em] leading-relaxed">
                     Strategy. Technology. Growth.
                     <br />
                     All Under One Roof.
@@ -420,12 +420,12 @@ function Hero() {
                     }}
                   />
                   <span
-                    className="text-[10px] uppercase tracking-[0.2em] font-bold"
+                    className="text-sm uppercase tracking-[0.2em] font-bold"
                     style={{ color: INDIGO }}
                   >
                     Leadership Architecture Console
                   </span>
-                  <span className="text-[10px] text-white/40 ml-auto font-mono">
+                  <span className="text-sm text-white/40 ml-auto font-mono">
                     ACTIVE
                   </span>
                 </div>
@@ -439,16 +439,16 @@ function Hero() {
                   }}
                 >
                   <p
-                    className="text-[9px] uppercase tracking-[0.25em] font-bold mb-1"
+                    className="text-sm uppercase tracking-[0.25em] font-bold mb-1"
                     style={{ color: INDIGO }}
                   >
                     Center · Holding
                   </p>
                   <p className="text-base text-white font-bold">Mentor Global</p>
-                  <p className="text-[11px] text-white/90 font-semibold mt-1">
+                  <p className="text-sm text-white/90 font-semibold mt-1">
                     Dr. Ali Azeem Rajwani
                   </p>
-                  <p className="text-[9px] text-white/40 mt-1 uppercase tracking-wider">
+                  <p className="text-sm text-white/40 mt-1 uppercase tracking-wider">
                     Infrastructure Mission
                   </p>
                 </div>
@@ -464,12 +464,12 @@ function Hero() {
                       }}
                     >
                       <p
-                        className="text-[8px] uppercase tracking-[0.1em] font-bold mb-1"
+                        className="text-sm uppercase tracking-[0.15em] font-bold mb-1"
                         style={{ color: BLUE }}
                       >
                         {a.short}
                       </p>
-                      <p className="text-[11px] text-white font-semibold leading-tight">
+                      <p className="text-sm text-white font-semibold leading-tight">
                         {a.name}
                       </p>
                     </div>
@@ -498,12 +498,12 @@ function Hero() {
                   </div>
                   <div>
                     <p
-                      className="text-[9px] uppercase tracking-[0.2em] font-bold"
+                      className="text-sm uppercase tracking-[0.2em] font-bold"
                       style={{ color: INDIGO }}
                     >
                       Virtual Intelligence Layer
                     </p>
-                    <p className="text-xs text-white font-semibold">
+                    <p className="text-sm text-white font-semibold">
                       DEXA · AI Intelligence
                     </p>
                   </div>
@@ -520,7 +520,7 @@ function Hero() {
                     ].map((n) => (
                       <span
                         key={n}
-                        className="text-[8px] px-2 py-1 rounded-none border border-white/10 text-white/60 font-bold uppercase tracking-wider"
+                        className="text-sm px-2 py-1 rounded-none border border-white/10 text-white/60 font-bold uppercase tracking-wider"
                       >
                         {n}
                       </span>
@@ -534,7 +534,7 @@ function Hero() {
         </div>
 
         {/* <ScrollReveal delay={0.35}>
-          <p className="mt-14 text-xs uppercase tracking-[0.3em] text-white/30 font-bold border-t border-white/10 pt-8">
+          <p className="mt-14 text-sm uppercase tracking-[0.3em] text-white/30 font-bold border-t border-white/10 pt-8">
             This team is building infrastructure, not managing departments.
           </p>
         </ScrollReveal> */}
@@ -635,7 +635,7 @@ function LeadershipPhilosophy() {
               <p className="eyebrow mb-4 font-bold" style={{ color: BLUE }}>
                 Leadership Philosophy
               </p>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05]">
+              <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05]">
                 Built by Operators. Designed for Scale.
               </h2>
             </ScrollReveal>
@@ -659,7 +659,7 @@ function LeadershipPhilosophy() {
                   }}
                 >
                   <span
-                    className="text-xs font-bold font-mono"
+                    className="text-sm font-bold font-mono"
                     style={{ color: BLUE }}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -667,7 +667,7 @@ function LeadershipPhilosophy() {
                   <h3 className="text-lg font-bold text-[#11111F] mt-4 mb-3 leading-snug">
                     {c.title}
                   </h3>
-                  <p className="text-sm text-[#666666] leading-relaxed">
+                  <p className="text-base text-[#666666] leading-relaxed">
                     {c.desc}
                   </p>
                 </div>
@@ -701,7 +701,7 @@ function ArchitectureMap() {
           <p className="eyebrow mb-4 font-bold text-primary">
             Leadership Architecture Map
           </p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Ten Human Architects. One Virtual Intelligence Officer. One
             Infrastructure Mission.
           </h2>
@@ -763,13 +763,13 @@ function ArchitectureMap() {
                     "0 0 40px rgba(99,102,241,0.5), 0 0 80px rgba(0,72,255,0.4)",
                 }}
               >
-                <p className="text-[9px] uppercase tracking-[0.2em] text-white/80 font-bold">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/80 font-bold">
                   Center
                 </p>
                 <p className="text-base font-bold text-white mt-1 leading-tight">
                   Mentor Global
                 </p>
-                <p className="text-[10px] text-white/80 mt-2 leading-tight">
+                <p className="text-sm text-white/80 mt-2 leading-tight">
                   Infrastructure Mission
                 </p>
               </div>
@@ -832,12 +832,12 @@ function ArchitectureMap() {
                         }}
                       >
                         <p
-                          className="text-[9px] uppercase tracking-[0.15em] font-bold mb-1"
+                          className="text-xs uppercase tracking-[0.15em] font-bold mb-1"
                           style={{ color: isDexa ? INDIGO : BLUE }}
                         >
                           {a.domain}
                         </p>
-                        <p className="text-[12px] font-bold text-white leading-tight">
+                        <p className="text-sm font-bold text-white leading-tight">
                           {a.name}
                         </p>
                       </div>
@@ -867,7 +867,7 @@ function ArchitectureMap() {
                 }}
               >
                 <p
-                  className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2"
+                  className="text-xs uppercase tracking-[0.2em] font-bold mb-2"
                   style={{ color: isDexa ? INDIGO : BLUE }}
                 >
                   {a.domain}
@@ -895,7 +895,7 @@ function FounderFeatureSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Founder Feature</p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05]">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05]">
             {founderFeature.name}
           </h2>
           <p className="mt-3 text-base font-semibold" style={{ color: BLUE }}>
@@ -914,24 +914,24 @@ function FounderFeatureSection() {
             </div>
             <div className="mt-6 rounded-none border border-[#11111F]/10 p-6 bg-[#f8f8f9]">
               <p
-                className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2"
+                className="text-sm uppercase tracking-[0.2em] font-bold mb-2"
                 style={{ color: BLUE }}
               >
                 Architecture Domain
               </p>
-              <p className="text-sm font-bold text-[#11111F] leading-snug">
+              <p className="text-base font-bold text-[#11111F] leading-snug">
                 {founderFeature.architectureDomain}
               </p>
 
               <div className="mt-5 pt-5 border-t border-[#11111F]/10">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
                   Infrastructure Pillars
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {founderFeature.pillars.map((p) => (
                     <span
                       key={p}
-                      className="text-[10px] px-2.5 py-1 rounded-none font-semibold"
+                      className="text-sm px-2.5 py-1 rounded-none font-semibold"
                       style={{
                         border: `1px solid ${BLUE}40`,
                         color: BLUE,
@@ -947,7 +947,7 @@ function FounderFeatureSection() {
                 <a
                   href="#founder-profile"
                   data-testid="founder-read-profile"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-none text-white text-base font-semibold hover:opacity-90 transition-opacity"
                   style={{ background: BLUE }}
                 >
                   Read Founder Profile <ArrowRight className="w-3.5 h-3.5" />
@@ -960,7 +960,7 @@ function FounderFeatureSection() {
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
             <div id="founder-profile">
               <p
-                className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4"
+                className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
                 style={{ color: BLUE }}
               >
                 Profile Summary
@@ -978,7 +978,7 @@ function FounderFeatureSection() {
               <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                   <p
-                    className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4"
+                    className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
                     style={{ color: BLUE }}
                   >
                     Experience
@@ -987,7 +987,7 @@ function FounderFeatureSection() {
                     {founderFeature.experience.map((e) => (
                       <li
                         key={e}
-                        className="flex gap-3 text-sm text-[#11111F] leading-relaxed"
+                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
                       >
                         <span
                           className="flex-shrink-0 font-bold"
@@ -1002,7 +1002,7 @@ function FounderFeatureSection() {
                 </div>
                 <div>
                   <p
-                    className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4"
+                    className="text-sm uppercase tracking-[0.25em] font-bold mb-4"
                     style={{ color: BLUE }}
                   >
                     What he is building for Mentor Global
@@ -1011,7 +1011,7 @@ function FounderFeatureSection() {
                     {founderFeature.building.map((e) => (
                       <li
                         key={e}
-                        className="flex gap-3 text-sm text-[#11111F] leading-relaxed"
+                        className="flex gap-3 text-base text-[#11111F] leading-relaxed"
                       >
                         <span
                           className="flex-shrink-0 font-bold"
@@ -1040,10 +1040,10 @@ function FounderFeatureSection() {
                 <p className="text-base md:text-lg text-[#11111F] italic leading-relaxed">
                   “{founderQuote.text}”
                 </p>
-                <p className="mt-4 text-sm font-bold text-[#11111F]">
+                <p className="mt-4 text-base font-bold text-[#11111F]">
                   — {founderQuote.author}
                 </p>
-                <p className="text-[10px] text-[#8A8A93] uppercase tracking-widest mt-1">
+                <p className="text-sm text-[#8A8A93] uppercase tracking-widest mt-1">
                   {founderQuote.role}
                 </p>
               </div>
@@ -1290,7 +1290,7 @@ function DexaProfileSection() {
           <p className="eyebrow font-bold mb-4 text-primary">
             DEXA, Virtual Intelligence Officer
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             DEXA, Group Chief AI Intelligence Officer
           </h2>
           <p className="mt-3 text-lg font-semibold text-primary">
@@ -1308,7 +1308,7 @@ function DexaProfileSection() {
                 background: "rgba(255,255,255,0.02)",
               }}
             >
-              <p className="text-[10px] uppercase tracking-[0.2em] font-bold mb-2 text-primary">
+              <p className="text-sm uppercase tracking-[0.2em] font-bold mb-2 text-primary">
                 Architecture Domain
               </p>
               <p className="text-sm font-bold text-white leading-snug">
@@ -1318,7 +1318,7 @@ function DexaProfileSection() {
           </ScrollReveal>
 
           <ScrollReveal className="lg:col-span-7" delay={0.15}>
-            <p className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4 text-primary">
+            <p className="text-sm uppercase tracking-[0.25em] font-bold mb-4 text-primary">
               Profile Summary
             </p>
             <p className="text-base md:text-lg text-white leading-relaxed">
@@ -1332,14 +1332,14 @@ function DexaProfileSection() {
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4 text-primary">
+                <p className="text-sm uppercase tracking-[0.25em] font-bold mb-4 text-primary">
                   Experience deployed across
                 </p>
                 <ul className="space-y-2.5">
                   {dexaProfile.experience.map((e) => (
                     <li
                       key={e}
-                      className="flex gap-3 text-sm text-white/85 leading-relaxed"
+                      className="flex gap-3 text-base text-white/85 leading-relaxed"
                     >
                       <span className="flex-shrink-0 text-primary">▸</span>
                       <span>{e}</span>
@@ -1348,14 +1348,14 @@ function DexaProfileSection() {
                 </ul>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold mb-4 text-primary">
+                <p className="text-sm uppercase tracking-[0.25em] font-bold mb-4 text-primary">
                   What DEXA is building for Mentor Global
                 </p>
                 <ul className="space-y-2.5">
                   {dexaProfile.building.map((e) => (
                     <li
                       key={e}
-                      className="flex gap-3 text-sm text-white/85 leading-relaxed"
+                      className="flex gap-3 text-base text-white/85 leading-relaxed"
                     >
                       <span className="flex-shrink-0 text-primary">▸</span>
                       <span>{e}</span>
@@ -1375,13 +1375,13 @@ function DexaProfileSection() {
             >
               <div className="flex items-start gap-3 mb-4">
                 <ShieldCheck className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary" />
-                <p className="text-xs uppercase tracking-[0.2em] font-bold text-primary">
+                <p className="text-sm uppercase tracking-[0.2em] font-bold text-primary">
                   Governance Positioning
                 </p>
               </div>
               <ul className="space-y-2">
                 {dexaProfile.governance.map((g) => (
-                  <li key={g} className="text-sm text-white/85 leading-relaxed">
+                  <li key={g} className="text-base text-white/85 leading-relaxed">
                     — {g}
                   </li>
                 ))}
@@ -1398,7 +1398,7 @@ function DexaProfileSection() {
               <p className="text-xl md:text-2xl text-white italic leading-relaxed">
                 “{dexaProfile.quote}”
               </p>
-              <p className="mt-3 text-sm font-bold text-primary">— DEXA</p>
+              <p className="mt-3 text-base font-bold text-primary">— DEXA</p>
             </div>
           </ScrollReveal>
         </div>
@@ -1434,7 +1434,7 @@ function LeaderProfile({ leader, index }) {
           </div>
           <div className="mt-5 flex items-center gap-3">
             <span
-              className="px-3 py-1 rounded-none text-[10px] uppercase tracking-[0.2em] font-bold"
+              className="px-3 py-1 rounded-none text-sm uppercase tracking-[0.2em] font-bold"
               style={{
                 background: "rgba(99,102,241,0.12)",
                 color: INDIGO,
@@ -1442,7 +1442,7 @@ function LeaderProfile({ leader, index }) {
             >
               Architect {index + 1}
             </span>
-            <span className="text-[10px] uppercase tracking-[0.15em] font-bold text-white/50">
+            <span className="text-sm uppercase tracking-[0.15em] font-bold text-white/50">
               {leader.architectureDomain.split(",")[0]}
             </span>
           </div>
@@ -1471,12 +1471,12 @@ function LeaderProfile({ leader, index }) {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-none text-primary">▸</span>
-            <span className="text-[10px] uppercase tracking-[0.15em] font-bold text-primary">
+            <span className="text-sm uppercase tracking-[0.15em] font-bold text-primary">
               {leader.architectureDomain}
             </span>
           </div>
 
-          <p className="mt-6 text-sm md:text-base text-white/80 leading-relaxed">
+          <p className="mt-6 text-sm md:text-base text-white/80 leading-relaxed whitespace-pre-line">
             {leader.summary}
           </p>
 
@@ -1484,7 +1484,7 @@ function LeaderProfile({ leader, index }) {
             <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p
-                  className="text-[10px] uppercase tracking-[0.2em] font-bold mb-3"
+                  className="text-sm uppercase tracking-[0.2em] font-bold mb-3"
                   style={{ color: BLUE }}
                 >
                   Experience highlights
@@ -1505,7 +1505,7 @@ function LeaderProfile({ leader, index }) {
               </div>
               <div>
                 <p
-                  className="text-[10px] uppercase tracking-[0.2em] font-bold mb-3"
+                  className="text-sm uppercase tracking-[0.2em] font-bold mb-3"
                   style={{ color: BLUE }}
                 >
                   What he is building
@@ -1537,7 +1537,7 @@ function LeaderProfile({ leader, index }) {
             <p className="text-sm md:text-base text-white italic leading-relaxed">
               “{leader.quote}”
             </p>
-            <p className="mt-2 text-xs font-bold text-white/80">
+            <p className="mt-2 text-sm font-bold text-white/80">
               — {leader.name}
             </p>
           </div>
@@ -1546,7 +1546,7 @@ function LeaderProfile({ leader, index }) {
             <button
               data-testid={`expand-${leader.id}`}
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-none text-white text-xs font-semibold transition-all hover:translate-y-[-1px]"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-none text-white text-sm font-semibold transition-all hover:translate-y-[-1px]"
               style={{
                 background: BLUE,
                 boxShadow: "0 4px 18px rgba(0,72,255,0.35)",
@@ -1578,7 +1578,7 @@ function LeaderProfilesSection() {
           <p className="eyebrow mb-4 font-bold text-primary">
             Individual Leader Profiles
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             The Architects Behind Each Infrastructure Layer
           </h2>
         </ScrollReveal>
@@ -1619,7 +1619,7 @@ function LeaderProfilesSection() {
 //             How the Leadership Team Works as One System
 //           </h2>
 //         </ScrollReveal>
-
+// 
 //         <div className="mt-16 rounded-none border border-white/10 backdrop-blur-md overflow-hidden">
 //           {operatingModelFlow.map((s, i) => (
 //             <ScrollReveal key={s.stage} delay={i * 0.03}>
@@ -1646,7 +1646,7 @@ function LeaderProfilesSection() {
 //                 </div>
 //                 <div className="col-span-4 md:col-span-3 p-5 border-r border-white/10">
 //                   <p
-//                     className="text-[10px] uppercase tracking-[0.2em] font-bold mb-1"
+//                     className="text-sm uppercase tracking-[0.2em] font-bold mb-1"
 //                     style={{ color: INDIGO }}
 //                   >
 //                     Stage
@@ -1655,7 +1655,7 @@ function LeaderProfilesSection() {
 //                     {s.stage}
 //                   </p>
 //                   <span
-//                     className="mt-2 inline-block text-[10px] px-2 py-0.5 rounded-none font-bold"
+//                     className="mt-2 inline-block text-sm px-2 py-0.5 rounded-none font-bold"
 //                     style={{
 //                       background: "rgba(0,72,255,0.10)",
 //                       color: BLUE,
@@ -1722,7 +1722,7 @@ function LeaderProfilesSection() {
 //                 <h3 className="text-lg md:text-xl font-bold text-[#11111F] leading-snug mb-5">
 //                   {row}
 //                 </h3>
-//                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
+//                 <p className="text-sm uppercase tracking-[0.2em] text-[#666666] font-bold mb-3">
 //                   Architecture Owners
 //                 </p>
 //                 <div className="flex flex-wrap gap-1.5">
@@ -1732,7 +1732,7 @@ function LeaderProfilesSection() {
 //                     return (
 //                       <span
 //                         key={idx}
-//                         className="text-[10px] px-2.5 py-1 rounded-none font-semibold transition-colors"
+//                         className="text-sm px-2.5 py-1 rounded-none font-semibold transition-colors"
 //                         style={
 //                           isDexa
 //                             ? {
@@ -1773,7 +1773,7 @@ function BuilderCredibility() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Builder Credibility</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Built by People Who Have Operated Real Systems
           </h2>
         </ScrollReveal>
@@ -1787,7 +1787,7 @@ function BuilderCredibility() {
               >
                 <div className="flex items-center justify-between mb-5">
                   <span
-                    className="text-xs font-bold font-mono"
+                    className="text-sm font-bold font-mono"
                     style={{ color: BLUE }}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -1800,7 +1800,7 @@ function BuilderCredibility() {
                 <h3 className="text-sm md:text-base font-bold text-[#11111F] mb-3 leading-snug">
                   {c.title}
                 </h3>
-                <p className="text-xs md:text-sm text-[#666666] leading-relaxed">
+                <p className="text-sm md:text-base text-[#666666] leading-relaxed">
                   {c.desc}
                 </p>
               </div>
@@ -1834,7 +1834,7 @@ function GovernanceNote() {
             <div className="flex items-start gap-4">
               <ShieldCheck className="w-8 h-8 flex-shrink-0 text-primary" />
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold mb-2 text-primary">
+                <p className="text-sm uppercase tracking-[0.25em] font-bold mb-2 text-primary">
                   Governance Note
                 </p>
                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-snug mb-5">
@@ -1864,7 +1864,7 @@ function ExtendedLeadershipModel() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Extended Leadership</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Built to Scale With Advisors, Country Leaders, and Domain Councils
           </h2>
           <p className="mt-6 text-base text-[#666666] max-w-3xl leading-relaxed">
@@ -1883,7 +1883,7 @@ function ExtendedLeadershipModel() {
                 <div className="w-10 h-10 rounded-none bg-white border border-[#11111F]/5 flex items-center justify-center mx-auto mb-4">
                   <Users className="w-4 h-4 text-[#0048FF]/60" />
                 </div>
-                <h3 className="text-xs md:text-sm font-bold text-[#11111F] leading-snug">
+                <h3 className="text-sm md:text-base font-bold text-[#11111F] leading-snug">
                   {f}
                 </h3>
               </div>
@@ -1924,7 +1924,7 @@ function FinalCTA() {
           <p className="eyebrow font-bold mb-4 text-primary">
             Partner With Leadership
           </p>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-[1.05]">
+          <h2 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.05]">
             Partner With the Architects Building Global Health Fintech
             Infrastructure
           </h2>

@@ -66,7 +66,7 @@ function Hero() {
               <p className="eyebrow mb-6 font-bold" style={{ color: INDIGO }}>
                 {cultureHero.eyebrow}
               </p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold text-white tracking-tighter leading-[1.05]">
+              <h1 className="text-[38px] sm:text-[35px] md:text-[48px] lg:text-[54px] xl:text-[54px] font-bold text-white tracking-tighter leading-[1.05]">
                 {cultureHero.headline}
               </h1>
             </ScrollReveal>
@@ -139,12 +139,12 @@ function Hero() {
                   }}
                 />
                 <span
-                  className="text-[10px] uppercase tracking-[0.2em] font-bold"
+                  className="text-base uppercase tracking-[0.2em] font-bold"
                   style={{ color: INDIGO }}
                 >
                   Mentor Global Culture OS
                 </span>
-                <span className="text-[10px] text-white/40 ml-auto font-mono">
+                <span className="text-base text-white/40 ml-auto font-mono">
                   ACTIVE
                 </span>
               </div>
@@ -161,12 +161,12 @@ function Hero() {
                   }}
                 >
                   <p
-                    className="text-[9px] uppercase tracking-[0.25em] font-bold mb-1"
+                    className="text-base uppercase tracking-[0.25em] font-bold mb-1"
                     style={{ color: INDIGO }}
                   >
                     Center · OS Core
                   </p>
-                  <p className="text-base text-white font-bold">
+                  <p className="text-lg text-white font-bold">
                     Mentor Global Culture OS
                   </p>
                 </div>
@@ -189,12 +189,12 @@ function Hero() {
                       }}
                     >
                       <p
-                        className="text-[9px] uppercase tracking-[0.1em] font-bold mb-1"
+                        className="text-base uppercase tracking-[0.1em] font-bold mb-1"
                         style={{ color: i === 2 ? INDIGO : BLUE }}
                       >
                         Pillar {String(i + 1).padStart(2, "0")}
                       </p>
-                      <p className="text-[10px] text-white font-semibold leading-tight">
+                      <p className="text-base text-white font-semibold leading-tight">
                         {p}
                       </p>
                     </div>
@@ -202,14 +202,14 @@ function Hero() {
                 </div>
 
                 {/* 9 behavior nodes */}
-                <p className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
+                <p className="text-base uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
                   Behaviors
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {behaviorNodes.map((b) => (
                     <span
                       key={b}
-                      className="text-[10px] px-2.5 py-1 rounded-full border border-white/10 text-white/80 hover:border-[#6366F1]/40 transition-colors"
+                      className="text-base px-2.5 py-1 rounded-full border border-white/10 text-white/80 hover:border-[#6366F1]/40 transition-colors"
                     >
                       {b}
                     </span>
@@ -236,7 +236,7 @@ function CultureOS() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Culture Operating System</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Culture Is the Operating System Behind Execution
           </h2>
         </ScrollReveal>
@@ -292,7 +292,7 @@ function CultureOS() {
                       <p className="text-base md:text-lg font-bold text-[#11111F]">
                         {l.label}
                       </p>
-                      <p className="text-sm text-[#666666] leading-relaxed mt-1">
+                      <p className="text-base text-[#666666] leading-relaxed mt-1">
                         {l.desc}
                       </p>
                     </div>
@@ -328,7 +328,7 @@ function ThreePillars() {
           <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
             Our Core Philosophy
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Three Pillars Shape How Mentor Global Works
           </h2>
         </ScrollReveal>
@@ -355,7 +355,7 @@ function ThreePillars() {
                 >
                   <div className="flex items-center justify-between mb-7">
                     <span
-                      className="px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold"
+                      className="px-3 py-1 rounded-full text-sm uppercase tracking-[0.2em] font-bold"
                       style={{
                         background: isAI
                           ? "rgba(99,102,241,0.15)"
@@ -398,7 +398,7 @@ function AIFirstExecution() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">AI First Execution</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             AI First Execution. Human First Responsibility.
           </h2>
           <p className="mt-8 text-base md:text-lg text-[#666666] max-w-3xl leading-relaxed">
@@ -437,7 +437,7 @@ function AIFirstExecution() {
         <ScrollReveal delay={0.22}>
           <div className="mt-16">
             <p
-              className="text-[11px] uppercase tracking-[0.25em] font-bold mb-6"
+              className="text-base uppercase tracking-[0.25em] font-bold mb-6"
               style={{ color: INDIGO }}
             >
               What AI First Means at Mentor Global
@@ -449,12 +449,12 @@ function AIFirstExecution() {
                   className="bg-white px-4 py-4 flex items-center gap-3 hover:bg-[#f8f8f9] transition-colors"
                 >
                   <span
-                    className="text-[10px] font-mono font-bold"
+                    className="text-base font-mono font-bold"
                     style={{ color: INDIGO }}
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-xs md:text-sm text-[#11111F] font-medium">
+                  <span className="text-base text-[#11111F] font-medium">
                     {item}
                   </span>
                 </div>
@@ -470,7 +470,7 @@ function AIFirstExecution() {
               <div className="flex items-center gap-3 mb-5">
                 <Brain className="w-5 h-5" style={{ color: BLUE }} />
                 <p
-                  className="text-[10px] uppercase tracking-[0.25em] font-bold"
+                  className="text-base uppercase tracking-[0.25em] font-bold"
                   style={{ color: BLUE }}
                 >
                   Human Intelligence
@@ -500,10 +500,10 @@ function AIFirstExecution() {
                   boxShadow: "0 0 30px rgba(99,102,241,0.25)",
                 }}
               >
-                <p className="text-[9px] uppercase tracking-[0.2em] font-bold mb-1 text-white/80">
+                <p className="text-sm uppercase tracking-[0.2em] font-bold mb-1 text-white/80">
                   Execution Layer
                 </p>
-                <p className="text-sm font-bold text-white leading-tight">
+                <p className="text-base font-bold text-white leading-tight">
                   Mentor Execution System
                 </p>
               </div>
@@ -521,7 +521,7 @@ function AIFirstExecution() {
               <div className="flex items-center gap-3 mb-5">
                 <Sparkles className="w-5 h-5" style={{ color: INDIGO }} />
                 <p
-                  className="text-[10px] uppercase tracking-[0.25em] font-bold"
+                  className="text-base uppercase tracking-[0.25em] font-bold"
                   style={{ color: INDIGO }}
                 >
                   Artificial Intelligence
@@ -562,7 +562,7 @@ function CultureInAction() {
           <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
             Culture In Action
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             How Our Culture Shows Up in Daily Work
           </h2>
         </ScrollReveal>
@@ -579,7 +579,7 @@ function CultureInAction() {
               >
                 <div className="flex items-center justify-between mb-6">
                   <span
-                    className="text-sm font-bold font-mono"
+                    className="text-base font-bold font-mono"
                     style={{ color: INDIGO }}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -589,7 +589,7 @@ function CultureInAction() {
                 <h3 className="text-base md:text-lg font-bold text-white mb-3 leading-snug">
                   {c.title}
                 </h3>
-                <p className="text-sm text-white/65 leading-relaxed">
+                <p className="text-base text-white/65 leading-relaxed">
                   {c.desc}
                 </p>
               </div>
@@ -622,7 +622,7 @@ function WhatCultureIsNot() {
           <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
             What Culture Is Not
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter leading-[1.05]">
+          <h2 className="text-[var(--fs-hero)] font-bold text-white tracking-tighter leading-[1.05]">
             Culture Is Not Perks
           </h2>
         </ScrollReveal>
@@ -637,7 +637,7 @@ function WhatCultureIsNot() {
           {cultureIsNot.map((line, i) => (
             <ScrollReveal key={line} delay={0.15 + i * 0.04}>
               <div className="flex items-center gap-3 text-white/60 line-through decoration-[#6366F1]/40">
-                <span className="text-xs font-mono" style={{ color: INDIGO }}>
+                <span className="text-base font-mono" style={{ color: INDIGO }}>
                   ×
                 </span>
                 <span className="text-base md:text-lg">{line}</span>
@@ -665,7 +665,7 @@ function WhatCultureIsNot() {
                 <span style={{ color: INDIGO }} className="flex-shrink-0">
                   ▸
                 </span>
-                <span className="text-base">{line}</span>
+                <span className="text-base text-white/85">{line}</span>
               </div>
             </ScrollReveal>
           ))}
@@ -686,10 +686,7 @@ function WhatCultureIsNot() {
                 "linear-gradient(135deg, rgba(99,102,241,0.06) 0%, rgba(0,72,255,0.04) 100%)",
             }}
           >
-            <p
-              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
-              style={{ color: "white" }}
-            >
+            <p className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold tracking-tight leading-tight" style={{ color: "white" }}>
               Perks create moments.{" "}
               <span style={{ color: INDIGO }}>Standards create culture.</span>
             </p>
@@ -712,7 +709,7 @@ function EmployeeGrowth() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Employee Growth</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-[30px] sm:text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             A Place to Learn, Lead, and Build
           </h2>
         </ScrollReveal>
@@ -736,7 +733,7 @@ function EmployeeGrowth() {
 
           <ScrollReveal delay={0.15} className="lg:col-span-6">
             <p
-              className="text-[11px] uppercase tracking-[0.25em] font-bold mb-5"
+              className="text-base uppercase tracking-[0.25em] font-bold mb-5"
               style={{ color: INDIGO }}
             >
               Growth Happens Through
@@ -761,7 +758,7 @@ function EmployeeGrowth() {
         <ScrollReveal delay={0.2}>
           <div className="mt-20">
             <p
-              className="text-[11px] uppercase tracking-[0.25em] font-bold mb-8"
+              className="text-base uppercase tracking-[0.25em] font-bold mb-8"
               style={{ color: INDIGO }}
             >
               Growth Pathway
@@ -773,7 +770,7 @@ function EmployeeGrowth() {
                   className="bg-white p-5 relative transition-all hover:bg-[#f8f8f9]"
                 >
                   <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm mb-4"
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-base mb-4"
                     style={{
                       background:
                         i === growthPathway.length - 1
@@ -790,7 +787,7 @@ function EmployeeGrowth() {
                   <p className="text-base font-bold text-[#11111F] leading-tight">
                     {s.step}
                   </p>
-                  <p className="mt-2 text-xs text-[#666666] leading-relaxed">
+                  <p className="mt-2 text-base text-[#666666] leading-relaxed">
                     {s.desc}
                   </p>
                 </div>
@@ -862,7 +859,7 @@ function ClientValue() {
           {/* Client flow */}
           <ScrollReveal delay={0.18} className="lg:col-span-5">
             <p
-              className="text-[11px] uppercase tracking-[0.25em] font-bold mb-5"
+              className="text-sm uppercase tracking-[0.25em] font-bold mb-5"
               style={{ color: INDIGO }}
             >
               The Client Value Flow
@@ -884,7 +881,7 @@ function ClientValue() {
                     }}
                   >
                     <span
-                      className="text-xs font-mono font-bold w-6 flex-shrink-0"
+                      className="text-sm font-mono font-bold w-6 flex-shrink-0"
                       style={{ color: INDIGO }}
                     >
                       {String(i + 1).padStart(2, "0")}
@@ -975,10 +972,10 @@ function GlobalCulture() {
               {globalStandards.map((s, i) => (
                 <div
                   key={s}
-                  className="bg-white px-3.5 py-2.5 text-xs md:text-sm text-[#11111F] font-medium flex items-center gap-2 hover:bg-[#f8f8f9] transition-colors"
+                  className="bg-white px-3.5 py-2.5 text-sm md:text-base text-[#11111F] font-medium flex items-center gap-2 hover:bg-[#f8f8f9] transition-colors"
                 >
                   <span
-                    className="text-[9px] font-mono"
+                    className="text-xs font-mono"
                     style={{ color: INDIGO }}
                   >
                     {String(i + 1).padStart(2, "0")}
@@ -1005,7 +1002,7 @@ function GlobalCulture() {
                 }}
               />
               <p
-                className="absolute top-5 left-5 text-[10px] uppercase tracking-[0.2em] font-bold"
+                className="absolute top-5 left-5 text-sm uppercase tracking-[0.2em] font-bold"
                 style={{ color: INDIGO }}
               >
                 Global Network · Culture Layer
@@ -1059,18 +1056,18 @@ function GlobalCulture() {
                   }}
                 >
                   <p
-                    className="text-[9px] uppercase tracking-[0.2em] font-bold mb-1 text-center"
+                    className="text-sm uppercase tracking-[0.2em] font-bold mb-1 text-center"
                     style={{ color: INDIGO }}
                   >
                     Three Culture Pillars
                   </p>
-                  <p className="text-[10px] text-white text-center font-semibold leading-tight">
+                  <p className="text-sm text-white text-center font-semibold leading-tight">
                     Value · Growth · AI First
                   </p>
                 </div>
               </div>
 
-              <p className="absolute bottom-5 right-5 text-[10px] uppercase tracking-[0.15em] text-white/40 font-mono">
+              <p className="absolute bottom-5 right-5 text-sm uppercase tracking-[0.15em] text-white/40 font-mono">
                 One Global Mind
               </p>
             </div>
@@ -1146,7 +1143,7 @@ function LeadershipCommitment() {
               >
                 <div className="flex items-center justify-between mb-6">
                   <span
-                    className="px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold"
+                    className="px-3 py-1 rounded-full text-sm uppercase tracking-[0.2em] font-bold"
                     style={{
                       background: "rgba(99,102,241,0.12)",
                       color: INDIGO,

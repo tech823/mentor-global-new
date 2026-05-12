@@ -30,29 +30,29 @@ export function BackToTop() {
 
   return (
     <div
-      className="fixed bottom-8 right-6 z-[999999] flex flex-col items-center group active:scale-95 transition-transform"
+      id="back-to-top"
+      className="fixed bottom-8 right-6 z-[999999] flex flex-col items-center group active:scale-95 transition-all duration-300 ease-out"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       style={{ cursor: 'pointer', pointerEvents: 'auto' }}
     >
-      {/* Progress Pill */}
+      {/* Scroll Percentage Badge */}
+      <div className="mb-2 bg-[#0048FF] text-white text-[10px] font-bold px-2 py-0.5 rounded-full tabular-nums shadow-lg border border-white/20 transform group-hover:scale-110 transition-transform duration-300">
+        {Math.round(scrollProgress)}%
+      </div>
+
       <div className="relative flex flex-col items-center">
-         {/* Percentage */}
-         <div className="mb-2 bg-black/80 text-white text-[8px] font-bold px-1.5 py-0.5 rounded tabular-nums">
-            {Math.round(scrollProgress)}%
-         </div>
+        {/* Main Button Circle */}
+        <div className="w-10 h-10 rounded-full bg-white dark:bg-[#11111F] text-[#0048FF] flex items-center justify-center shadow-xl border border-black/5 dark:border-white/10 z-10 group-hover:bg-[#0048FF] group-hover:text-white transition-all duration-300">
+          <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+        </div>
 
-         {/* The Pill */}
-         <div className="w-1.5 h-16 bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden relative border border-black/5 shadow-sm">
-            <div 
-               className="absolute top-0 left-0 w-full bg-[#0048FF] transition-all duration-200"
-               style={{ height: `${scrollProgress}%` }}
-            />
-         </div>
-
-         {/* The Circle with Arrow */}
-         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#0048FF] text-white flex items-center justify-center shadow-lg border border-white/20">
-            <ChevronUp className="w-5 h-5" />
-         </div>
+        {/* Progress Vertical Bar */}
+        <div className="w-1.5 h-16 bg-gray-100 dark:bg-white/5 rounded-full -mt-2 overflow-hidden relative border border-black/5 dark:border-white/5 shadow-inner">
+          <div 
+            className="absolute top-0 left-0 w-full bg-[#0048FF] transition-all duration-300 ease-out"
+            style={{ height: `${scrollProgress}%` }}
+          />
+        </div>
       </div>
     </div>
   );
