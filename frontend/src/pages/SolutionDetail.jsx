@@ -23,7 +23,7 @@ export default function SolutionDetail() {
     <main data-testid={`solution-${slug}-page`}>
       {/* Hero */}
       <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-[1720px] mx-auto px-6 md:px-12">
           <ScrollReveal>
             <Link
               to="/solutions"
@@ -42,7 +42,7 @@ export default function SolutionDetail() {
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.15}>
-                <p className="mt-8 text-lg text-[#666666] max-w-xl leading-relaxed">
+                <p className="mt-8 hero-desc">
                   {solution.heroSubtext}
                 </p>
               </ScrollReveal>
@@ -106,7 +106,7 @@ export default function SolutionDetail() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Insurance Lines</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-12">
                 Across All Insurance Verticals
               </h2>
             </ScrollReveal>
@@ -132,7 +132,7 @@ export default function SolutionDetail() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Digital Service Center</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
                 Self-Service Insurance Operations
               </h2>
             </ScrollReveal>
@@ -155,7 +155,7 @@ export default function SolutionDetail() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">DEXA Intelligence</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-12">
                 AI-Powered Insurance Intelligence
               </h2>
             </ScrollReveal>
@@ -182,7 +182,7 @@ export default function SolutionDetail() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Architecture</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-12">
                 DEXA Intelligence Layers
               </h2>
             </ScrollReveal>
@@ -214,7 +214,7 @@ export default function SolutionDetail() {
           <div className="relative max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Agent Pods</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
                 Agentic AI Pods
               </h2>
             </ScrollReveal>
@@ -240,7 +240,7 @@ export default function SolutionDetail() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <ScrollReveal>
               <p className="eyebrow mb-4">Growth OS</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-4">
                 {solution.growthOS.headline}
               </h2>
             </ScrollReveal>
@@ -267,10 +267,10 @@ export default function SolutionDetail() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">DEXA Intelligence</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight max-w-3xl mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight max-w-3xl mb-6">
               DEXA Across {solution.title}
             </h2>
-            <p className="text-lg text-[#8A8A93] max-w-2xl leading-relaxed">{solution.dexaRole}</p>
+            <p className="section-desc-dark max-w-2xl">{solution.dexaRole}</p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <Link
@@ -289,7 +289,7 @@ export default function SolutionDetail() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Platform Visuals</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-12">
               What the Infrastructure Looks Like
             </h2>
           </ScrollReveal>

@@ -72,7 +72,7 @@ export default function Contact() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#11111F] tracking-tight mb-4" data-testid="contact-success-message">
                 Thank You
               </h2>
-              <p className="text-base text-[#666666] leading-relaxed">
+              <p className="body-text">
                 Thank you. The Mentor Global team will review your inquiry and respond within 1 to 2 business days.
               </p>
             </ScrollReveal>
@@ -86,7 +86,7 @@ export default function Contact() {
     <main data-testid="contact-page">
       {/* Hero */}
       <section className="bg-white pt-32 pb-16 md:pt-40 md:pb-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-[1720px] mx-auto px-6 md:px-12">
           <ScrollReveal>
             <p className="eyebrow mb-4">Contact</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#11111F] tracking-tighter leading-[1.05] max-w-5xl">

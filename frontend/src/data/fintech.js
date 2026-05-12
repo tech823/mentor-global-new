@@ -130,12 +130,66 @@ export const dexaFinanceCapabilities = [
 ];
 
 export const dexaFinanceScenarios = [
-  { title: "Scenario 1: OPD Payment Declined", messages: [{ from: "employee", text: "Why was my OPD payment declined?" }, { from: "dexa", text: "Your OPD wallet has 8,000 available, but the transaction amount was 12,000. You can pay the difference, request exception approval if your plan allows it, or use another eligible benefit category." }], actions: ["Pay Difference", "Request Approval", "View Wallet Rules"] },
-  { title: "Scenario 2: Provider Settlement", messages: [{ from: "provider", text: "When will my payment be settled?" }, { from: "dexa", text: "Your payable of 350,000 is scheduled for settlement on Friday. Two invoices are matched. One invoice is pending reconciliation because patient eligibility confirmation is missing." }], actions: ["View Payables", "Upload Missing Data", "Contact Finance"] },
-  { title: "Scenario 3: Expense Flagged", messages: [{ from: "finance", text: "Why was this employee expense flagged?" }, { from: "dexa", text: "This expense was flagged because it exceeded the department meal limit by 4,500 and the receipt is missing. Recommended action: request receipt and manager approval before reimbursement." }], actions: ["Request Receipt", "Send to Manager", "Reject Expense"] },
-  { title: "Scenario 4: Payroll Pending", messages: [{ from: "hr", text: "Why is payroll batch still pending?" }, { from: "dexa", text: "Payroll batch is pending because 12 employee bank account records failed validation and 3 earned wage advances need deduction confirmation before final disbursement." }], actions: ["View Failed Records", "Confirm Deductions", "Approve Batch"] },
-  { title: "Scenario 5: Premium Payment", messages: [{ from: "policyholder", text: "Did my premium payment update my policy?" }, { from: "dexa", text: "Your payment was received, but policy status is pending update because the payment reference has not matched with your policy record. I have created a matching request for the finance team." }], actions: ["View Payment", "Upload Receipt", "Talk to Support"] },
-  { title: "Scenario 6: Settlement Mismatch", messages: [{ from: "finance", text: "Why is today's settlement mismatch 42,000?" }, { from: "dexa", text: "The mismatch is linked to three transactions. Two have duplicate invoice numbers and one has a partial claim approval. Recommended action: review exception queue and approve revised settlement." }], actions: ["View Exceptions", "Export Report", "Assign to Finance"] }
+  {
+    domain: "Wallet Management",
+    userRole: "Employee",
+    question: "Why was my OPD payment declined?",
+    context: "Transaction amount: 12,000 | Available balance: 8,000",
+    answer: "Your OPD wallet has 8,000 available, but the transaction amount was 12,000. You can pay the difference, request exception approval if your plan allows it, or use another eligible benefit category.",
+    actions: ["Pay Difference", "Request Approval", "View Wallet Rules"],
+    checks: ["Wallet Balance Check", "Policy Limit Verification", "Category Eligibility", "Exception Rules Check"],
+    approval: { role: "Finance Admin", action: "Authorize Excess" }
+  },
+  {
+    domain: "Settlement Operations",
+    userRole: "Healthcare Provider",
+    question: "When will my payment be settled?",
+    context: "Payable amount: 350,000 | Invoices: 2 matched, 1 pending eligibility",
+    answer: "Your payable of 350,000 is scheduled for settlement on Friday. Two invoices are matched. One invoice is pending reconciliation because patient eligibility confirmation is missing.",
+    actions: ["View Payables", "Upload Missing Data", "Contact Finance"],
+    checks: ["Invoice Matching", "Eligibility Verification", "Settlement Schedule Check", "Reconciliation Audit"],
+    approval: { role: "Settlement Officer", action: "Finalize Disbursement" }
+  },
+  {
+    domain: "Corporate Governance",
+    userRole: "Finance Controller",
+    question: "Why was this employee expense flagged?",
+    context: "Meal expense exceeded limit by 4,500 | Missing receipt",
+    answer: "This expense was flagged because it exceeded the department meal limit by 4,500 and the receipt is missing. Recommended action: request receipt and manager approval before reimbursement.",
+    actions: ["Request Receipt", "Send to Manager", "Reject Expense"],
+    checks: ["Limit Enforcement", "Receipt Presence Check", "Department Budget Audit", "Policy Violation Flag"],
+    approval: { role: "Department Manager", action: "Approve Exception" }
+  },
+  {
+    domain: "Payroll Infrastructure",
+    userRole: "HR Administrator",
+    question: "Why is payroll batch still pending?",
+    context: "Bank record failures: 12 | Advances needing confirmation: 3",
+    answer: "Payroll batch is pending because 12 employee bank account records failed validation and 3 earned wage advances need deduction confirmation before final disbursement.",
+    actions: ["View Failed Records", "Confirm Deductions", "Approve Batch"],
+    checks: ["Bank Account Validation", "Advance Deduction Matching", "Funding Availability Check", "Compliance Audit"],
+    approval: { role: "Payroll Manager", action: "Release Batch" }
+  },
+  {
+    domain: "Insurance Payments",
+    userRole: "Policyholder",
+    question: "Did my premium payment update my policy?",
+    context: "Unmatched payment reference | Pending policy update",
+    answer: "Your payment was received, but policy status is pending update because the payment reference has not matched with your policy record. I have created a matching request for the finance team.",
+    actions: ["View Payment", "Upload Receipt", "Talk to Support"],
+    checks: ["Payment Gateway Sync", "Reference ID Matching", "Policy Status Check", "Ledger Entry Audit"],
+    approval: { role: "Operations Lead", action: "Manual Match Reference" }
+  },
+  {
+    domain: "Finance Reconciliation",
+    userRole: "Finance Manager",
+    question: "Why is today's settlement mismatch 42,000?",
+    context: "Duplicates detected | Partial claim approval mismatch",
+    answer: "The mismatch is linked to three transactions. Two have duplicate invoice numbers and one has a partial claim approval. Recommended action: review exception queue and approve revised settlement.",
+    actions: ["View Exceptions", "Export Report", "Assign to Finance"],
+    checks: ["Duplicate Detection", "Claim vs Settlement Matching", "Exception Logic Run", "Ledger Integrity Check"],
+    approval: { role: "CFO / Finance Lead", action: "Override Exception" }
+  }
 ];
 
 export const fintechArchitectureLayers = [

@@ -88,11 +88,56 @@ export const dexaOSCapabilities = [
 ];
 
 export const dexaOSScenarios = [
-  { title: "CEO revenue question", userRole: "CEO", question: "Why is the insurance team behind target?", context: "DEXA checks CRM pipeline, meetings completed, proposal volume, follow up completion, conversion rate, margin target.", answer: "Insurance distribution is behind target because qualified meetings dropped this week, proposal follow up completion is below threshold, and two high value opportunities are stuck in negotiation. Recommended actions: assign senior support to high value leads, increase daily presentations, and review pending proposals.", actions: ["View Pipeline", "Assign Senior Support", "Generate Action Plan"] },
-  { title: "Employee Growth OS question", userRole: "Employee", question: "How can I earn an extra 100,000 this quarter?", context: "DEXA checks personal goal, incentive percentage, margin ratio, current sales pipeline, activity performance, target gap.", answer: "To earn extra 100,000, you need approximately 1,000,000 in additional margin, depending on your incentive rules. Based on your current conversion rate, you need 50 meetings and 200 calls this quarter. Your daily target should be 10 calls, 3 follow ups, and 1 qualified meeting attempt.", actions: ["Create Growth Plan", "View Daily Tasks", "Ask Manager for Support"] },
-  { title: "Manager coaching question", userRole: "Manager", question: "Who needs coaching this week?", context: "DEXA checks productivity score, missed follow ups, proposal activity, meeting completion, training score, target gap.", answer: "Three team members need coaching. One has low proposal volume, one has repeated missed follow ups, and one has weak meeting conversion. Recommended action: assign proposal training, review follow up discipline, and schedule one on one coaching.", actions: ["View Team Risk", "Assign Training", "Schedule Coaching"] },
-  { title: "Finance question", userRole: "Finance", question: "Why are receivables increasing?", context: "DEXA checks closed deals, invoices, collections, overdue accounts, follow up tasks, payment status.", answer: "Receivables increased because five invoices crossed the due date and three collection follow ups were missed. Two clients are awaiting revised invoices. Recommended action: assign collection tasks and resolve invoice corrections.", actions: ["View Receivables", "Assign Collection Tasks", "Export Report"] },
-  { title: "HR and training question", userRole: "HR", question: "Which new employees are not ready for field work?", context: "DEXA checks training completion, assessment score, attendance, task completion, manager feedback, role readiness.", answer: "Four employees are not ready for field work. Two have incomplete onboarding modules, one failed the product assessment, and one has not completed field SOP training. Recommended action: assign refresher learning and delay independent field assignment until reassessment.", actions: ["View Readiness", "Assign Training", "Notify Manager"] }
+  { 
+    domain: "CEO Leadership", 
+    userRole: "CEO", 
+    question: "Why is the insurance team behind target?", 
+    context: "DEXA checks CRM pipeline, meetings completed, proposal volume, follow up completion, conversion rate, margin target.", 
+    answer: "Insurance distribution is behind target because qualified meetings dropped this week, proposal follow up completion is below threshold, and two high value opportunities are stuck in negotiation. Recommended actions: assign senior support to high value leads, increase daily presentations, and review pending proposals.", 
+    actions: ["View Pipeline", "Assign Senior Support", "Generate Action Plan"],
+    checks: ["Revenue Target Audit", "Pipeline Integrity Check", "Activity Threshold Verification", "Leadership Permission Validation"],
+    approval: { role: "COO", action: "Approve sales corrective strategy" }
+  },
+  { 
+    domain: "Growth OS", 
+    userRole: "Employee", 
+    question: "How can I earn an extra 100,000 this quarter?", 
+    context: "DEXA checks personal goal, incentive percentage, margin ratio, current sales pipeline, activity performance, target gap.", 
+    answer: "To earn extra 100,000, you need approximately 1,000,000 in additional margin, depending on your incentive rules. Based on your current conversion rate, you need 50 meetings and 200 calls this quarter. Your daily target should be 10 calls, 3 follow ups, and 1 qualified meeting attempt.", 
+    actions: ["Create Growth Plan", "View Daily Tasks", "Ask Manager for Support"],
+    checks: ["Incentive Rule Verification", "Personal Goal Alignment", "Performance History Audit", "Margin Threshold Check"],
+    approval: { role: "Manager", action: "Validate and lock quarterly growth plan" }
+  },
+  { 
+    domain: "Management Coaching", 
+    userRole: "Manager", 
+    question: "Who needs coaching this week?", 
+    context: "DEXA checks productivity score, missed follow ups, proposal activity, meeting completion, training score, target gap.", 
+    answer: "Three team members need coaching. One has low proposal volume, one has repeated missed follow ups, and one has weak meeting conversion. Recommended action: assign proposal training, review follow up discipline, and schedule one on one coaching.", 
+    actions: ["View Team Risk", "Assign Training", "Schedule Coaching"],
+    checks: ["Productivity Benchmark Check", "SLA Breach Audit", "Training Readiness Review", "Managerial Access Validation"],
+    approval: { role: "Department Head", action: "Authorize team coaching interventions" }
+  },
+  { 
+    domain: "Finance Control", 
+    userRole: "Finance", 
+    question: "Why are receivables increasing?", 
+    context: "DEXA checks closed deals, invoices, collections, overdue accounts, follow up tasks, payment status.", 
+    answer: "Receivables increased because five invoices crossed the due date and three collection follow ups were missed. Two clients are awaiting revised invoices. Recommended action: assign collection tasks and resolve invoice corrections.", 
+    actions: ["View Receivables", "Assign Collection Tasks", "Export Report"],
+    checks: ["Aging Report Verification", "Invoice Status Audit", "Task Assignment Integrity", "Finance Protocol Check"],
+    approval: { role: "Finance Director", action: "Approve overdue collection escalation" }
+  },
+  { 
+    domain: "HR Readiness", 
+    userRole: "HR", 
+    question: "Which new employees are not ready for field work?", 
+    context: "DEXA checks training completion, assessment score, attendance, task completion, manager feedback, role readiness.", 
+    answer: "Four employees are not ready for field work. Two have incomplete onboarding modules, one failed the product assessment, and one has not completed field SOP training. Recommended action: assign refresher learning and delay independent field assignment until reassessment.", 
+    actions: ["View Readiness", "Assign Training", "Notify Manager"],
+    checks: ["Training Compliance Audit", "Assessment Integrity Check", "HR Policy Verification", "Role Readiness Validation"],
+    approval: { role: "HR Manager", action: "Block field assignment pending retraining" }
+  }
 ];
 
 export const osArchitectureLayers = [

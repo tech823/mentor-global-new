@@ -16,8 +16,11 @@ import CompanyOperatingInfrastructure from "@/pages/solutions/CompanyOperatingIn
 import Dexa from "@/pages/DexaNew";
 import Subsidiaries from "@/pages/SubsidiariesNew";
 import About from "@/pages/About";
-import Team from "@/pages/Team";
+import Team from "@/pages/TeamNew";
 import Contact from "@/pages/Contact";
+
+import TestMobileFlow from "@/pages/TestMobileFlow";
+import Culture from "./pages/Culture";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,17 +39,34 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solutions" element={<Solutions />} />
-          <Route path="/solutions/healthcare-infrastructure" element={<HealthcareInfrastructure />} />
-          <Route path="/solutions/insurance-infrastructure" element={<InsuranceInfrastructure />} />
-          <Route path="/solutions/fintech-infrastructure" element={<FintechInfrastructure />} />
-          <Route path="/solutions/ai-infrastructure" element={<AIInfrastructure />} />
-          <Route path="/solutions/company-operating-infrastructure" element={<CompanyOperatingInfrastructure />} />
+          <Route
+            path="/solutions/healthcare-infrastructure"
+            element={<HealthcareInfrastructure />}
+          />
+          <Route
+            path="/solutions/insurance-infrastructure"
+            element={<InsuranceInfrastructure />}
+          />
+          <Route
+            path="/solutions/fintech-infrastructure"
+            element={<FintechInfrastructure />}
+          />
+          <Route
+            path="/solutions/ai-infrastructure"
+            element={<AIInfrastructure />}
+          />
+          <Route
+            path="/solutions/company-operating-infrastructure"
+            element={<CompanyOperatingInfrastructure />}
+          />
           <Route path="/solutions/:slug" element={<SolutionDetail />} />
           <Route path="/dexa" element={<Dexa />} />
           <Route path="/subsidiaries" element={<Subsidiaries />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/culture" element={<Culture />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-mobile-flow" element={<TestMobileFlow />} />
         </Routes>
         <Footer />
       </BrowserRouter>

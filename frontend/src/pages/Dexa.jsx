@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
+import { IphoneMockup } from "../components/shared/IphoneMockup";
+import { ChatSimulation } from "../components/shared/ChatSimulation";
+import { dexaFullScenarios } from "../data/dexa-page";
 
 const dexaDomains = [
   { name: "Healthcare Infrastructure", items: ["Claims routing and triage", "Provider matching and recommendations", "Benefit optimization", "Health pool analytics", "Missing document identification", "Internal team support"] },
@@ -39,6 +42,54 @@ const governance = [
   { title: "Confidence Scoring", desc: "Each output includes a confidence score for transparency and trust." },
   { title: "Domain Boundaries", desc: "DEXA operates within defined domain boundaries and escalates edge cases." }
 ];
+
+function DexaInAction() {
+  return (
+    <section data-testid="dexa-in-action" className="bg-[#0B0B14] py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#0048FF]/[0.02]" />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <ScrollReveal>
+              <p className="eyebrow mb-6">DEXA in Action</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">
+                Intelligent operations across every infrastructure layer
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="text-lg text-[#8A8A93] leading-relaxed max-w-xl">
+                DEXA is not a surface layer interface. It is a governed processing engine that connects user intent with approved knowledge, deterministic rules, and agentic execution.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.25}>
+              <div className="mt-10 space-y-6">
+                {[
+                  { label: "Understand", desc: "Identifies role, intent, and system context." },
+                  { label: "Reason", desc: "Applies rules and retrieves approved knowledge." },
+                  { label: "Act", desc: "Coordinates agents and updates system states." },
+                  { label: "Govern", desc: "Logs actions and escalates for human approval." }
+                ].map((step, i) => (
+                  <div key={step.label} className="flex gap-4">
+                    <div className="w-1.5 h-1.5 bg-[#0048FF] mt-2 shrink-0" />
+                    <div>
+                      <p className="text-sm font-bold text-white uppercase tracking-widest mb-1">{step.label}</p>
+                      <p className="text-sm text-[#8A8A93]">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal delay={0.2} direction="left">
+            <IphoneMockup>
+              <ChatSimulation scenarios={dexaFullScenarios} />
+            </IphoneMockup>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Dexa() {
   return (
@@ -145,6 +196,8 @@ export default function Dexa() {
           </div>
         </div>
       </section>
+
+      <DexaInAction />
 
       {/* Agent Pods */}
       <section className="bg-white py-24 md:py-32">

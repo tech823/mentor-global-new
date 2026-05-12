@@ -134,7 +134,7 @@ function Hero() {
       className="relative bg-[#11111F] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden"
     >
       <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-[#0048FF]/[0.07] blur-[160px]" />
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+      <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <ScrollReveal>

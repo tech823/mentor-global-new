@@ -92,6 +92,10 @@ module.exports = {
         'grid-pulse': {
           '0%, 100%': { opacity: '0.3' },
           '50%': { opacity: '0.6' }
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
         }
       },
       animation: {
@@ -101,7 +105,8 @@ module.exports = {
         'fade-up': 'fade-up 0.6s ease-out forwards',
         'fade-in': 'fade-in 0.5s ease-out forwards',
         'slide-left': 'slide-left 0.6s ease-out forwards',
-        'grid-pulse': 'grid-pulse 3s ease-in-out infinite'
+        'grid-pulse': 'grid-pulse 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite'
       }
     }
   },

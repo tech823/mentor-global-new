@@ -116,11 +116,56 @@ export const dexaInsuranceCapabilities = [
 ];
 
 export const dexaInsuranceScenarios = [
-  { title: "Scenario 1: Travel Insurance Quote", messages: [{ from: "customer", text: "I need travel insurance for a Schengen trip. What information do you need?" }, { from: "dexa", text: "To start your travel insurance quote, I need your travel dates, destination countries, traveler age, passport country, trip purpose, and whether you need medical coverage, baggage coverage, or cancellation coverage. I will guide you through the quote form and show available options based on product rules." }], actions: ["Start Quote", "Upload Travel Details", "Talk to Advisor"] },
-  { title: "Scenario 2: Broker Renewals", messages: [{ from: "broker", text: "Which clients have renewals due in the next 30 days?" }, { from: "dexa", text: "You have 18 renewals due in the next 30 days. Five are high priority because they have open claims, three are missing updated risk information, and two require carrier re quote. Recommended next actions: request updated client details, prepare renewal proposals, and follow up with carriers." }], actions: ["View Renewals", "Create Follow Up Tasks", "Generate Client Emails"] },
-  { title: "Scenario 3: Underwriting Flag", messages: [{ from: "underwriter", text: "Why is this business insurance case flagged for review?" }, { from: "dexa", text: "This case is flagged because the client declared high annual revenue, multiple business locations, previous fire related claim history, and missing property valuation documents. The system recommends manual review before quote approval." }], actions: ["View Risk Data", "Request Documents", "Approve for Manual Review"] },
-  { title: "Scenario 4: Motor Claim", messages: [{ from: "customer", text: "My motor claim is on hold. Why?" }, { from: "dexa", text: "Your claim is on hold because the repair estimate and police report are missing. Please upload both documents so the claims team can continue review." }], actions: ["Upload Documents", "View Claim", "Talk to Claims Team"] },
-  { title: "Scenario 5: Reinsurance Recovery", messages: [{ from: "analyst", text: "Which recoveries are pending from reinsurers this month?" }, { from: "dexa", text: "There are seven pending recovery items this month. Three relate to treaty claims, two relate to facultative property risks, and two require missing bordereaux reconciliation. Recommended next actions: review missing bordereaux records and send recovery follow up to participating reinsurers." }], actions: ["View Recoveries", "Export Bordereaux Exceptions", "Create Follow Up"] }
+  {
+    domain: "Distribution",
+    userRole: "Customer",
+    question: "I need travel insurance for a Schengen trip. What information do you need?",
+    context: "Schengen trip request | Requirements gathering",
+    answer: "To start your travel insurance quote, I need your travel dates, destination countries, traveler age, passport country, trip purpose, and whether you need medical coverage, baggage coverage, or cancellation coverage. I will guide you through the quote form and show available options based on product rules.",
+    actions: ["Start Quote", "Upload Travel Details", "Talk to Advisor"],
+    checks: ["Product Eligibility Check", "Schengen Requirements Audit", "Pricing Rule Application", "Coverage Option Matching"],
+    approval: { role: "Underwriting System", action: "Verify auto-bind eligibility" }
+  },
+  {
+    domain: "Policy Servicing",
+    userRole: "Insurance Broker",
+    question: "Which clients have renewals due in the next 30 days?",
+    context: "18 renewals found | High priority: 5 (open claims) | Missing info: 3",
+    answer: "You have 18 renewals due in the next 30 days. Five are high priority because they have open claims, three are missing updated risk information, and two require carrier re-quote. Recommended next actions: request updated client details, prepare renewal proposals, and follow up with carriers.",
+    actions: ["View Renewals", "Create Follow Up Tasks", "Generate Client Emails"],
+    checks: ["Renewal Date Verification", "Claims History Audit", "Risk Data Completeness", "Carrier Quote Status"],
+    approval: { role: "Brokerage Manager", action: "Approve renewal list" }
+  },
+  {
+    domain: "Underwriting",
+    userRole: "Underwriter",
+    question: "Why is this business insurance case flagged for review?",
+    context: "High revenue | Multiple locations | Fire claim history | Missing valuation",
+    answer: "This case is flagged because the client declared high annual revenue, multiple business locations, previous fire-related claim history, and missing property valuation documents. The system recommends manual review before quote approval.",
+    actions: ["View Risk Data", "Request Documents", "Approve for Manual Review"],
+    checks: ["Revenue Limit Audit", "Claims History Verification", "Document Presence Check", "Risk Scoring Run"],
+    approval: { role: "Senior Underwriter", action: "Grant manual quote authority" }
+  },
+  {
+    domain: "Claims Management",
+    userRole: "Customer",
+    question: "My motor claim is on hold. Why?",
+    context: "Missing repair estimate | Missing police report",
+    answer: "Your claim is on hold because the repair estimate and police report are missing. Please upload both documents so the claims team can continue review.",
+    actions: ["Upload Documents", "View Claim", "Talk to Claims Team"],
+    checks: ["SOP Document Check", "Policy Validity Audit", "Claim ID Verification", "Medical Review Signal"],
+    approval: { role: "Claims Manager", action: "Authorize repair start" }
+  },
+  {
+    domain: "Reinsurance",
+    userRole: "Analyst",
+    question: "Which recoveries are pending from reinsurers this month?",
+    context: "7 pending items | Treaty: 3 | Facultative: 2 | Bordereaux mismatch: 2",
+    answer: "There are seven pending recovery items this month. Three relate to treaty claims, two relate to facultative property risks, and two require missing bordereaux reconciliation. Recommended next actions: review missing bordereaux records and send recovery follow-up to participating reinsurers.",
+    actions: ["View Recoveries", "Export Bordereaux Exceptions", "Create Follow Up"],
+    checks: ["Bordereaux Ingestion Audit", "Recovery Calculation Run", "Reinsurer Participation Match", "Ledger Integrity Check"],
+    approval: { role: "Reinsurance Lead", action: "Sign off recovery bordereaux" }
+  }
 ];
 
 export const insuranceArchitectureLayers = [

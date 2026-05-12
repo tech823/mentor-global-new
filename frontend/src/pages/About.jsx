@@ -8,9 +8,23 @@ import {
   Network,
   Layers,
   Users,
+  Smartphone,
+  Stethoscope,
+  ShieldCheck,
+  PieChart,
+  Command,
+  Settings,
+  Cpu,
+  Search,
+  Compass,
+  Eye,
+  Workflow,
+  Globe,
   Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "../components/shared/ScrollReveal";
+import { IpadMockup } from "../components/shared/IpadMockup";
+import { motion } from "framer-motion";
 import {
   aboutHero,
   founderQuote1,
@@ -26,9 +40,12 @@ import {
   valuesCards,
   differentiators,
 } from "../data/about-page";
-
+import Ali from "../assets/dr ali main.jpeg";
 /* ---------------- Section 1: Hero ---------------- */
-
+const NAVY = "#0a0a15";
+const NEAR_BLACK = "#11111F";
+const BLUE = "#0048FF";
+const INDIGO = "#6366F1";
 function Hero() {
   return (
     <section
@@ -36,17 +53,22 @@ function Hero() {
       className="relative bg-[#11111F] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden"
     >
       <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-[#0048FF]/[0.07] blur-[160px]" />
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+      <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6">
             <ScrollReveal>
-              <p className="eyebrow mb-6 text-[#0048FF]">{aboutHero.eyebrow}</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold text-white tracking-tighter leading-[1.02]">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0048FF]/10 border border-[#0048FF]/20 mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse" />
+                <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-[#0048FF]">
+                  {aboutHero.eyebrow}
+                </span>
+              </div>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
                 {aboutHero.headline}
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.12}>
-              <p className="mt-8 text-lg text-[#8A8A93] max-w-2xl leading-relaxed">
+              <p className="mt-8 hero-desc max-w-2xl">
                 {aboutHero.subheadline}
               </p>
             </ScrollReveal>
@@ -59,14 +81,12 @@ function Hero() {
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/solutions"
-                  data-testid="about-hero-cta-primary"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-all duration-300 shadow-[0_10px_20px_rgba(0,72,255,0.2)]"
                 >
                   {aboutHero.primaryCTA} <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/contact"
-                  data-testid="about-hero-cta-secondary"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
                 >
                   {aboutHero.secondaryCTA}
@@ -75,67 +95,109 @@ function Hero() {
             </ScrollReveal>
           </div>
 
-          {/* Infrastructure composition visual */}
-          <ScrollReveal delay={0.2} direction="left" className="lg:col-span-6">
-            <div className="border border-white/10 bg-white/[0.02] p-5">
-              <div className="flex items-center gap-2 mb-5">
-                <div className="w-2 h-2 bg-[#0048FF] animate-pulse" />
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#0048FF]">
-                  Global Health Fintech Infrastructure
-                </span>
-                <span className="text-[10px] text-[#8A8A93] ml-auto">
-                  Active
-                </span>
-              </div>
-
-              {/* Center hub */}
-              <div className="border border-[#0048FF]/40 bg-[#0048FF]/5 p-4 mb-3 text-center">
-                <p className="text-[9px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-1">
-                  Holding Company
-                </p>
-                <p className="text-base text-white font-bold">Mentor Global</p>
-              </div>
-
-              {/* Five pillars */}
-              <div className="grid grid-cols-5 gap-1.5">
-                {aboutHero.pillars.map((p) => (
-                  <div
-                    key={p}
-                    className="border border-white/10 bg-white/[0.02] p-2 hover:border-[#0048FF]/30 transition-colors"
-                  >
-                    <p className="text-[9px] text-white/80 font-semibold leading-tight text-center">
-                      {p.replace(" Infrastructure", "")}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-2.5 text-center text-[9px] uppercase tracking-[0.2em] text-[#0048FF] font-bold border border-[#0048FF]/20 bg-[#0048FF]/[0.04] py-2">
-                Powered by Mentor Innovation and DEXA
-              </div>
-
-              {/* Global markers */}
-              <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">
-                  Global Markers
-                </p>
-                <div className="space-y-1.5">
-                  {aboutHero.globalMarkers.map((g) => (
-                    <div
-                      key={g.location}
-                      className="flex items-center gap-2 text-[10px]"
-                    >
-                      <MapPin className="w-3 h-3 text-[#0048FF] flex-shrink-0" />
-                      <span className="text-white font-semibold">
-                        {g.location}
+          {/* Right Side: Infrastructure Dashboard inside iPad */}
+          <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+            <ScrollReveal delay={0.2} direction="left" className="w-full">
+              <IpadMockup
+                orientation="landscape"
+                className="max-w-2xl lg:ml-auto"
+              >
+                <div className="relative w-full h-full bg-[#05050A] overflow-hidden flex flex-col p-6 md:p-7">
+                  {/* Compact Header */}
+                  <div className="flex items-center justify-between mb-6 pb-3 border-b border-white/5">
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#0048FF] animate-pulse shadow-[0_0_8px_#0048FF]" />
+                      <span className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-extrabold text-[#0048FF]">
+                        Infrastructure OS v4.0
                       </span>
-                      <span className="text-white/50">— {g.role}</span>
                     </div>
-                  ))}
+                    <span className="text-[8px] text-[#0048FF] font-black tracking-widest uppercase px-1.5 py-0.5 rounded-sm bg-[#0048FF]/10 border border-[#0048FF]/20">
+                      Active
+                    </span>
+                  </div>
+
+                  {/* Holding Company Box - Slimmer */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="relative border border-[#0048FF]/30 bg-[#0048FF]/5 p-5 mb-4 text-center group overflow-hidden"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#0048FF]/5 to-transparent opacity-50" />
+                    <p className="relative text-[8px] uppercase tracking-[0.4em] text-[#0048FF]/60 font-black mb-1.5">
+                      Global Holding Structure
+                    </p>
+                    <p className="relative text-xl md:text-2xl text-white font-extrabold tracking-tight">
+                      Mentor Global
+                    </p>
+                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#0048FF]/40 to-transparent" />
+                  </motion.div>
+
+                  {/* Infrastructure Pillars Grid - Compact */}
+                  <div className="grid grid-cols-5 gap-2 mb-4">
+                    {aboutHero.pillars.map((p, i) => (
+                      <motion.div
+                        key={p}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 + i * 0.04 }}
+                        className="border border-white/10 bg-white/[0.02] p-2.5 text-center transition-all hover:border-[#0048FF]/40 hover:bg-[#0048FF]/5"
+                      >
+                        <p className="text-[8px] md:text-[9px] text-white/70 font-bold leading-tight uppercase tracking-tighter">
+                          {p.replace(" Infrastructure", "")}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Powered By Bar - Slimmer */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="relative text-center text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-[#0048FF] font-black border border-[#0048FF]/15 bg-[#0048FF]/[0.05] py-2.5 mb-6"
+                  >
+                    Powered by Mentor Innovation & DEXA
+                  </motion.div>
+
+                  {/* Global Markers - Dense Grid to fit all 5 */}
+                  <div className="flex-1 min-h-0">
+                    <p className="text-[9px] uppercase tracking-[0.2em] text-white/20 mb-4 font-black flex items-center gap-2">
+                      <span className="w-6 h-[1px] bg-white/10" />
+                      Operational Hubs
+                      <span className="flex-1 h-[1px] bg-white/10" />
+                    </p>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 px-1 overflow-visible">
+                      {aboutHero.globalMarkers.map((g, i) => (
+                        <motion.div
+                          key={g.location}
+                          initial={{ opacity: 0, x: -5 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.4 + i * 0.04 }}
+                          className="flex items-center gap-3 p-2 border border-white/5 bg-white/[0.01] rounded-sm group transition-all hover:border-[#0048FF]/30 hover:bg-white/[0.03]"
+                        >
+                          <div className="relative shrink-0 w-7 h-7 border border-white/10 bg-[#0048FF]/5 flex items-center justify-center rounded-sm transition-colors group-hover:border-[#0048FF]/40">
+                            <MapPin className="w-3 h-3 text-[#0048FF]" />
+                          </div>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-[10px] text-white font-extrabold tracking-tight truncate">
+                              {g.location}
+                            </span>
+                            <span className="text-[7px] text-white/30 font-bold uppercase tracking-widest truncate leading-none mt-1">
+                              {g.role}
+                            </span>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Compact Glows */}
+                  <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#0048FF]/10 blur-[80px] rounded-full pointer-events-none" />
+                  <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#0048FF]/5 blur-[80px] rounded-full pointer-events-none" />
                 </div>
-              </div>
-            </div>
-          </ScrollReveal>
+              </IpadMockup>
+            </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
@@ -147,55 +209,69 @@ function Hero() {
 function FounderThesis() {
   return (
     <section
-      data-testid="about-founder-thesis"
-      className="relative bg-[#0a0a15] py-24 md:py-32 overflow-hidden"
+      data-testid="team-founder-declaration"
+      className="relative py-28 md:py-36 overflow-hidden border-b border-white/5"
+      style={{ background: NAVY }}
     >
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage:
-            "linear-gradient(#0048FF 1px, transparent 1px), linear-gradient(90deg, #0048FF 1px, transparent 1px)",
+          backgroundImage: `linear-gradient(${BLUE} 1px, transparent 1px), linear-gradient(90deg, ${BLUE} 1px, transparent 1px)`,
           backgroundSize: "80px 80px",
         }}
       />
-      <div className="relative max-w-6xl mx-auto px-6 md:px-12">
+      <div
+        className="absolute -top-20 right-0 w-[700px] h-[700px] rounded-none blur-[200px]"
+        style={{ background: "rgba(99,102,241,0.08)" }}
+      />
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow text-[#0048FF] mb-4">Founder Declaration</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-10">
-            The Founder's Thesis
-          </h2>
-          <p className="text-base md:text-lg text-[#8A8A93] max-w-3xl leading-relaxed">
-            Mentor Global is built on a simple belief: the next generation of
-            companies will not be built from zero. They will be built on
-            intelligent infrastructure.
+          <p className="eyebrow mb-4 font-bold" style={{ color: INDIGO }}>
+            A Vision for the Infrastructure Age{" "}
           </p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-16">
+            The Founder's Declaration
+          </h2>
         </ScrollReveal>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
-          <ScrollReveal delay={0.1} className="md:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+          <ScrollReveal delay={0.1} className="md:col-span-5">
             <div className="relative">
-              <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-[#0048FF]" />
-              <div className="aspect-square max-w-[420px] bg-[#0a0a15] overflow-hidden">
+              <div className="aspect-[4/5] max-w-[460px] overflow-hidden bg-[#0a0a15] relative ring-1 ring-white/10">
                 <img
-                  src="https://customer-assets.emergentagent.com/job_mentor-ecosystem-2/artifacts/ktc8f6ap_Dr%20Ali%20Rajwani.jpeg"
-                  alt="Dr. Ali Rajwani"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  src={Ali}
+                  alt=""
+                  className="w-full h-full object-cover transition-all duration-700"
+                  // style={{ filter: "grayscale(1) contrast(1.1)" }}
                 />
               </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.18} className="md:col-span-8">
-            <Quote className="w-10 h-10 text-[#0048FF]/30 mb-6" />
-            <blockquote className="text-2xl md:text-3xl lg:text-[32px] font-semibold text-white leading-[1.3] tracking-tight">
-              “{founderQuote1.text}”
+          <ScrollReveal delay={0.18} className="md:col-span-7">
+            <Quote
+              className="w-12 h-12 mb-8"
+              style={{ color: "rgba(99,102,241,0.4)" }}
+            />
+            <blockquote className="text-2xl md:text-3xl lg:text-[34px] font-semibold text-white leading-[1.4] tracking-tight">
+              <p>
+                We are not building Mentor Global to win a place in today’s
+                market. We are building the foundation for the markets that must
+                come next.
+              </p>
+              <p className="mt-6 text-white">
+                A world where healthcare becomes accessible, finance moves with
+                trust, insurance becomes intelligent, companies operate through
+                connected systems, and innovation is no longer limited by
+                geography, complexity, or legacy infrastructure
+              </p>
             </blockquote>
-            <div className="mt-10 pt-8 border-t border-white/10">
-              <p className="text-base font-bold text-white italic">
-                — {founderQuote1.author}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-base font-bold text-white">
+                — Dr. Ali Rajwani
               </p>
               <p className="text-sm text-[#8A8A93] mt-1">
-                {founderQuote1.role}
+                Founder, Board Director and Group CEO, Mentor Global
               </p>
             </div>
           </ScrollReveal>
@@ -209,16 +285,13 @@ function FounderThesis() {
 
 function WhoWeAre() {
   return (
-    <section
-      data-testid="about-who-we-are"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="about-who-we-are" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
             <ScrollReveal>
               <p className="eyebrow mb-4">Who We Are</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05]">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05]">
                 Who We Are
               </h2>
             </ScrollReveal>
@@ -302,7 +375,7 @@ function WhatWeBuild() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">What We Build</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             Five infrastructure layers. One connected global architecture.
           </h2>
         </ScrollReveal>
@@ -346,12 +419,14 @@ function WhyInfrastructure() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <p className="eyebrow text-[#0048FF] mb-4">Why Infrastructure Matters</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <p className="eyebrow text-[#0048FF] mb-4">
+            Why Infrastructure Matters
+          </p>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Products solve moments. Infrastructure changes systems.
           </h2>
           <div className="mt-8 max-w-3xl space-y-4">
-            <p className="text-base md:text-lg text-[#8A8A93] leading-relaxed">
+            <p className="section-desc-dark">
               Products can solve one problem. Infrastructure can power thousands
               of companies.
             </p>
@@ -434,10 +509,10 @@ function OperatingModel() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Our Operating Model</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight leading-[1.05] max-w-4xl">
             How Mentor Global Operates
           </h2>
-          <p className="mt-6 text-base md:text-lg text-[#666666] max-w-3xl leading-relaxed">
+          <p className="mt-6 section-desc max-w-3xl">
             Holding strategy. Technology engine. Intelligence layer. Local
             execution.
           </p>
@@ -500,10 +575,10 @@ function GlobalPresence() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow text-[#0048FF] mb-4">Global Presence</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-4xl">
             Global Presence With Operational Chapters
           </h2>
-          <p className="mt-6 text-base md:text-lg text-[#8A8A93] max-w-3xl leading-relaxed">
+          <p className="mt-6 section-desc-dark max-w-3xl">
             Mentor Global is structured for global expansion. The group combines
             Singapore based holding strategy, Pakistan based market validation,
             operational UAE and US chapters, and a growing global technology
@@ -543,10 +618,7 @@ function GlobalPresence() {
 
 function ChaptersOperational() {
   return (
-    <section
-      data-testid="about-chapters"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="about-chapters" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Operational Chapters</p>
@@ -588,7 +660,10 @@ function ChaptersOperational() {
                 <div className="absolute top-5 left-[8%] right-[8%] h-[2px] bg-gradient-to-r from-[#0048FF] via-[#0048FF]/40 to-[#0048FF]" />
                 <div className="grid grid-cols-5 gap-4">
                   {expansionTimeline.map((s, i) => (
-                    <div key={s.step} className="relative flex flex-col items-center">
+                    <div
+                      key={s.step}
+                      className="relative flex flex-col items-center"
+                    >
                       <div
                         className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm relative z-10 ${
                           i === expansionTimeline.length - 1
@@ -615,7 +690,10 @@ function ChaptersOperational() {
               {/* Mobile vertical timeline */}
               <div className="md:hidden space-y-4">
                 {expansionTimeline.map((s, i) => (
-                  <div key={s.step} className="flex items-center gap-4 border border-[#11111F]/10 p-4">
+                  <div
+                    key={s.step}
+                    className="flex items-center gap-4 border border-[#11111F]/10 p-4"
+                  >
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0 ${
                         i === expansionTimeline.length - 1
@@ -681,7 +759,9 @@ function BackboneSection() {
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#0048FF] font-bold mb-1">
                   Holding Company
                 </p>
-                <p className="text-xl font-bold text-[#11111F]">Mentor Global</p>
+                <p className="text-xl font-bold text-[#11111F]">
+                  Mentor Global
+                </p>
               </div>
             </div>
 
@@ -757,7 +837,7 @@ function Philosophy() {
             Value for Our Clients. Growth for Our Employees.
           </h2>
           <div className="mt-8 max-w-4xl space-y-4">
-            <p className="text-base md:text-lg text-[#8A8A93] leading-relaxed">
+            <p className="section-desc-dark">
               Mentor Global is built on a dual philosophy.
             </p>
             <p className="text-base text-[#8A8A93] leading-relaxed">
@@ -841,10 +921,7 @@ function Philosophy() {
 
 function Belief() {
   return (
-    <section
-      data-testid="about-belief"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="about-belief" className="bg-white py-24 md:py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-6">Our Belief</p>
@@ -876,10 +953,7 @@ function Belief() {
 
 function Values() {
   return (
-    <section
-      data-testid="about-values"
-      className="bg-[#f8f8f9] py-24 md:py-32"
-    >
+    <section data-testid="about-values" className="bg-[#f8f8f9] py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <p className="eyebrow mb-4">Our Values</p>
@@ -1057,8 +1131,8 @@ function FutureBuilding() {
           </h2>
           <div className="mt-10 max-w-3xl space-y-5">
             <p className="text-base md:text-lg text-white/85 leading-relaxed">
-              We believe the next generation of companies will not be built
-              from scratch. They will be built on intelligent infrastructure.
+              We believe the next generation of companies will not be built from
+              scratch. They will be built on intelligent infrastructure.
             </p>
             <p className="text-base text-[#8A8A93] leading-relaxed">
               Mentor Global exists to create that foundation, so healthcare
@@ -1085,7 +1159,9 @@ function FutureBuilding() {
               <p className="text-base font-bold text-white">
                 — {founderQuote2.author}
               </p>
-              <p className="text-sm text-[#8A8A93] mt-1">{founderQuote2.role}</p>
+              <p className="text-sm text-[#8A8A93] mt-1">
+                {founderQuote2.role}
+              </p>
             </div>
           </div>
         </ScrollReveal>
@@ -1098,10 +1174,7 @@ function FutureBuilding() {
 
 function FinalCTA() {
   return (
-    <section
-      data-testid="about-final-cta"
-      className="bg-white py-24 md:py-32"
-    >
+    <section data-testid="about-final-cta" className="bg-white py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="eyebrow mb-4">Build With Mentor Global</p>
@@ -1110,7 +1183,7 @@ function FinalCTA() {
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.12}>
-          <p className="mt-8 text-base md:text-lg text-[#666666] max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-8 section-desc max-w-3xl mx-auto">
             Partner with Mentor Global to build, deploy, and scale
             infrastructure across healthcare, insurance, fintech, AI, and
             company operating systems.

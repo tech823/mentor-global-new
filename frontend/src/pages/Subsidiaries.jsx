@@ -25,7 +25,7 @@ export default function Subsidiaries() {
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.15}>
-                <p className="mt-8 text-lg text-[#666666] max-w-xl leading-relaxed">
+                <p className="mt-8 hero-desc">
                   Mentor Global is a structured group of companies designed to build, deploy, and scale infrastructure across regulated markets.
                 </p>
               </ScrollReveal>
@@ -90,7 +90,7 @@ export default function Subsidiaries() {
                 <span className="text-2xl">{countryFlags[sub.country]}</span>
                 <p className="eyebrow">{sub.country}</p>
               </div>
-              <h2 className={`text-3xl sm:text-4xl font-bold tracking-tight mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-3 ${idx % 2 === 0 ? "text-[#11111F]" : "text-white"}`}>
                 {sub.country}
               </h2>
               <p className={`text-base mb-12 ${idx % 2 === 0 ? "text-[#666666]" : "text-[#8A8A93]"}`}>
@@ -131,7 +131,7 @@ export default function Subsidiaries() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
               Global Technology Clients
             </h2>
-            <p className="text-lg text-[#8A8A93] max-w-2xl mx-auto">
+            <p className="section-desc-dark max-w-2xl mx-auto">
               Technology clients across Asia, Middle East, Africa, and the US
             </p>
           </ScrollReveal>

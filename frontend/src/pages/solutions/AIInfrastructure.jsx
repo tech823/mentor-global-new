@@ -1,30 +1,52 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, ChevronRight } from "lucide-react";
 import { ScrollReveal } from "../../components/shared/ScrollReveal";
+import { DexaHeroChat } from "../../components/shared/DexaHeroChat";
+import { ChatSimulation } from "../../components/shared/ChatSimulation";
+import { MacbookMockup } from "../../components/shared/MacbookMockup";
 import { aiProblems, aiRails, dexaPrinciples, dexaPipeline, dexaLayers, dexaPillars, agentGroups, governanceCapabilities, approvalQueues, aiScenarios, aiArchitectureLayers, aiDeploymentModels, aiUseCases, aiOutcomes } from "../../data/ai-infrastructure";
 
 function Hero() {
   return (
-    <section data-testid="ai-hero" className="relative bg-[#11111F] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full bg-[#0048FF]/[0.06] blur-[160px]" />
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <Link to="/solutions" className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-8"><ArrowLeft className="w-4 h-4" /> All Solutions</Link>
+    <section data-testid="ai-hero" className="relative bg-[#0B0B14] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full bg-[#0048FF]/[0.08] blur-[160px]" />
+      <div className="relative max-w-[1720px] mx-auto px-6 md:px-12">
+        <Link to="/solutions" className="inline-flex items-center gap-2 text-sm text-[#8A8A93] hover:text-[#0048FF] transition-colors mb-8">
+          <ArrowLeft className="w-4 h-4" /> All Solutions
+        </Link>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <ScrollReveal><p className="eyebrow mb-6">AI Infrastructure</p><h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tighter leading-[1.05]">AI Infrastructure Powered by DEXA</h1></ScrollReveal>
-            <ScrollReveal delay={0.15}><p className="mt-8 text-lg text-[#8A8A93] max-w-xl leading-relaxed">Deploy governed intelligence infrastructure that understands context, connects to systems, coordinates agents, routes workflows, monitors execution, and powers decision support across healthcare, insurance, fintech, HealthRails, Mentor OS, and client platforms.</p></ScrollReveal>
-            <ScrollReveal delay={0.25}><p className="mt-4 text-sm text-[#8A8A93]/70 max-w-xl">Mentor Global does not add AI as a surface feature. It builds governed intelligence infrastructure that connects knowledge, rules, workflows, agents, APIs, approvals, and auditability into one operating layer.</p></ScrollReveal>
-            <ScrollReveal delay={0.35}><div className="mt-10 flex flex-col sm:flex-row gap-4"><Link to="/contact" data-testid="ai-hero-cta" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-colors">Build AI Infrastructure <ArrowRight className="w-5 h-5" /></Link><Link to="/dexa" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">Explore DEXA</Link></div></ScrollReveal>
+            <ScrollReveal>
+              <p className="eyebrow mb-6">AI Infrastructure</p>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-white tracking-tighter leading-[1.05]">
+                AI Infrastructure Powered by DEXA
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="mt-8 hero-desc">
+                Deploy governed intelligence infrastructure that understands context, connects to systems, coordinates agents, routes workflows, monitors execution, and powers decision support across healthcare, insurance, fintech, HealthRails, Mentor OS, and client platforms.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.25}>
+              <p className="mt-4 text-sm text-[#8A8A93]/70 max-w-xl">
+                Mentor Global does not add AI as a surface feature. It builds governed intelligence infrastructure that connects knowledge, rules, workflows, agents, APIs, approvals, and auditability into one operating layer.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={0.35}>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link to="/contact" data-testid="ai-hero-cta" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0048FF] text-white font-semibold hover:bg-[#0030CC] transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#0048FF]/20">
+                  Build AI Infrastructure <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link to="/dexa" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">
+                  Explore DEXA
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
           <ScrollReveal delay={0.2} direction="left">
-            <div className="border border-white/10 p-5 bg-white/[0.02]">
-              <div className="flex items-center gap-2 mb-4"><div className="w-2 h-2 bg-[#0048FF] animate-pulse" /><span className="text-xs font-bold text-[#0048FF]">DEXA Command Center</span><span className="text-[10px] text-[#8A8A93] ml-auto">Live</span></div>
-              <div className="grid grid-cols-3 gap-2">
-                {["Healthcare", "Insurance", "Fintech", "Mentor OS", "HealthRails", "Client Platforms", "APIs & Tools", "Human Approval", "Audit Logs", "Monitoring", "Governance", "Agents"].map((n, i) => (
-                  <div key={n} className={`p-2.5 border text-center ${i < 6 ? "border-[#0048FF]/20 bg-[#0048FF]/5" : "border-white/10 bg-white/[0.02]"}`}><p className="text-[9px] text-white/70 font-medium">{n}</p></div>
-                ))}
-              </div>
-              <div className="mt-3 flex items-center justify-between px-2 py-2 border border-white/10"><span className="text-[9px] text-[#8A8A93]">Active Agents: 8</span><span className="text-[9px] text-[#8A8A93]">Confidence: 94%</span><span className="text-[9px] text-[#0048FF]">Governed</span></div>
+            <div className="relative h-[650px]">
+              <div className="absolute -inset-10 bg-[#0048FF]/20 blur-[100px] rounded-full opacity-30 animate-pulse" />
+              <DexaHeroChat />
             </div>
           </ScrollReveal>
         </div>
@@ -64,7 +86,7 @@ function ConnectedRailsVisual() {
   return (
     <section data-testid="ai-rails-visual" className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <ScrollReveal><p className="eyebrow mb-4">Connected Intelligence</p><h2 className="text-3xl sm:text-4xl font-bold text-[#11111F] tracking-tight mb-16">From isolated AI tools to one governed intelligence layer</h2></ScrollReveal>
+        <ScrollReveal><p className="eyebrow mb-4">Connected Intelligence</p><h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight mb-16">From isolated AI tools to one governed intelligence layer</h2></ScrollReveal>
         <ScrollReveal delay={0.1}>
           <div className="mx-auto w-64 md:w-80 py-5 bg-[#11111F] text-white text-center mb-6"><p className="text-sm font-bold">DEXA Intelligence Engine</p></div>
           <div className="grid grid-cols-2 md:grid-cols-5 border border-[#11111F]/10">
@@ -150,7 +172,7 @@ function HumanApproval() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal><p className="eyebrow mb-4">Human Control</p><h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#11111F] tracking-tight">Human control where it matters</h2></ScrollReveal>
         <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] bg-[#11111F]/10">
-          {approvalQueues.map((q, i) => (<ScrollReveal key={q} delay={i * 0.02}><div className="bg-white p-4 md:p-5 card-hover h-full"><div className="flex items-center gap-2 mb-2"><div className="w-2 h-2 rounded-full bg-amber-400" /><span className="text-[10px] text-[#666666]">Pending</span></div><p className="text-xs text-[#11111F] font-medium">{q}</p></div></ScrollReveal>))}
+          {approvalQueues.map((q, i) => (<ScrollReveal key={q} delay={i * 0.02}><div className="bg-white p-4 md:p-5 card-hover h-full"><div className="flex items-center gap-2 mb-2"><div className="w-1.5 h-1.5 bg-amber-400" /><span className="text-[10px] text-[#666666]">Pending</span></div><p className="text-xs text-[#11111F] font-medium">{q}</p></div></ScrollReveal>))}
         </div>
       </div>
     </section>
@@ -162,10 +184,37 @@ function DexaScenarios() {
     <section data-testid="ai-scenarios" className="bg-[#11111F] py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 blue-glow-subtle" />
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
-        <ScrollReveal><p className="eyebrow mb-4">DEXA in Action</p><h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">From confusion to governed next action</h2></ScrollReveal>
-        <div className="mt-16 space-y-6">
-          {aiScenarios.map((s, idx) => (<ScrollReveal key={s.domain} delay={idx * 0.05}><div className="border border-white/10 p-5 md:p-7 bg-[#11111F]/80"><p className="text-xs font-bold text-[#0048FF] mb-1">{s.domain}</p><p className="text-[10px] text-[#8A8A93] mb-4">{s.context}</p><div className="space-y-3"><div className="flex justify-end"><div className="max-w-lg p-3 bg-white/[0.03] border border-white/10"><p className="text-[10px] uppercase tracking-wider font-bold mb-1 text-[#0048FF]">{s.userRole}</p><p className="text-xs text-white/80">{s.question}</p></div></div><div className="flex justify-start"><div className="max-w-lg p-3 bg-white/[0.05] border border-[#0048FF]/20"><p className="text-[10px] uppercase tracking-wider font-bold mb-1 text-[#0048FF]">DEXA</p><p className="text-xs text-white/80 leading-relaxed">{s.answer}</p></div></div></div><div className="mt-3 flex flex-wrap gap-2">{s.actions.map((a) => (<span key={a} className="text-[10px] px-3 py-1.5 bg-[#0048FF]/10 border border-[#0048FF]/30 text-[#0048FF] font-medium">{a}</span>))}</div></div></ScrollReveal>))}
-        </div>
+        <ScrollReveal>
+          <p className="eyebrow mb-4">DEXA in Action</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-12">
+            From confusion to governed next action
+          </h2>
+        </ScrollReveal>
+        
+        <ScrollReveal delay={0.1}>
+          <div className="relative mt-8">
+            <MacbookMockup>
+              <ChatSimulation scenarios={aiScenarios} />
+            </MacbookMockup>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.3}>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 border border-white/10 bg-white/[0.02]">
+              <h3 className="text-sm font-bold text-white mb-2">Multi-Scenario Exploration</h3>
+              <p className="text-xs text-[#8A8A93] leading-relaxed">Observe how DEXA handles operational scenarios across healthcare, insurance, fintech, and more.</p>
+            </div>
+            <div className="p-6 border border-white/10 bg-white/[0.02]">
+              <h3 className="text-sm font-bold text-white mb-2">Governed Reasoning</h3>
+              <p className="text-xs text-[#8A8A93] leading-relaxed">DEXA verifies permissions, retrieves approved knowledge, and applies business rules before responding.</p>
+            </div>
+            <div className="p-6 border border-white/10 bg-white/[0.02]">
+              <h3 className="text-sm font-bold text-white mb-2">Actionable Intelligence</h3>
+              <p className="text-xs text-[#8A8A93] leading-relaxed">Every response concludes with governed next actions, routing users directly into approved workflows.</p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

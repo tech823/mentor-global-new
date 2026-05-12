@@ -78,28 +78,34 @@ export const dexaCapabilities = [
 
 export const dexaScenarios = [
   {
-    title: "Scenario 1: OPD Access",
-    messages: [
-      { from: "employee", text: "I want to book OPD at Aga Khan Hospital. Do I need prior authorization?" },
-      { from: "dexa", text: "Your OPD is covered in your benefit plan. You do not need prior authorization for covered OPD services. You can book OPD at Aga Khan Hospital and use cashless access if your company plan and provider category allow it." },
-      { from: "employee", text: "Do I need to pay at the counter?" },
-      { from: "dexa", text: "You can use cashless OPD by authorizing use of your wallet or benefit limit. When you authorize, your details and NIC will be shared securely with the provider workflow so the hospital can confirm eligibility before service." }
-    ]
+    domain: "OPD Access",
+    userRole: "Employee",
+    question: "I want to book OPD at Aga Khan Hospital. Do I need prior authorization?",
+    context: "DEXA checks employee benefit plan, provider category, OPD rules, and current wallet balance.",
+    answer: "Your OPD is covered in your benefit plan. **You do not need prior authorization** for covered OPD services at Aga Khan Hospital. You can use cashless access by authorizing the transaction through your health wallet.",
+    actions: ["Book Appointment", "View Wallet", "Check Coverage Details"],
+    checks: ["Benefit Plan Validation", "Provider Network Check", "Wallet Balance Verification", "Eligibility Status Confirm"],
+    approval: { role: "Provider System", action: "Verify eligibility and lock service fee" }
   },
   {
-    title: "Scenario 2: Claim on Hold",
-    messages: [
-      { from: "employee", text: "Why is my claim on hold?" },
-      { from: "dexa", text: "Your claim is on hold because the prescription document is missing. Please upload the prescription so the claims team can continue review." }
-    ],
-    actions: ["Upload Prescription", "View Claim", "Talk to Support"]
+    domain: "Claim Support",
+    userRole: "User",
+    question: "Why is my claim on hold?",
+    context: "DEXA checks claim status, uploaded documents, medical review notes, and missing document list.",
+    answer: "Your claim is currently on hold because the **prescription document is missing**. Please upload the prescription so our claims team can complete the medical review and authorize payment.",
+    actions: ["Upload Prescription", "View Claim History", "Talk to Case Manager"],
+    checks: ["Document Audit", "Claim ID Verification", "Medical Review Signal", "SOP Compliance Check"],
+    approval: { role: "Claims Officer", action: "Authorize claim for final settlement" }
   },
   {
-    title: "Scenario 3: HR Spend Analysis",
-    messages: [
-      { from: "hr", text: "Why did our healthcare spend increase this month?" },
-      { from: "dexa", text: "Your healthcare spend increased due to higher pharmacy utilization, two IPD claims, and increased reimbursement submissions from the sales department. Recommended next actions: review pharmacy rules, guide repeat OPD users toward panel providers, and review pending reimbursement categories." }
-    ]
+    domain: "HR Spend Analysis",
+    userRole: "HR Manager",
+    question: "Why did our healthcare spend increase this month?",
+    context: "DEXA checks utilization data, department-level claims, pharmacy spend, and IPD/OPD split.",
+    answer: "Healthcare spend increased due to a **15% rise in pharmacy utilization** and two high-value IPD cases. Reimbursment submissions from the Sales department also spiked. Recommended action: review pharmacy benefit rules and guide employees toward panel providers.",
+    actions: ["Download Spend Report", "View Department Analytics", "Review Benefit Rules"],
+    checks: ["Data Aggregation Audit", "Anomaly Detection", "Trend Analysis Verification", "Access Level Validation"],
+    approval: { role: "Finance Director", action: "Approve monthly utilization report" }
   }
 ];
 
